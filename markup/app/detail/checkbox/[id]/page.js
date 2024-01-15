@@ -59,7 +59,7 @@ export default function page(props) {
   margin-left: 8px;
 }
       `,
-      js: () => {},
+      js: '',
     },
     {
       title: "Checkbox02",
@@ -127,7 +127,7 @@ export default function page(props) {
   margin-left: 8px;
 }
       `,
-      js: () => {
+      js: `
         // 체크박스
         const checkTotalBtns = document.querySelectorAll(".s__checkbox-total");
         const checkBtns = document.querySelectorAll(".s__checkbox-ck");
@@ -171,7 +171,7 @@ export default function page(props) {
         checkBtns.forEach((ck) => {
           ck.addEventListener("click", handlerAgrCheck);
         });
-      },
+      `,
     },
   ];
 

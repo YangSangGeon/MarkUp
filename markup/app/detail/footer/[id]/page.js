@@ -7,8 +7,8 @@ export default function page(props) {
       title: "Footer01",
       img: "category/img_footer01.svg",
       html: `
-      <footer>
-      <div class="s__container">
+<footer>
+    <div class="s__container">
           <div class="s__row">
               <img class="footer__logo" src="/icon_footer_logo.svg" alt="logo">
               <ul class="footer__link-list">
@@ -49,7 +49,6 @@ export default function page(props) {
               <p class="footer__copy">COPYRIGHT@2023 BRAND.ALL RIGHTS RESERVED.</p>
           </div>
       </div>
-
   </footer>
       `,
       css: `
@@ -143,7 +142,7 @@ footer .s__row {
   }
 }
       `,
-      js: () => {},
+      js: '',
     },
     {
       title: "Footer02",
@@ -274,7 +273,7 @@ footer .s__row {
 }
 
       `,
-      js: () => {},
+      js: '',
     },
   ];
 

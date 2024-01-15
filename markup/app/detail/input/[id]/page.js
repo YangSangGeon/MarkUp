@@ -20,7 +20,7 @@ export default function page(props) {
 </section>
       `,
       css: ``,
-      js: () => {},
+      js: '',
     },
   ];
 

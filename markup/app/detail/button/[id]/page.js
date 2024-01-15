@@ -61,7 +61,7 @@ export default function page(props) {
   </div>
       `,
       css: ``,
-      js: () => {},
+      js: '',
     },
   ];
 

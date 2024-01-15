@@ -85,7 +85,7 @@ export default function page(props) {
 }
 /* swiper 끝 */
       `,
-      js: () => {
+      js: `
         const swiper = new Swiper(".swiper", {
           // Optional parameters
           // direction: 'vertical',
@@ -107,7 +107,7 @@ export default function page(props) {
           //   el: '.swiper-scrollbar',
           // },
         });
-      },
+      `,
       download: [{ name: "Swiper", link: "/download/swiper.zip" }],
     },
     {
@@ -255,7 +255,7 @@ export default function page(props) {
 }
 /* swiper 끝 */
       `,
-      js: () => {
+      js: `
         const progressCircle = document.querySelector(".autoplay-progress svg");
         const progressContent = document.querySelector(
           ".autoplay-progress span"
@@ -290,7 +290,7 @@ export default function page(props) {
             //프로그래스바(원형)
             autoplayTimeLeft(s, time, progress) {
               progressCircle.style.setProperty("--progress", 1 - progress);
-              progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+              progressContent.textContent = Math.ceil(time / 1000)+'s';
             },
           },
         });
@@ -307,7 +307,7 @@ export default function page(props) {
             btn.classList.add("stop");
           }
         });
-      },
+      `,
       download: [{ name: "Swiper", link: "/download/swiper.zip" }],
     },
     {
@@ -499,7 +499,7 @@ export default function page(props) {
 }
 /* swiper 끝 */
       `,
-      js: () => {
+      js: `
         const progressLine = document.querySelector(".autoplay-progress svg");
         const progressContent = document.querySelector(
           ".autoplay-progress span"
@@ -560,7 +560,7 @@ export default function page(props) {
             btn.classList.add("stop");
           }
         });
-      },
+      `,
       download: [{ name: "Swiper", link: "/download/swiper.zip" }],
     },
     {
@@ -677,7 +677,7 @@ export default function page(props) {
 }
 /* swiper 끝 */
       `,
-      js: () => {
+      js: `
         const swiper = new Swiper(".swiper", {
           // Optional parameters
           // direction: 'vertical',
@@ -715,7 +715,7 @@ export default function page(props) {
             },
           },
         });
-      },
+      `,
       download: [{ name: "Swiper", link: "/download/swiper.zip" }],
     },
   ];

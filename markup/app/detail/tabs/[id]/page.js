@@ -195,7 +195,7 @@ export default function page(props) {
       }
       /* tab 끝*/
       `,
-      js: () => {
+      js: `
         // tab01
         const tabList = document.querySelectorAll(".s__tab01-box");
         tabList.forEach((e) => {
@@ -209,7 +209,7 @@ export default function page(props) {
             e.classList.add("active-on");
           });
         });
-      },
+      `,
     },
     {
       title: "Tabs02",
@@ -273,7 +273,7 @@ font-weight: 700;
 display: block;
 }
       `,
-      js: () => {
+      js: `
         // tab02
         const tabList02 = document.querySelectorAll(".s__tab02-title");
         const tabContents02 = document.querySelectorAll(".s__teb-contents");
@@ -290,7 +290,7 @@ display: block;
             document.getElementById(thisTabName).classList.add("active-on");
           });
         });
-      },
+      `,
     },
   ];
 

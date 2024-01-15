@@ -124,8 +124,8 @@ export default function page(props) {
             padding: 16px;
         }
       `,
-      js: () => {
-        // 아코디언
+      js:
+        `// 아코디언
         const accordionAList = document.querySelectorAll(".s__accordion01 a");
         const accordionList = document.querySelectorAll(".s__accordion01");
         accordionAList.forEach((e) => {
@@ -142,8 +142,7 @@ export default function page(props) {
               e.parentNode.parentNode.classList.add("active-on");
             }
           });
-        });
-      },
+        });`
     },
   ];
 

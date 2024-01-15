@@ -9,14 +9,16 @@ export default function page(props) {
       jsFile: [],
       img: "category/img_header_pc01.svg",
       html: `
-<div class="s__container">
-  <div class="s__row">
+<section>
+  <div class="s__container">
+    <div class="s__row">
+    </div>
   </div>
-</div>
+</section>
       `,
       css: `
       `,
-      js: () => {},
+      js: '',
       download: [{ name: "file01", link: "link01" }],
     },
   ];

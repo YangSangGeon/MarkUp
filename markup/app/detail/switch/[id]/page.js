@@ -53,7 +53,7 @@ export default function page(props) {
     transition: all 0.2s ease-in;
   }
       `,
-      js: () => {},
+      js: '',
     },
   ];
 

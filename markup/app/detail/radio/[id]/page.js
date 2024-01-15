@@ -64,7 +64,7 @@ export default function page(props) {
   margin-left: 8px;
 }
       `,
-      js: () => {},
+      js: '',
     },
   ];
 

@@ -227,7 +227,7 @@ export default function page(props) {
 }
 
       `,
-      js: () => {
+      js: `
         const popOpenBtns = document.querySelectorAll(".js-popup-open");
 
         function popClose(popup) {
@@ -246,7 +246,7 @@ export default function page(props) {
             e.preventDefault();
 
             const popID = this.dataset.popid;
-            const popup = document.querySelector(`#${popID}`);
+            const popup = document.querySelector('#'+popID);
 
             popup.classList.add("is-open");
             document.body.classList.add("scroll-off");
@@ -254,7 +254,7 @@ export default function page(props) {
             popClose(popup);
           });
         });
-      },
+      `,
     },
     {
       title: "Modal02",
@@ -482,7 +482,7 @@ export default function page(props) {
 }
 
       `,
-      js: () => {
+      js:`
         const popOpenBtns = document.querySelectorAll(".js-popup-open");
 
         function popClose(popup) {
@@ -501,7 +501,7 @@ export default function page(props) {
             e.preventDefault();
 
             const popID = this.dataset.popid;
-            const popup = document.querySelector(`#${popID}`);
+            const popup = document.querySelector('#'+popID);
 
             popup.classList.add("is-open");
             document.body.classList.add("scroll-off");
@@ -509,7 +509,7 @@ export default function page(props) {
             popClose(popup);
           });
         });
-      },
+      `,
     },
     {
       title: "Modal03",
@@ -631,7 +631,7 @@ export default function page(props) {
     }
 }
       `,
-      js: () => {
+      js: `
         const popupSliderCloseBtn = document.querySelector(
           ".popup-slider-close-btn"
         );
@@ -788,7 +788,7 @@ export default function page(props) {
         // document.addEventListener("DOMContentLoaded", function () { //화면로드 후 적용하려면 사용
         toggleMainPopup();
         // });
-      },
+      `,
       download: [{ name: "Modal03", link: "/download/modal03.zip" }],
     },
   ];

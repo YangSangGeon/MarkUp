@@ -34,7 +34,7 @@ export default function page(props) {
   box-sizing: border-box;
 }
       `,
-      js: () => {},
+      js: '',
     },
     {
       title: "Textarea02",
@@ -83,7 +83,7 @@ export default function page(props) {
 }
 
       `,
-      js: () => {
+      js: `
         // 텍스트에어리어 숫자 체크
         const textCounts = document.querySelectorAll(".js-text-count");
 
@@ -93,17 +93,17 @@ export default function page(props) {
           const countMax = this.maxLength; //최대글자수
           const countText = this.value.length; //현재글자수
 
-          countTextGroup.innerText = `${countText}/${countMax}`;
+          countTextGroup.innerText = countText+'/'+countMax;
 
           if (countText > countMax) {
             this.value.length = countMax;
-            countTextGroup.innerText = `${countMax}/${countMax}`;
+            countTextGroup.innerText = countMax+'/'+countMax;
           }
         }
         textCounts.forEach((elem) => {
           elem.addEventListener("keyup", handlerTextCount);
         });
-      },
+      `,
     },
   ];
 

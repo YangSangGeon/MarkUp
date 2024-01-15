@@ -9,7 +9,7 @@ export default function page(props) {
       jsFile: ["js/echart.js"],
       img: "category/img_chart01.svg",
       html: `
-      <div class="s__container">
+  <div class="s__container">
       <div class="s__row">
           <!-- 선차트 -->
           <h1>선차트</h1>
@@ -25,7 +25,7 @@ export default function page(props) {
 
       `,
       css: ``,
-      js: () => {
+      js: `
         // ----------------테스트용 데이터 : 참고만 해주세요----------------
 
         // 테스트용 랜덤 배열제작
@@ -233,7 +233,7 @@ export default function page(props) {
           ],
         };
         myChart03.setOption(option03);
-      },
+      `,
       download: [{ name: "Chart01", link: "/download/chart01.zip" }],
     },
     {
@@ -242,8 +242,8 @@ export default function page(props) {
       jsFile: ["js/chart.js"],
       img: "category/img_chart02.svg",
       html: `
-      <div class="s__container">
-      <div class="s__row">
+<div class="s__container">
+    <div class="s__row">
           <!-- 선차트 -->
           <h1>선차트</h1>
           <div>
@@ -279,7 +279,7 @@ export default function page(props) {
   margin-right: 8px;
 }
       `,
-      js: () => {
+      js: `
         // ----------------테스트용 데이터 : 참고만 해주세요----------------
 
         // 테스트용 랜덤 배열제작
@@ -650,7 +650,7 @@ export default function page(props) {
         };
         const ctx03 = document.getElementById("myChart03");
         new Chart(ctx03, config03);
-      },
+      `,
       download: [{ name: "Chart02", link: "/download/chart02.zip" }],
     },
   ];

@@ -123,7 +123,7 @@ export default function page(props) {
 
 
       `,
-      js: () => {},
+      js: '',
     },
     {
       title: "Board02",
@@ -145,8 +145,8 @@ export default function page(props) {
     </section>
       `,
       css: ``,
-      js: () => {
-        // 도움말
+      js: 
+       ` // 도움말
         //https://github.com/nhn/tui.grid/blob/master/packages/toast-ui.grid/docs/ko/README.md
 
         // 원래 대로라면 이렇게
@@ -190,7 +190,7 @@ export default function page(props) {
         class RowNumberRenderer {
           constructor(props) {
             const el = document.createElement("span");
-            el.innerHTML = `No.${props.formattedValue}`;
+            el.innerHTML = 'No.' + props.formattedValue;
             this.el = el;
           }
 
@@ -199,7 +199,7 @@ export default function page(props) {
           }
 
           render(props) {
-            this.el.innerHTML = `No.${props.formattedValue}`;
+            this.el.innerHTML = 'No.' + props.formattedValue;
           }
         }
 
@@ -268,12 +268,7 @@ export default function page(props) {
             },
             {
               type: "checkbox",
-              header: `
-      <label for="all-checkbox" class="checkbox">
-        <input type="checkbox" id="all-checkbox" class="hidden-input" name="_checked" />
-        <span class="custom-input"></span>
-      </label>
-    `,
+              header: '<label for="all-checkbox" class="checkbox"><input type="checkbox" id="all-checkbox" class="hidden-input" name="_checked" /><span class="custom-input"></span></label>',
               renderer: {
                 type: CheckboxRenderer,
               },
@@ -311,8 +306,8 @@ export default function page(props) {
 
         grid.on("uncheck", function (ev) {
           console.log("uncheck", ev);
-        });
-      },
+        });`
+      ,
       download: [{ name: "board02", link: "/download/board02.zip" }],
     },
   ];

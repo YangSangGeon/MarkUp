@@ -106,7 +106,7 @@ export default function page(props) {
 }
 
       `,
-      js: () => {},
+      js: '',
     },
     {
       title: "Table02",
@@ -219,7 +219,7 @@ export default function page(props) {
           font-weight: 700;
       }
       `,
-      js: () => {},
+      js: '',
     },
     {
       title: "Table03",
@@ -300,7 +300,7 @@ export default function page(props) {
       }
       /* table 끝 */
       `,
-      js: () => {},
+      js: '',
     },
   ];
 

@@ -139,7 +139,7 @@ header .s__row {
 }
       
       `,
-      js: () => {
+      js: `
         //mobile 메뉴
         let menuBtn = document.querySelectorAll(".mobile-menu__step1");
         let mobileMenuBtn = document.querySelector(".menu");
@@ -166,7 +166,7 @@ header .s__row {
           mobileMenuList.classList.toggle("menu-on");
           mobileMenuBtn.classList.toggle("menu-on");
         });
-      },
+      `,
     },
     {
       title: "Header_Mobile02 (Mobile Only)",
@@ -331,7 +331,7 @@ header .s__row {
 }
 
       `,
-      js: () => {
+      js: `
         //mobile 메뉴
         let menuBtn = document.querySelectorAll(".mobile-menu__step1");
         let menuBtnStep2 = document.querySelectorAll(".mobile-menu__step2");
@@ -372,7 +372,7 @@ header .s__row {
           mobileMenuList.classList.toggle("menu-on");
           mobileMenuBtn.classList.toggle("menu-on");
         });
-      },
+      `,
     },
   ];
 

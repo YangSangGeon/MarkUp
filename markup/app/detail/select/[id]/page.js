@@ -17,7 +17,7 @@ export default function page(props) {
 </select>
       `,
       css: ``,
-      js: () => {},
+      js: '',
     },
     {
       title: "Select02",
@@ -47,7 +47,7 @@ export default function page(props) {
   gap: 8px;
 }
       `,
-      js: () => {
+      js: `
         //input 숫자 최대 개수
         const phoneNum = document.querySelectorAll(".s__input_phone");
         for (let i = 0; i < phoneNum.length; i++) {
@@ -59,7 +59,7 @@ export default function page(props) {
             }
           });
         }
-      },
+      `,
     },
   ];
 

@@ -12,7 +12,7 @@ export default function page(props) {
       `,
       css: `
       `,
-      js: () => {},
+      js: '',
       download: [{ name: "file01", link: "link01" }],
     },
   ];

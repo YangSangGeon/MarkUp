@@ -335,7 +335,7 @@ header.s__header .s__row {
 }
       
       `,
-      js: () => {
+      js: `
         //pc메뉴
         let header = document.querySelector("header");
         let pcMenu = document.querySelector(".s__pc-header-wrap");
@@ -368,7 +368,7 @@ header.s__header .s__row {
         lastMenuLink.addEventListener("focusin", () => {
           pcMenu.classList.add("menu-on");
         });
-      },
+      `,
     },
     {
       title: "Header_PC03 (PC, Tablet Only)",
@@ -572,7 +572,7 @@ li.active > .pc-menu__step3 {
   }
 } 
       `,
-      js: () => {
+      js: `
         //pc메뉴
         let pcMenuBtn = document.querySelectorAll(".pc-menu__step1");
         let pcMenuBtnStep2 = document.querySelectorAll(
@@ -630,7 +630,7 @@ li.active > .pc-menu__step3 {
             p.classList.add("active");
           });
         }
-      },
+      `,
     },
   ];
 

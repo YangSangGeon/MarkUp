@@ -46,7 +46,7 @@ export default function page(props) {
   border: 1px solid var(--border);
 }
       `,
-      js: () => {
+      js: `
         //싱글 파일첨부
         const fileUploads = document.querySelectorAll(
           'input[type="file"]:not([multiple])'
@@ -61,20 +61,17 @@ export default function page(props) {
               // p 태그 생성
               const fileGetListName = document.createElement("p");
               fileGetListName.className = "file__get__list__name";
-              fileGetListName.textContent = `${fileName} (${fileSize}MB)`;
+              fileGetListName.textContent = fileName + '(' + fileSize + 'MB)';
               fileInput.parentNode.parentNode.querySelector(
                 ".s__singlefile-list"
               ).innerHTML = ""; //초기화
               fileInput.parentNode.parentNode
                 .querySelector(".s__singlefile-list")
                 .appendChild(fileGetListName);
-              // fileInput.parentNode.parentNode.querySelector('.s__singlefile-list').innerHTML = ` //이렇게 해도 됨
-              // <p class="file__get__list__name">${fileName} (${fileSize}MB)</p>
-              // `
             });
           });
         }
-      },
+      `,
     },
     {
       title: "File02",
@@ -157,7 +154,7 @@ export default function page(props) {
   position: relative;
 }
       `,
-      js: () => {
+      js: `
         //멀티 파일첨부
         const fileMultiUploads = document.querySelectorAll(
           'input[type="file"][multiple]'
@@ -195,25 +192,25 @@ export default function page(props) {
 
                   // 새로운 li 요소 생성
                   const listItem = document.createElement("li");
-                  listItem.id = `data${currentFile.lastModified}`;
+                  listItem.id = 'data'+currentFile.lastModified;
 
                   // p 태그 생성
                   const fileGetListName = document.createElement("p");
                   fileGetListName.className = "file__get__list__name";
-                  fileGetListName.textContent = `${currentFile.name} (${fileSize}MB)`;
+                  fileGetListName.textContent = currentFile.name +'(' + fileSize + 'MB)';
 
                   // button 태그 생성
                   const removeButton = document.createElement("button");
                   removeButton.className = "btns remove_button";
                   removeButton.setAttribute(
                     "data-index",
-                    `data${currentFile.lastModified}`
+                    'data'+currentFile.lastModified
                   );
                   removeButton.setAttribute("data-target-input", fileInput.id);
 
                   // span 태그 생성
                   const span = document.createElement("span");
-                  span.textContent = `${currentFile.name} 삭제`;
+                  span.textContent = currentFile.name + ' 삭제';
 
                   // button에 span 추가
                   removeButton.appendChild(span);
@@ -276,7 +273,7 @@ export default function page(props) {
             });
           });
         }
-      },
+      `,
     },
   ];
 

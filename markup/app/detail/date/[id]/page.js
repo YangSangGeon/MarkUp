@@ -31,7 +31,7 @@ export default function page(props) {
     background: url(/icon_date.svg) no-repeat 97% 50%/18px auto;
 }
       `,
-      js: () => {
+      js: `
         // 데이트피커
         // https://www.daterangepicker.com/#config
 
@@ -82,7 +82,7 @@ export default function page(props) {
             );
           }
         );
-      },
+      `,
       download: [{ name: "Date", link: "/download/date.zip" }],
     },
     {
@@ -114,7 +114,7 @@ export default function page(props) {
 }
 
       `,
-      js: () => {
+      js: `
         // 데이트피커
         // https://www.daterangepicker.com/#config
 
@@ -164,7 +164,7 @@ export default function page(props) {
             );
           }
         );
-      },
+      `,
       download: [{ name: "Date", link: "/download/date.zip" }],
     },
   ];

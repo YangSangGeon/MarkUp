@@ -90,10 +90,10 @@ const encodeHTML = (str) => {
   const componentsHtml = DOMPurify.sanitize(props.contentsHtml); //html
   const componentsCss = DOMPurify.sanitize(props.contentsCss); //css
   const firstJs = props.contentsJs.toString();
-  const startIndex = firstJs.indexOf("{") + 1; // '{' 다음 위치부터
-  const endIndex = firstJs.lastIndexOf("}"); // '}' 직전까지
-  const innerData = firstJs.substring(startIndex, endIndex).trim();
-  const componentsJs = DOMPurify.sanitize(innerData); //js
+  // const startIndex = firstJs.indexOf("{") + 1; // '{' 다음 위치부터
+  // const endIndex = firstJs.lastIndexOf("}"); // '}' 직전까지
+  // const innerData = firstJs.substring(startIndex, endIndex).trim();
+  // const componentsJs = DOMPurify.sanitize(innerData); //js
   // const encodeJs = encodeHTML(componentsJs); //js
   const encodeJs = encodeHTML(firstJs); //js
 
@@ -498,7 +498,7 @@ input[type="number"]::-webkit-inner-spin-button {
                 </>
               )}
 
-              {componentsJs && (
+              {encodeJs && (
                 <>
                   <LangTitle>Javascript</LangTitle>
                   <div className="Code">
