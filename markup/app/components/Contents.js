@@ -71,6 +71,22 @@ export default function Contents(props) {
       background-color: #3559e0;
     }
   `;
+
+const encodeHTML = (str) => {
+  if (str !== undefined && str !== null && str !== "") {
+    str = String(str);
+
+    str = str.replace(/<script[^>]*>([\S\s]*?)<\/script>/gim, "");
+    str = str.replace(/<\/?\w(?:[^"'>]|"[^"]*"|'[^']*')*>/gim, "");
+    var element = document.createElement("div");
+    element.innerHTML = str;
+    str = element.textContent;
+    element.textContent = "";
+  }
+  return str;
+  };
+  
+
   const componentsHtml = DOMPurify.sanitize(props.contentsHtml); //html
   const componentsCss = DOMPurify.sanitize(props.contentsCss); //css
   const firstJs = props.contentsJs.toString();
@@ -78,6 +94,8 @@ export default function Contents(props) {
   const endIndex = firstJs.lastIndexOf("}"); // '}' 직전까지
   const innerData = firstJs.substring(startIndex, endIndex).trim();
   const componentsJs = DOMPurify.sanitize(innerData); //js
+  // const encodeJs = encodeHTML(componentsJs); //js
+  const encodeJs = encodeHTML(firstJs); //js
 
   //style reset
   const resetCss = `
@@ -386,19 +404,6 @@ input[type="number"]::-webkit-inner-spin-button {
 
     // iframe 생성
     // iframe의 document에 접근하여 HTML, CSS, JS를 넣습니다.
-    const encodeHTML = (str) => {
-      if (str !== undefined && str !== null && str !== "") {
-        str = String(str);
-
-        str = str.replace(/<script[^>]*>([\S\s]*?)<\/script>/gim, "");
-        str = str.replace(/<\/?\w(?:[^"'>]|"[^"]*"|'[^']*')*>/gim, "");
-        var element = document.createElement("div");
-        element.innerHTML = str;
-        str = element.textContent;
-        element.textContent = "";
-      }
-      return str;
-    };
 
     if (iframeRef.current) {
       const iframeDocument = iframeRef.current.contentDocument;
@@ -436,7 +441,7 @@ input[type="number"]::-webkit-inner-spin-button {
       iframeDocument.head.appendChild(styleElement2);
 
       setTimeout(() => {
-        scriptElement.innerHTML = encodeHTML(componentsJs); //js
+        scriptElement.innerHTML = encodeJs; //js
         iframeDocument.body.appendChild(scriptElement);
       }, 100);
     }
@@ -500,7 +505,7 @@ input[type="number"]::-webkit-inner-spin-button {
                     <pre className="line-numbers">
                       {/* <code className={`language-javascript`} dangerouslySetInnerHTML={{ __html: componentsJs }}></code> */}
                       <code className={`language-javascript`}>
-                        {componentsJs}
+                        {encodeJs}
                       </code>
                     </pre>
                   </div>
