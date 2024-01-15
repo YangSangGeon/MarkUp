@@ -6,6 +6,12 @@ import Contents from "@/app/components/Contents";
 import { useEffect, useState } from "react";
 
 export default function ContentsWrap(props) {
+  // 이미지 로드 확인
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+  const handleImageLoad = () => {
+    setIsImageLoaded(true);
+  }
+
   // 처음켜지면 id의 값이 thisPage의 값으로 지정
   const thisPage = props.props.params.id;
   const Title = styled.h2`
@@ -52,7 +58,8 @@ export default function ContentsWrap(props) {
             }}
           >
             <Link href={String(index)}>
-              {num.img ? <img src={"/" + num.img} alt={num.title} /> : <NoneImg />}
+              {isImageLoaded ? '' : <NoneImg />}
+              <img src={"/" + num.img} alt={num.title} onLoad={handleImageLoad} />
             </Link>
           </li>
         ))}
