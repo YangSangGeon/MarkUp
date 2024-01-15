@@ -32,7 +32,12 @@ export default function ContentsWrap(props) {
     margin-bottom: 24px;
     height: 62px;
   `;
-
+  const NoneImg = styled.span`
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+  `
   return (
     <Body>
       <TabImgWrap>
@@ -47,7 +52,7 @@ export default function ContentsWrap(props) {
             }}
           >
             <Link href={String(index)}>
-              <img src={"/" + num.img} alt={num.title} />
+              {num.img ? <img src={"/" + num.img} alt={num.title} /> : <NoneImg />}
             </Link>
           </li>
         ))}
