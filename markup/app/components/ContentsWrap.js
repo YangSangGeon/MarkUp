@@ -7,10 +7,26 @@ import { useEffect, useState } from "react";
 
 export default function ContentsWrap(props) {
   // 이미지 로드 확인
-  const [isImageLoaded, setIsImageLoaded] = useState(false);
-  const handleImageLoad = () => {
-    setIsImageLoaded(true);
-  }
+  const [isImageLoaded, setIsImageLoaded] = useState(Array(props.data.length).fill(false));
+  
+  // useEffect를 사용하여 이미지 로드 이벤트를 한 번만 등록
+  useEffect(() => {
+    const handleImageLoad = (index) => {
+      setIsImageLoaded((prev) => {
+        const newState = [...prev];
+        newState[index] = true;
+        return newState;
+      });
+    };
+
+    // 이미지 로드 이벤트 핸들러 등록
+    props.data.forEach((_, index) => {
+      const img = new Image();
+      img.src = "/" + props.data[index].img;
+      img.onload = () => handleImageLoad(index);
+    });
+  }, [props.data]);
+
 
   // 처음켜지면 id의 값이 thisPage의 값으로 지정
   const thisPage = props.props.params.id;
@@ -57,9 +73,12 @@ export default function ContentsWrap(props) {
                   : "1px solid var(--boarder)",
             }}
           >
-            <Link href={String(index)}>
-              {isImageLoaded ? '' : <NoneImg />}
-              <img src={"/" + num.img} alt={num.title} onLoad={handleImageLoad} />
+           <Link href={String(index)}>
+              {isImageLoaded[index] ? (
+                <img src={"/" + num.img} alt={num.title} />
+              ) : (
+                <NoneImg />
+              )}
             </Link>
           </li>
         ))}
