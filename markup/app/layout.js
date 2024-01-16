@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = {
   title: "markUp",
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
         <footer>
           <p>Copyright © 2024 SnagGeon Inc. All rights reserved.</p>
         </footer>
+        <Analytics />
         <SpeedInsights />
       </body>
     </html>
