@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   const [size, setSize] = useState("size-pc");
@@ -38,11 +39,11 @@ export default function Header() {
       <Container>
         <Row>
           <Link href="/">
-            <img src="/icon_logo.svg" alt="홈" title="홈" />
+            <Image width={70} height={18} src="/icon_main_logo.svg" alt="홈" title="홈" />
           </Link>
           <DeviceBtns>
             <DeviceBtn onClick={() => setSize("size-mobile")}>
-              <img
+              <Image width={32} height={32} 
                 src={
                   size === "size-mobile"
                     ? "/icon_mobile_on.svg"
@@ -52,7 +53,7 @@ export default function Header() {
               />
             </DeviceBtn>
             <DeviceBtn onClick={() => setSize("size-tablet")}>
-              <img
+              <Image width={32} height={32} 
                 src={
                   size === "size-tablet"
                     ? "/icon_tablet_on.svg"
@@ -62,7 +63,7 @@ export default function Header() {
               />
             </DeviceBtn>
             <DeviceBtn onClick={() => setSize("size-pc")}>
-              <img
+              <Image width={32} height={32} 
                 src={size === "size-pc" ? "/icon_pc_on.svg" : "/icon_pc.svg"}
                 alt="PC사이즈"
               />

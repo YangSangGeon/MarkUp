@@ -190,7 +190,6 @@ export default function Home() {
             <>
               <SubTitle>수정중</SubTitle>
               <ReadMeListWrap>
-                <ReadMeList>간헐적으로 로고가 사라지는 현상</ReadMeList>
                 <ReadMeList>
                   간헐적으로 외부라이브러리 적용 파일들 MarkUp 화면에서 적용
                   안되는 현상

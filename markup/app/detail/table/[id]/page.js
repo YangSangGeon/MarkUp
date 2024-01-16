@@ -29,7 +29,7 @@ export default function page(props) {
         <p>th</p>
         <div>
             <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
             </p>
         </div>
     </li>
@@ -75,10 +75,6 @@ export default function page(props) {
   font-weight: 700;
   white-space: normal;
 }
-.s__table01-row > li > div > p {
-    font-weight: 500;
-    white-space: normal;
-  }
 .s__table01-row > li div {
   padding: 12px 24px;
   width: calc(100% - 150px);
@@ -102,7 +98,21 @@ export default function page(props) {
 } 
 /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/ 
 @media all and (max-width:767px) {
-
+.s__table01-row > li{
+    flex-direction: column;
+    }
+    .s__table01-row > li p{
+    height: auto;
+    width: 100%;
+    padding: 8px 0;
+    }
+    .s__table01-row > li div{
+    width: 100%;
+    padding: 4px 24px;
+    }
+    .s__table01-row > li > p{
+    border-bottom: 1px solid var(--border);
+    }
 }
 
       `,
