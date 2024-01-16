@@ -4,6 +4,7 @@ import Link from "next/link";
 import styled from "styled-components";
 import Contents from "@/app/components/Contents";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function ContentsWrap(props) {
   // 이미지 로드 확인
@@ -21,9 +22,10 @@ export default function ContentsWrap(props) {
 
     // 이미지 로드 이벤트 핸들러 등록
     props.data.forEach((_, index) => {
-      const img = new Image();
-      img.src = "/" + props.data[index].img;
-      img.onload = () => handleImageLoad(index);
+      // const img = new Image();
+      // img.src = "/" + props.data[index].img;
+      // img.onload = () => handleImageLoad(index);
+      handleImageLoad(index);
     });
   }, [props.data]);
 
@@ -75,7 +77,7 @@ export default function ContentsWrap(props) {
           >
            <Link href={String(index)}>
               {isImageLoaded[index] ? (
-                <img src={"/" + num.img} alt={num.title} />
+                <Image width={60} height={60} src={"/" + num.img} alt={num.title} />
               ) : (
                 <NoneImg />
               )}
