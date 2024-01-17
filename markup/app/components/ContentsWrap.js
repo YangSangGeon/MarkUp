@@ -6,6 +6,37 @@ import Contents from "@/app/components/Contents";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
+const Title = styled.h2`
+color: var(--black, #181818);
+font-family: GmarketSansBold;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+`;
+const SubTitle = styled.p`
+color: var(--gray);
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+margin-bottom: 16px;
+`;
+const Body = styled.div`
+margin-top: 40px;
+width: calc(100% - 216px);
+`;
+const TabImgWrap = styled.ul`
+display: flex;
+gap: 12px;
+margin-bottom: 24px;
+height: 62px;
+`;
+const NoneImg = styled.span`
+display: block;
+width: 60px;
+height: 60px;
+background-color: #fff;
+`
+
 export default function ContentsWrap(props) {
   // 이미지 로드 확인
   const [isImageLoaded, setIsImageLoaded] = useState(Array(props.data.length).fill(false));
@@ -29,39 +60,8 @@ export default function ContentsWrap(props) {
     });
   }, [props.data]);
 
-
   // 처음켜지면 id의 값이 thisPage의 값으로 지정
   const thisPage = props.props.params.id;
-  const Title = styled.h2`
-    color: var(--black, #181818);
-    font-family: GmarketSansBold;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-  `;
-  const SubTitle = styled.p`
-    color: var(--gray);
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    margin-bottom: 16px;
-  `;
-  const Body = styled.div`
-    margin-top: 40px;
-    width: calc(100% - 216px);
-  `;
-  const TabImgWrap = styled.ul`
-    display: flex;
-    gap: 12px;
-    margin-bottom: 24px;
-    height: 62px;
-  `;
-  const NoneImg = styled.span`
-    display: block;
-    width: 60px;
-    height: 60px;
-    background-color: #fff;
-  `
   return (
     <Body>
       <TabImgWrap>
@@ -77,7 +77,7 @@ export default function ContentsWrap(props) {
           >
            <Link href={String(index)}>
               {isImageLoaded[index] ? (
-                <Image width={60} height={60} src={"/" + num.img} alt={num.title} />
+                <Image priority={true} width={60} height={60} src={"/" + num.img} alt={num.title} />
               ) : (
                 <NoneImg />
               )}

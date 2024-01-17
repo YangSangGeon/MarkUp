@@ -4,41 +4,41 @@ import styled from "styled-components";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
+const SidebarList = styled.ul`
+margin-top: 40px;
+display: flex;
+flex-direction: column;
+gap: 16px;
+width: 200px;
+& li:nth-child(1),
+& li:nth-child(4) {
+  padding-bottom: 16px;
+  position: relative;
+}
+& li:nth-child(1)::after,
+& li:nth-child(4)::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 1px;
+  background-color: var(--boarder);
+  position: absolute;
+  bottom: 0;
+  opacity: 0.5;
+}
+`;
+const List = styled.p`
+color: var(--gray);
+font-family: Pretendard Variable;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-transform: capitalize;
+`;
+
 export default function Sidebar() {
   const pathname = usePathname();
-  const SidebarList = styled.ul`
-    margin-top: 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    width: 200px;
-    & li:nth-child(1),
-    & li:nth-child(4) {
-      padding-bottom: 16px;
-      position: relative;
-    }
-    & li:nth-child(1)::after,
-    & li:nth-child(4)::after {
-      content: "";
-      display: block;
-      width: 100px;
-      height: 1px;
-      background-color: var(--boarder);
-      position: absolute;
-      bottom: 0;
-      opacity: 0.5;
-    }
-  `;
-  const List = styled.p`
-    color: var(--gray);
-    font-family: Pretendard Variable;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-transform: capitalize;
-  `;
-
   const menuData = [
     { name: "ReadMe", path: "/detail/read_me" },
     { name: "Header(PC)", path: "/detail/header_pc/0" },

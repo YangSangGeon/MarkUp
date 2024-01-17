@@ -150,7 +150,7 @@ export default function page(props) {
 .popup__header__close {
   width: 24px;
   height: 24px;
-  background: url(/icon_close.svg) no-repeat center/contain;
+  background: url(/image/icon_close.svg) no-repeat center/contain;
   position: absolute;
   top: 24px;
   right: 24px;
@@ -286,7 +286,7 @@ export default function page(props) {
                   <form>
                       <div class="top-search">
                           <input type="text">
-                          <button><img src="/icon_search.svg" alt="검색" title="검색"></button>
+                          <button><img src="/image/icon_search.svg" alt="검색" title="검색"></button>
                       </div>
                       
                   </form>
@@ -393,7 +393,7 @@ export default function page(props) {
 .popup__header__close {
   width: 24px;
   height: 24px;
-  background: url(/icon_close.svg) no-repeat center/contain;
+  background: url(/image/icon_close.svg) no-repeat center/contain;
   position: absolute;
   top: 24px;
   right: 24px;
@@ -518,7 +518,7 @@ export default function page(props) {
       img: "category/img_modal03.svg",
       html: `
 <div class="popup-slider active-on">
-    <button class="popup-slider-close-btn"><img src="/icon_close_w.svg" alt="닫기" title="닫기"></button>
+    <button class="popup-slider-close-btn"><img src="/image/icon_close_w.svg" alt="닫기" title="닫기"></button>
     <!-- Slider main container -->
     <div class="swiper" id="popupSlider">
         <!-- Additional required wrapper -->
@@ -602,11 +602,11 @@ export default function page(props) {
     color: #fff;
 }
 .popup-slider .swiper-button-prev:after {
-  background: url(/icon_left_arrow_w.svg) no-repeat;
+  background: url(/image/icon_left_arrow_w.svg) no-repeat;
   background-size: contain;
 }
 .popup-slider .swiper-button-next:after {
-  background: url(/icon_right_arrow_w.svg) no-repeat;
+  background: url(/image/icon_right_arrow_w.svg) no-repeat;
   background-size: contain;
 }
 .popup-slider .swiper-pagination-bullet-active {

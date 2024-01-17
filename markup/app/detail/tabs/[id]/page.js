@@ -14,7 +14,7 @@ export default function page(props) {
         <div class="s__row">
             <div class="s__tab01-wrap">
                 <div class="s__tab01-box active-on" data-tab="tab01">
-                    <a href="javascript:void(0)" class="s__tab01-title">title1</a>
+                    <a href="#" class="s__tab01-title">title1</a>
                     <ul class="s__tab01-contents">
                         <li>
                             <a href=""><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span><span>2024.01.01</span></a>
@@ -32,10 +32,10 @@ export default function page(props) {
                             <a href=""><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span><span>2024.01.01</span></a>
                         </li>
                     </ul>
-                    <a href="" class="s__tab01-more-btn"><img src="/icon_plus.svg" alt="더보기" title="더보기"></a>
+                    <a href="" class="s__tab01-more-btn"><img src="/image/icon_plus.svg" alt="더보기" title="더보기"></a>
                 </div>
                 <div class="s__tab01-box" data-tab="tab01">
-                    <a href="javascript:void(0)" class="s__tab01-title">title2</a>
+                    <a href="#" class="s__tab01-title">title2</a>
                     <ul class="s__tab01-contents">
                         <li>
                             <a href=""><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span>2024.01.01</span></a>
@@ -53,10 +53,10 @@ export default function page(props) {
                             <a href=""><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span>2024.01.01</span></a>
                         </li>
                     </ul>
-                    <a href="" class="s__tab01-more-btn"><img src="/icon_plus.svg" alt="더보기" title="더보기"></a>
+                    <a href="" class="s__tab01-more-btn"><img src="/image/icon_plus.svg" alt="더보기" title="더보기"></a>
                 </div>
                 <div class="s__tab01-box" data-tab="tab01">
-                    <a href="javascript:void(0)" class="s__tab01-title">title3</a>
+                    <a href="#" class="s__tab01-title">title3</a>
                     <ul class="s__tab01-contents">
                         <li>
                             <a href=""><span>There are many variations of passages of Lorem Ipsum available</span><span>2024.01.01</span></a>
@@ -74,12 +74,12 @@ export default function page(props) {
                             <a href=""><span>There are many variations of passages of Lorem Ipsum available</span><span>2024.01.01</span></a>
                         </li>
                     </ul>
-                    <a href="" class="s__tab01-more-btn"><img src="/icon_plus.svg" alt="더보기" title="더보기"></a>
+                    <a href="" class="s__tab01-more-btn"><img src="/image/icon_plus.svg" alt="더보기" title="더보기"></a>
                 </div>
             </div>
             <div class="s__tab01-wrap">
                 <div class="s__tab01-box active-on" data-tab="tab02">
-                    <a href="javascript:void(0)" class="s__tab01-title">title1</a>
+                    <a href="#" class="s__tab01-title">title1</a>
                     <ul class="s__tab01-contents">
                         <li>
                         <a href=""><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span><span>2024.01.01</span></a>
@@ -97,10 +97,10 @@ export default function page(props) {
                             <a href=""><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span><span>2024.01.01</span></a>
                         </li>
                     </ul>
-                    <a href="" class="s__tab01-more-btn"><img src="/icon_plus.svg" alt="더보기" title="더보기"></a>
+                    <a href="" class="s__tab01-more-btn"><img src="/image/icon_plus.svg" alt="더보기" title="더보기"></a>
                 </div>
                 <div class="s__tab01-box" data-tab="tab02">
-                    <a href="javascript:void(0)" class="s__tab01-title">title2</a>
+                    <a href="#" class="s__tab01-title">title2</a>
                     <ul class="s__tab01-contents">
                         <li>
                         <a href=""><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span>2024.01.01</span></a>
@@ -118,7 +118,7 @@ export default function page(props) {
                             <a href=""><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span>2024.01.01</span></a>
                         </li>
                     </ul>
-                    <a href="" class="s__tab01-more-btn"><img src="/icon_plus.svg" alt="더보기" title="더보기"></a>
+                    <a href="" class="s__tab01-more-btn"><img src="/image/icon_plus.svg" alt="더보기" title="더보기"></a>
                 </div>
             </div>
         </div>
@@ -222,10 +222,10 @@ export default function page(props) {
         <div class="s__row">
             <div class="s__tab02-wrap">
                 <div class="s__tab02-title-wrap">
-                    <a href="javascript:void(0)" class="s__tab02-title active-on" data-tab="tab01">title1</a>
-                    <a href="javascript:void(0)" class="s__tab02-title" data-tab="tab02">title2</a>
-                    <a href="javascript:void(0)" class="s__tab02-title" data-tab="tab03">title3</a>
-                    <a href="javascript:void(0)" class="s__tab02-title" data-tab="tab04">title4</a>
+                    <a href="#" class="s__tab02-title active-on" data-tab="tab01">title1</a>
+                    <a href="#" class="s__tab02-title" data-tab="tab02">title2</a>
+                    <a href="#" class="s__tab02-title" data-tab="tab03">title3</a>
+                    <a href="#" class="s__tab02-title" data-tab="tab04">title4</a>
                 </div>
                 <div class="s__tab02-contents-wrap">
                     <div id="tab01" class="s__teb-contents active-on">

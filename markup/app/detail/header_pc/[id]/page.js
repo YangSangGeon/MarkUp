@@ -11,7 +11,7 @@ export default function page(props) {
 <header class="s__header">
   <div class="s__container pc-menu">
       <div class="s__row">
-          <a href="#" class="s__logo"><img src="/icon_logo.svg" alt="logo" title="홈으로 이동"></a>
+          <a href="#" class="s__logo"><img src="/image/icon_logo.svg" alt="logo" title="홈으로 이동"></a>
           <ul class="menu-link">
               <li>
                   <a href="#" class="pc-menu__step1">step1</a>
@@ -187,7 +187,7 @@ header.s__header .s__row {
     <div class="s__pc-header-wrap">
         <div class="s__container pc-menu">
             <div class="s__row">
-                <a href="#" class="s__logo"><img src="/icon_logo.svg" alt="logo" title="홈으로 이동"></a>
+                <a href="#" class="s__logo"><img src="/image/icon_logo.svg" alt="logo" title="홈으로 이동"></a>
                 <ul class="menu-link">
                     <li>
                         <a href="#" class="pc-menu__step1">step1</a>
@@ -380,7 +380,7 @@ header.s__header .s__row {
 <header class="s__header">
   <div class="s__container pc-menu">
       <div class="s__row">
-          <a href="#" class="s__logo"><img src="/icon_logo.svg" alt="logo" title="홈으로 이동"></a>
+          <a href="#" class="s__logo"><img src="/image/icon_logo.svg" alt="logo" title="홈으로 이동"></a>
           <ul class="menu-link">
               <li class="pc-menu__step1">
                   <a href="#">step1(1)</a>

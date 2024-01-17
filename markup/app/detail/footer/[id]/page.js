@@ -10,7 +10,7 @@ export default function page(props) {
 <footer>
     <div class="s__container">
           <div class="s__row">
-              <img class="footer__logo" src="/icon_footer_logo.svg" alt="logo">
+              <img class="footer__logo" src="/image/icon_footer_logo.svg" alt="logo">
               <ul class="footer__link-list">
                   <li><a href="#">이용약관</a></li>
                   <li><a href="#">개인정보처리방침</a></li>
@@ -23,16 +23,16 @@ export default function page(props) {
                   </select>
                   <div class="footet__link-icon-list">
                       <a href="#" title="유튜브">
-                          <img src="/icon_youtube_w.svg" alt="유튜브">
+                          <img src="/image/icon_youtube_w.svg" alt="유튜브">
                       </a>
                       <a href="#" title="인스타그램">
-                          <img src="/icon_instar_w.svg" alt="인스타그램">
+                          <img src="/image/icon_instar_w.svg" alt="인스타그램">
                       </a>
                       <a href="#" title="카카오톡">
-                          <img src="/icon_kakao_w.svg" alt="카카오톡">
+                          <img src="/image/icon_kakao_w.svg" alt="카카오톡">
                       </a>
                       <a href="#" title="블로그">
-                          <img src="/icon_blog_w.svg" alt="블로그">
+                          <img src="/image/icon_blog_w.svg" alt="블로그">
                       </a>
                   </div>
               </div>
@@ -110,7 +110,7 @@ footer .s__row {
   -moz-appearance:none; /*for firefox*/
   appearance:none;
 
-  background: url(/icon_down_arrow_w.svg) no-repeat  95% 50%/15px auto;
+  background: url(/image/icon_down_arrow_w.svg) no-repeat  95% 50%/15px auto;
   background-color: var(--footer-bg);
 }
 .footer__select::-ms-expand{
@@ -166,16 +166,16 @@ footer .s__row {
           </ul>
           <div class="footet__link-icon-list">
               <a href="#" title="유튜브">
-                  <img src="/icon_youtube_w.svg" alt="유튜브">
+                  <img src="/image/icon_youtube_w.svg" alt="유튜브">
               </a>
               <a href="#" title="인스타그램">
-                  <img src="/icon_instar_w.svg" alt="인스타그램">
+                  <img src="/image/icon_instar_w.svg" alt="인스타그램">
               </a>
               <a href="#" title="카카오톡">
-                  <img src="/icon_kakao_w.svg" alt="카카오톡">
+                  <img src="/image/icon_kakao_w.svg" alt="카카오톡">
               </a>
               <a href="#" title="블로그">
-                  <img src="/icon_blog_w.svg" alt="블로그">
+                  <img src="/image/icon_blog_w.svg" alt="블로그">
               </a>
           </div>
           <p class="footer__copy">COPYRIGHT@2023 BRAND.ALL RIGHTS RESERVED.</p>
@@ -245,7 +245,7 @@ footer .s__row {
   -moz-appearance: none; /*for firefox*/
   appearance: none;
 
-  background: url(/icon_down_arrow_w.svg) no-repeat 95% 50%/15px auto;
+  background: url(/image/icon_down_arrow_w.svg) no-repeat 95% 50%/15px auto;
   background-color: var(--footer-bg);
 }
 .footer__select::-ms-expand {

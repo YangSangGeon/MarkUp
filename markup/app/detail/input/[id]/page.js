@@ -19,7 +19,32 @@ export default function page(props) {
   </div>
 </section>
       `,
-      css: ``,
+      css: `
+/* 이 밑으로는 공통코드에도 적용되어 있어요. 이미 공통코드 적용하신 분은 무시해주세요. */
+/* input */
+.s__input {
+  padding: 11px 18px;
+  border-radius: 5px;
+  border: 1px solid var(--border);
+  font-size: 16px;
+  min-height: 48px;
+  margin: 2px;
+}
+.s__input-small{
+    padding: 8px 14px;
+    font-size: 14px;
+    min-height: 40px;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.s__input::placeholder{
+  color: var(--gray);
+}
+
+      `,
       js: '',
     },
   ];

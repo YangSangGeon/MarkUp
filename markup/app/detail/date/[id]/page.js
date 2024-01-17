@@ -20,7 +20,7 @@ export default function page(props) {
       css: `
 /* 데이트피커 */
 .s__date, .s__date-range{
-    background: url(/icon_date.svg) no-repeat 97% 50%/18px auto;
+    background: url(/image/icon_date.svg) no-repeat 97% 50%/18px auto;
 }
       `,
       js: `
@@ -94,7 +94,7 @@ export default function page(props) {
       css: `
 /* 데이트피커 */
 .s__date, .s__date-range{
-    background: url(/icon_date.svg) no-repeat 97% 50%/18px auto;
+    background: url(/image/icon_date.svg) no-repeat 97% 50%/18px auto;
 }
 
       `,

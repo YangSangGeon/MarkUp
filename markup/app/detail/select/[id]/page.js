@@ -16,7 +16,27 @@ export default function page(props) {
   <option value="4">data</option>
 </select>
       `,
-      css: ``,
+      css: `
+/* 이 밑으로는 공통코드에도 적용되어 있어요. 이미 공통코드 적용하신 분은 무시해주세요. */
+/* select */
+.s__select {
+  -webkit-appearance: none; /* for chrome */
+  -moz-appearance: none; /*for firefox*/
+  appearance: none;
+  background: url("/image/image/icon_down_arrow.svg") no-repeat 95% 50%/18px auto;
+  background-color: #fff;
+  padding: 12px 54px 12px 18px;
+  border-radius: 5px;
+  border: 1px solid var(--border);
+  font-size: 16px;
+  min-height: 50px;
+  margin: 2px;
+
+}
+.s__select::-ms-expand {
+  display: none; /*for IE10,11*/
+}
+      `,
       js: '',
     },
     {
@@ -45,6 +65,26 @@ export default function page(props) {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 8px;
+}
+
+/* 이 밑으로는 공통코드에도 적용되어 있어요. 이미 공통코드 적용하신 분은 무시해주세요. */
+/* select */
+.s__select {
+  -webkit-appearance: none; /* for chrome */
+  -moz-appearance: none; /*for firefox*/
+  appearance: none;
+  background: url("/image/image/icon_down_arrow.svg") no-repeat 95% 50%/18px auto;
+  background-color: #fff;
+  padding: 12px 54px 12px 18px;
+  border-radius: 5px;
+  border: 1px solid var(--border);
+  font-size: 16px;
+  min-height: 50px;
+  margin: 2px;
+
+}
+.s__select::-ms-expand {
+  display: none; /*for IE10,11*/
 }
       `,
       js: `

@@ -13,65 +13,65 @@ require("prismjs/plugins/toolbar/prism-toolbar");
 require("prismjs/plugins/show-language/prism-show-language"); //언어노출
 require("prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard"); //복사버튼
 
+const TabWrap = styled.div`
+display: flex;
+align-items: center;
+border-bottom: 1px solid var(--boarder);
+margin-top: 16px;
+margin-bottom: 16px;
+`;
+const Tab = styled.a`
+display: block;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+text-transform: capitalize;
+padding: 8px 16px 12px 16px;
+transform: translateY(1px);
+`;
+const HtmlWrap = styled.div`
+border: 1px solid var(--boarder);
+border-radius: 16px;
+padding: 12px;
+height: 650px;
+display: flex;
+align-items: center;
+transition: all 0.7s;
+margin: 0 auto;
+overflow: hidden;
+background-color: #323232;
+`;
+const HtmlInner = styled.iframe`
+width: 100%;
+position: relative;
+height: 100%;
+background-color: #fff;
+border-radius: 8px;
+`;
+const LangTitle = styled.li`
+font-size: 20px;
+font-weight: 700;
+margin-top: 36px;
+margin-bottom: 4px;
+`;
+const DownBtn = styled.a`
+display: inline-block;
+padding: 8px 24px;
+border-radius: 100px;
+font-size: 14px;
+background-color: var(--black);
+color: #fff;
+margin-right: 8px;
+margin-top: 24px;
+&:hover {
+  background-color: #3559e0;
+}
+`;
+
+
 export default function Contents(props) {
   const [index, setIndex] = useState(0);
-
-  const TabWrap = styled.div`
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid var(--boarder);
-    margin-top: 16px;
-    margin-bottom: 16px;
-  `;
-  const Tab = styled.a`
-    display: block;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    text-transform: capitalize;
-    padding: 8px 16px 12px 16px;
-    transform: translateY(1px);
-  `;
-  const HtmlWrap = styled.div`
-    border: 1px solid var(--boarder);
-    border-radius: 16px;
-    padding: 12px;
-    height: 650px;
-    display: flex;
-    align-items: center;
-    transition: all 0.7s;
-    margin: 0 auto;
-    overflow: hidden;
-    background-color: #323232;
-  `;
-  const HtmlInner = styled.iframe`
-    width: 100%;
-    position: relative;
-    height: 100%;
-    background-color: #fff;
-    border-radius: 8px;
-  `;
-  const LangTitle = styled.li`
-    font-size: 20px;
-    font-weight: 700;
-    margin-top: 36px;
-    margin-bottom: 4px;
-  `;
-  const DownBtn = styled.a`
-    display: inline-block;
-    padding: 8px 24px;
-    border-radius: 100px;
-    font-size: 14px;
-    background-color: var(--black);
-    color: #fff;
-    margin-right: 8px;
-    margin-top: 24px;
-    &:hover {
-      background-color: #3559e0;
-    }
-  `;
-
   const encodeHTML = (str) => {
     if (str !== undefined && str !== null && str !== "") {
       str = String(str);
@@ -262,7 +262,7 @@ input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none; /* for chrome */
   -moz-appearance: none; /*for firefox*/
   appearance: none;
-  background: url("/icon_down_arrow.svg") no-repeat 95% 50%/18px auto;
+  background: url("/image/icon_down_arrow.svg") no-repeat 95% 50%/18px auto;
   background-color: #fff;
   padding: 12px 54px 12px 18px;
   border-radius: 5px;
@@ -476,7 +476,7 @@ input[type="number"]::-webkit-inner-spin-button {
       <TabWrap>
         {data.map((item, innerIndex) => (
           <Tab
-            href="javascript:void(0)"
+            href="#/"
             key={innerIndex}
             style={{
               color: index === item.id ? "var(--black)" : "var(--gray)",

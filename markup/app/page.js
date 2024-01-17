@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 
 const Body = styled.div`
   margin-top: 40px;
+  width: calc(100% - 216px);
 `;
 const Title = styled.h2`
   color: var(--black, #181818);
@@ -101,7 +102,7 @@ export default function Home() {
       <TabWrap>
         {data.map((item, innerIndex) => (
           <Tab
-            href="javascript:void(0)"
+            href="#/"
             key={innerIndex}
             style={{
               color: index === item.id ? "var(--black)" : "var(--gray)",
@@ -120,7 +121,7 @@ export default function Home() {
         .filter((item) => index === item.id)
         .map((item, innerIndex) =>
           item.id === 0 ? (
-            <>
+            <div key={innerIndex}>
               <SubTitle>특징</SubTitle>
               <ReadMeListWrap>
                 <ReadMeList>
@@ -180,15 +181,15 @@ export default function Home() {
                   않았습니다.
                 </ReadMeList>
               </ReadMeListWrap>
-            </>
+            </div>
           ) : item.id === 1 ? (
-            <>
+            <div key={innerIndex}>
               <ReadMeListWrap>
                 <ReadMeList>여러분의 메일을 기다리는중!</ReadMeList>
               </ReadMeListWrap>
-            </>
+            </div>
           ) : (
-            <>
+            <div key={innerIndex}>
               <SubTitle>수정 중</SubTitle>
               <ReadMeListWrap>
                 <ReadMeList>아직 없어요!</ReadMeList>
@@ -197,7 +198,7 @@ export default function Home() {
               <ReadMeListWrap>
                 <ReadMeList>아직 없어요!</ReadMeList>
               </ReadMeListWrap>
-            </>
+            </div>
           )
         )}
     </Body>

@@ -68,11 +68,11 @@ export default function page(props) {
   height: 40px;
 }
 .swiper-button-prev:after{
-  background: url(/icon_left_arrow_w.svg) no-repeat;
+  background: url(/image/icon_left_arrow_w.svg) no-repeat;
   background-size: contain;
 }
 .swiper-button-next:after{
-  background: url(/icon_right_arrow_w.svg) no-repeat;
+  background: url(/image/icon_right_arrow_w.svg) no-repeat;
   background-size: contain;
 }
 .swiper-pagination-bullet-active{
@@ -149,9 +149,9 @@ export default function page(props) {
         </svg>
         <span></span>
     </div>
-    <a href="javascript:void(0)" class="autoplay-play-stop">
-        <img src="/icon_play_w.svg" alt="재생" class="autoplay-play">
-        <img src="/icon_play_stop_w.svg" alt="일시정지" class="autoplay-stop">
+    <a href="#" class="autoplay-play-stop">
+        <img src="/image/icon_play_w.svg" alt="재생" class="autoplay-play">
+        <img src="/image/icon_play_stop_w.svg" alt="일시정지" class="autoplay-stop">
     </a>
 </div>
       `,
@@ -185,11 +185,11 @@ export default function page(props) {
   height: 40px;
 }
 .swiper-button-prev:after{
-  background: url(/icon_left_arrow_w.svg) no-repeat;
+  background: url(/image/icon_left_arrow_w.svg) no-repeat;
   background-size: contain;
 }
 .swiper-button-next:after{
-  background: url(/icon_right_arrow_w.svg) no-repeat;
+  background: url(/image/icon_right_arrow_w.svg) no-repeat;
   background-size: contain;
 }
 .autoplay-play-stop{
@@ -352,9 +352,9 @@ export default function page(props) {
         <div class="arrow-box">
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
-            <a href="javascript:void(0)" class="autoplay-play-stop">
-                <img src="/icon_play_w.svg" alt="재생" class="autoplay-play">
-                <img src="/icon_play_stop_w.svg" alt="일시정지" class="autoplay-stop">
+            <a href="#" class="autoplay-play-stop">
+                <img src="/image/icon_play_w.svg" alt="재생" class="autoplay-play">
+                <img src="/image/icon_play_stop_w.svg" alt="일시정지" class="autoplay-stop">
             </a>
         </div>
     </div>
@@ -391,11 +391,11 @@ export default function page(props) {
   height: 40px;
 }
 .swiper-button-prev:after{
-  background: url(/icon_left_arrow_w.svg) no-repeat;
+  background: url(/image/icon_left_arrow_w.svg) no-repeat;
   background-size: contain;
 }
 .swiper-button-next:after{
-  background: url(/icon_right_arrow_w.svg) no-repeat;
+  background: url(/image/icon_right_arrow_w.svg) no-repeat;
   background-size: contain;
 }
 .autoplay-play-stop{
@@ -660,11 +660,11 @@ export default function page(props) {
   height: 40px;
 }
 .swiper-button-prev:after{
-  background: url(/icon_left_arrow.svg) no-repeat;
+  background: url(/image/icon_left_arrow.svg) no-repeat;
   background-size: contain;
 }
 .swiper-button-next:after{
-  background: url(/icon_right_arrow.svg) no-repeat;
+  background: url(/image/icon_right_arrow.svg) no-repeat;
   background-size: contain;
 }
 .swiper-pagination-bullet-active{

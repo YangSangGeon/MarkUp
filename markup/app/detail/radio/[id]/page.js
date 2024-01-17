@@ -42,20 +42,20 @@ export default function page(props) {
   width: 24px;
   height: 24px;
   display: block;
-  background: url(/icon_radio_off.svg);
+  background: url(/image/icon_radio_off.svg);
   background-size: contain;
   cursor: pointer;
 }
 .s__radio input:disabled + label {
-  background: url(/icon_radio_off_disabled.svg);
+  background: url(/image/icon_radio_off_disabled.svg);
   background-size: contain;
 }
 .s__radio input:checked + label {
-  background: url(/icon_radio_on.svg);
+  background: url(/image/icon_radio_on.svg);
   background-size: contain;
 }
 .s__radio input:checked:disabled + label {
-  background: url(/icon_radio_on_disabled.svg);
+  background: url(/image/icon_radio_on_disabled.svg);
   background-size: contain;
 }
 .s__radio input + label + label {

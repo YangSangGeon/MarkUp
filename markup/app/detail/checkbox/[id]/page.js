@@ -37,20 +37,20 @@ export default function page(props) {
   width: 24px;
   height: 24px;
   display: block;
-  background: url(/icon_checkbox_off.svg);
+  background: url(/image/icon_checkbox_off.svg);
   background-size: contain;
   cursor: pointer;
 }
 .s__checkbox input:disabled + label {
-  background: url(/icon_checkbox_off_disabled.svg);
+  background: url(/image/icon_checkbox_off_disabled.svg);
   background-size: contain;
 }
 .s__checkbox input:checked + label {
-  background: url(/icon_checkbox_on.svg);
+  background: url(/image/icon_checkbox_on.svg);
   background-size: contain;
 }
 .s__checkbox input:checked:disabled + label {
-  background: url(/icon_checkbox_on_disabled.svg);
+  background: url(/image/icon_checkbox_on_disabled.svg);
   background-size: contain;
 }
 .s__checkbox input + label + label {
@@ -105,20 +105,20 @@ export default function page(props) {
   width: 24px;
   height: 24px;
   display: block;
-  background: url(/icon_checkbox_off.svg);
+  background: url(/image/icon_checkbox_off.svg);
   background-size: contain;
   cursor: pointer;
 }
 .s__checkbox input:disabled + label {
-  background: url(/icon_checkbox_off_disabled.svg);
+  background: url(/image/icon_checkbox_off_disabled.svg);
   background-size: contain;
 }
 .s__checkbox input:checked + label {
-  background: url(/icon_checkbox_on.svg);
+  background: url(/image/icon_checkbox_on.svg);
   background-size: contain;
 }
 .s__checkbox input:checked:disabled + label {
-  background: url(/icon_checkbox_on_disabled.svg);
+  background: url(/image/icon_checkbox_on_disabled.svg);
   background-size: contain;
 }
 .s__checkbox input + label + label {

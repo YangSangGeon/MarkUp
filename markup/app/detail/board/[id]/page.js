@@ -21,7 +21,7 @@ export default function page(props) {
                       <li><a href="#"><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus dolorem hic explicabo vel rem non at id. Suscipit delectus, quisquam est sed cumque architecto doloremque asperiores nostrum quas quo et.</span><span>2023.01.01</span></a></li>
                       <li><a href="#"><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repel  </span><span>2023.01.01</span></a></li>
                   </ul>
-                  <a class="board01__more-btn" href="#">more<img src="/icon_plus.svg" alt="더보기"></a>
+                  <a class="board01__more-btn" href="#">more<img src="/image/icon_plus.svg" alt="더보기"></a>
               </div>
               <div class="board01__list">
                   <p class="board01__title">title</p>
@@ -32,7 +32,7 @@ export default function page(props) {
                       <li><a href="#"><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus dolorem hic explicabo vel rem non at id. Suscipit delectus, quisquam est sed cumque architecto doloremque asperiores nostrum quas quo et.</span><span>2023.01.01</span></a></li>
                       <li><a href="#"><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus dolorem hic explicabo vel rem non at id. Suscipit delectus, quisquam est sed cumque architecto doloremque asperiores nostrum quas quo et.</span><span>2023.01.01</span></a></li>
                   </ul>
-                  <a class="board01__more-btn" href="#">more<img src="/icon_plus.svg" alt="더보기"></a>
+                  <a class="board01__more-btn" href="#">more<img src="/image/icon_plus.svg" alt="더보기"></a>
               </div>
           </div>
       </div>
