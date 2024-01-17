@@ -451,7 +451,7 @@ input[type="number"]::-webkit-inner-spin-button {
       <TabWrap>
         {data.map((item, innerIndex) => (
           <Tab
-            href="#"
+            href="javascript:void(0)"
             key={innerIndex}
             style={{
               color: index === item.id ? "var(--black)" : "var(--gray)",

@@ -5,6 +5,7 @@ export default function page(props) {
   const data = [
     {
       title: "Header_Mobile01 (Mobile Only)",
+      subTitle:"PC, 태블릿에서는 숨겨집니다",
       img: "category/img_header_mobile01.svg",
       html: `
 <header class="s__header">
@@ -170,6 +171,7 @@ header .s__row {
     },
     {
       title: "Header_Mobile02 (Mobile Only)",
+      subTitle:"PC, 태블릿에서는 숨겨집니다",
       img: "category/img_header_mobile02.svg",
       html: `
 <header class="s__header">

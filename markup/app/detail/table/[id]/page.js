@@ -5,6 +5,7 @@ export default function page(props) {
   const data = [
     {
       title: "Table01",
+      subTitle: "ul, li, div 태그로 만들어진 테이블입니다.",
       cssFile: [],
       jsFile: [],
       img: "category/img_table01.svg",
@@ -116,10 +117,11 @@ export default function page(props) {
 }
 
       `,
-      js: '',
+      js: "",
     },
     {
       title: "Table02",
+      subTitle: "ul, li, div 태그로 만들어진 테이블입니다.",
       cssFile: [],
       jsFile: [],
       img: "category/img_table02.svg",
@@ -229,10 +231,11 @@ export default function page(props) {
           font-weight: 700;
       }
       `,
-      js: '',
+      js: "",
     },
     {
       title: "Table03",
+      subTitle: "table 태그로 만들어진 테이블입니다.",
       cssFile: [],
       jsFile: [],
       img: "category/img_table03.svg",
@@ -310,7 +313,7 @@ export default function page(props) {
       }
       /* table 끝 */
       `,
-      js: '',
+      js: "",
     },
   ];
 

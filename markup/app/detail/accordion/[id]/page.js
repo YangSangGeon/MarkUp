@@ -17,16 +17,13 @@ export default function page(props) {
                     <ul class="s__accordion01" data-accordion="accordion01">
                         <li class="s__accordion01-title">
                             <a href="javascript:void(0)">
-                                <span>아코디언타이틀</span>
+                                <span>Accordion Title</span>
                                 <img src="/icon_down_arrow.svg" alt="열기" title="열기">
                             </a>
                         </li>
                         <li class="s__accordion01-contents">
                             <div>
-                                <p>아코디언텍스트</p>
-                                <p>아코디언텍스트</p>
-                                <p>아코디언텍스트</p>
-                                <p>아코디언텍스트</p>
+                                <p>Welcome. This is the accordion area. Welcome. This is the accordion area.</p>
                             </div>
                         </li>
                     </ul>
@@ -35,16 +32,16 @@ export default function page(props) {
                     <ul class="s__accordion01" data-accordion="accordion01">
                         <li class="s__accordion01-title">
                             <a href="javascript:void(0)">
-                                <span>아코디언타이틀</span>
+                                <span>Accordion Title</span>
                                 <img src="/icon_down_arrow.svg" alt="열기" title="열기">
                             </a>
                         </li>
                         <li class="s__accordion01-contents">
                             <div>
-                                <p>아코디언텍스트</p>
-                                <p>아코디언텍스트</p>
-                                <p>아코디언텍스트</p>
-                                <p>아코디언텍스트</p>
+                                <p>Welcome. This is the accordion area.</p>
+                                <p>Welcome. This is the accordion area.</p>
+                                <p>Welcome. This is the accordion area.</p>
+                                <p>Welcome. This is the accordion area.</p>
                             </div>
                         </li>
                     </ul>
@@ -53,16 +50,16 @@ export default function page(props) {
                     <ul class="s__accordion01" data-accordion="accordion01">
                         <li class="s__accordion01-title">
                             <a href="javascript:void(0)">
-                                <span>아코디언타이틀</span>
+                                <span>Accordion Title</span>
                                 <img src="/icon_down_arrow.svg" alt="열기" title="열기">
                             </a>
                         </li>
                         <li class="s__accordion01-contents">
                             <div>
-                                <p>아코디언텍스트</p>
-                                <p>아코디언텍스트</p>
-                                <p>아코디언텍스트</p>
-                                <p>아코디언텍스트</p>
+                                <p>Welcome. This is the accordion area.</p>
+                                <p>Welcome. This is the accordion area.</p>
+                                <p>Welcome. This is the accordion area.</p>
+                                <p>Welcome. This is the accordion area.</p>
                             </div>
                         </li>
                     </ul>
@@ -71,16 +68,16 @@ export default function page(props) {
                     <ul class="s__accordion01" data-accordion="accordion01">
                         <li class="s__accordion01-title">
                             <a href="javascript:void(0)">
-                                <span>아코디언타이틀</span>
+                                <span>Accordion Title</span>
                                 <img src="/icon_down_arrow.svg" alt="열기" title="열기">
                             </a>
                         </li>
                         <li class="s__accordion01-contents">
                             <div>
-                                <p>아코디언텍스트</p>
-                                <p>아코디언텍스트</p>
-                                <p>아코디언텍스트</p>
-                                <p>아코디언텍스트</p>
+                                <p>Welcome. This is the accordion area.</p>
+                                <p>Welcome. This is the accordion area.</p>
+                                <p>Welcome. This is the accordion area.</p>
+                                <p>Welcome. This is the accordion area.</p>
                             </div>
                         </li>
                     </ul>

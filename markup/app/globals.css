@@ -242,3 +242,34 @@ footer {
 body {
   font-family: "Pretendard", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
+/* 모바일 화면일 경우 감춤 */
+.mobile_only {
+  display: none;
+}
+@media all and (max-width:767px) {
+  header, footer, .m_container{
+    display: none;
+  }
+  .mobile_only {
+    display: block;
+  }
+  .mobile_main_title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+  }
+  .mobile_main_title img{
+    margin-bottom: 24px;
+  }
+  .mobile_main_title p {
+    text-align: center;
+    font-size: 16px;
+  }
+}
