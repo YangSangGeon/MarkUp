@@ -499,7 +499,7 @@ input[type="number"]::-webkit-inner-spin-button {
               <HtmlInner ref={iframeRef} title="example-iframe"></HtmlInner>
             </HtmlWrap>
           ) : (
-            <div>
+            <div key={innerIndex}>
               {props.contentsDownload &&
                 props.contentsDownload.map((item, index) => (
                   <DownBtn key={index} href={item.link} download>
