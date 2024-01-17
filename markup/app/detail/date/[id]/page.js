@@ -5,8 +5,6 @@ export default function page(props) {
   const data = [
     {
       title: "Date01",
-      subTitle:
-        "해당 페이지에서는 버그로 간혹 표현이 안됩니다. 다만 가져가서 사용하시면 잘 나옵니다!",
       cssFile: ["css/daterangepicker.css"],
       jsFile: [
         "js/jquery.min.js",
@@ -15,15 +13,9 @@ export default function page(props) {
       ],
       img: "category/img_date01.svg",
       html: `
-<section>
-  <div class="s__container">
-    <div class="s__row">
-      <div class="s__date-wrap">
-        <input type="text" class="s__input s__date">
-      </div>
-    </div>
-  </div>
-</section>
+<div class="s__date-wrap">
+  <input type="text" class="s__input s__date">
+</div>
       `,
       css: `
 /* 데이트피커 */
@@ -87,8 +79,6 @@ export default function page(props) {
     },
     {
       title: "Date02",
-      subTitle:
-        "해당 페이지에서는 버그로 간혹 표현이 안됩니다. 다만 가져가서 사용하시면 잘 나옵니다!",
       cssFile: ["css/daterangepicker.css"],
       jsFile: [
         "js/jquery.min.js",
@@ -97,15 +87,9 @@ export default function page(props) {
       ],
       img: "category/img_date02.svg",
       html: `
-<section>
-  <div class="s__container">
-    <div class="s__row">
-      <div class="s__date-wrap">
-        <input type="text" name="daterange" class="s__input s__date-range" value="" />
-      </div>
-    </div>
-  </div>
-</section>
+<div class="s__date-wrap">
+  <input type="text" name="daterange" class="s__input s__date-range" value="" />
+</div>
       `,
       css: `
 /* 데이트피커 */

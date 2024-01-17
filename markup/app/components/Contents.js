@@ -72,20 +72,19 @@ export default function Contents(props) {
     }
   `;
 
-const encodeHTML = (str) => {
-  if (str !== undefined && str !== null && str !== "") {
-    str = String(str);
+  const encodeHTML = (str) => {
+    if (str !== undefined && str !== null && str !== "") {
+      str = String(str);
 
-    str = str.replace(/<script[^>]*>([\S\s]*?)<\/script>/gim, "");
-    str = str.replace(/<\/?\w(?:[^"'>]|"[^"]*"|'[^']*')*>/gim, "");
-    var element = document.createElement("div");
-    element.innerHTML = str;
-    str = element.textContent;
-    element.textContent = "";
-  }
-  return str;
+      str = str.replace(/<script[^>]*>([\S\s]*?)<\/script>/gim, "");
+      str = str.replace(/<\/?\w(?:[^"'>]|"[^"]*"|'[^']*')*>/gim, "");
+      var element = document.createElement("div");
+      element.innerHTML = str;
+      str = element.textContent;
+      element.textContent = "";
+    }
+    return str;
   };
-  
 
   const componentsHtml = DOMPurify.sanitize(props.contentsHtml); //html
   const componentsCss = DOMPurify.sanitize(props.contentsCss); //css
@@ -427,23 +426,49 @@ input[type="number"]::-webkit-inner-spin-button {
           iframeDocument.head.appendChild(link);
         });
       }
-      if (props.contentsJsFile && props.contentsJsFile.length !== 0) {
-        //js 파일 첨부되어있을때
-        props.contentsJsFile.forEach((e) => {
-          const script = iframeDocument.createElement("script");
-          script.src = "/" + e;
-          iframeDocument.head.appendChild(script);
-        });
-      }
       //style css
       const styleElement2 = iframeDocument.createElement("style");
       styleElement2.innerHTML = componentsCss;
       iframeDocument.head.appendChild(styleElement2);
 
-      setTimeout(() => {
+      if (props.contentsJsFile && props.contentsJsFile.length !== 0) {
+        //js 파일 첨부되어있을때
+        // 아이프레임에 스크립트를 삽입하는 함수를 Promise로 감싸기
+        function loadScript(src, document) {
+          return new Promise((resolve, reject) => {
+            const script = document.createElement("script");
+            script.src = "/" + src;
+            script.onload = resolve;
+            script.onerror = reject;
+            document.body.appendChild(script);
+          });
+        }
+
+        // 모든 스크립트를 순차적으로 로드하고 완료 후에 다음 단계로 진행
+        async function loadScriptsSequentially(
+          contentsJsFiles,
+          iframeDocument
+        ) {
+          for (const e of contentsJsFiles) {
+            await loadScript(e, iframeDocument);
+          }
+        }
+
+        loadScriptsSequentially(props.contentsJsFile, iframeDocument)
+          .then(() => {
+            // 여기에 스크립트가 모두 로드된 후에 실행해야 할 코드를 작성
+            scriptElement.innerHTML = encodeJs; //js
+            iframeDocument.body.appendChild(scriptElement);
+          })
+          .catch((error) => {
+            // 오류 처리
+            console.error("Error loading scripts:", error);
+          });
+        
+      } else {
         scriptElement.innerHTML = encodeJs; //js
         iframeDocument.body.appendChild(scriptElement);
-      }, 100);
+      }
     }
   }, [index]);
   return (
@@ -504,9 +529,7 @@ input[type="number"]::-webkit-inner-spin-button {
                   <div className="Code">
                     <pre className="line-numbers">
                       {/* <code className={`language-javascript`} dangerouslySetInnerHTML={{ __html: componentsJs }}></code> */}
-                      <code className={`language-javascript`}>
-                        {encodeJs}
-                      </code>
+                      <code className={`language-javascript`}>{encodeJs}</code>
                     </pre>
                   </div>
                 </>

@@ -134,7 +134,8 @@ export default function Home() {
                 <ReadMeList>
                   <strong>라이브러리 의존성 최소화 :</strong> 대부분 바닐라
                   JavaScript로 개발되어 라이브러리 의존성을 최소화했습니다.(단,
-                  Swiper, Chart, date 는 전체적으로 외부라이브러리 사용했습니다.)
+                  Swiper, Chart, date 는 전체적으로 외부라이브러리
+                  사용했습니다.)
                 </ReadMeList>
               </ReadMeListWrap>
               <SubTitle>공통 코드 다운로드</SubTitle>
@@ -188,12 +189,13 @@ export default function Home() {
             </>
           ) : (
             <>
-              <SubTitle>수정중</SubTitle>
+              <SubTitle>수정 중</SubTitle>
               <ReadMeListWrap>
-                <ReadMeList>
-                  간헐적으로 외부라이브러리 적용 파일들 MarkUp 화면에서 적용
-                  안되는 현상
-                </ReadMeList>
+                <ReadMeList>아직 없어요!</ReadMeList>
+              </ReadMeListWrap>
+              <SubTitle>확인 중</SubTitle>
+              <ReadMeListWrap>
+                <ReadMeList>아직 없어요!</ReadMeList>
               </ReadMeListWrap>
             </>
           )
