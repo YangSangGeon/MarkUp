@@ -12,13 +12,15 @@ export default function page(props) {
   <div class="s__container">
       <div class="s__row">
           <!-- 선차트 -->
-          <h1>선차트</h1>
+          <h1 style="margin-top: 32px; margin-bottom: 16px; text-align: center; font-weight: bold; font-size: 24px;">Line</h1>
           <div id="myChart01" style="width: 100%; height:250px;"></div>
+
           <!-- 도넛차트 -->
-          <h1>도넛차트</h1>
+          <h1 style="margin-top: 32px; margin-bottom: 16px; text-align: center; font-weight: bold; font-size: 24px;">Pie</h1>
           <div id="myChart02" style="width: 100%; height:250px;"></div>
+
           <!-- 바차트 -->
-          <h1>바차트</h1>
+          <h1 style="margin-top: 32px; margin-bottom: 16px; text-align: center; font-weight: bold; font-size: 24px;">Category</h1>
           <div id="myChart03" style="width: 100%; height:250px;"></div>
       </div>
   </div>
@@ -232,17 +234,17 @@ export default function page(props) {
 <div class="s__container">
     <div class="s__row">
           <!-- 선차트 -->
-          <h1>선차트</h1>
+          <h1 style="margin-top: 32px; margin-bottom: 16px; text-align: center; font-weight: bold; font-size: 24px;">Line</h1>
           <div style="width: 100%;height:150px;"><canvas id="myChart01"></canvas></div>
           <div id="legend-container01"></div>
 
           <!-- 도넛차트 -->
-          <h1>도넛차트</h1>
+          <h1 style="margin-top: 32px; margin-bottom: 16px; text-align: center; font-weight: bold; font-size: 24px;">Doughnut</h1>
           <div style="width: 100%;height:250px;"><canvas id="myChart02"></canvas></div>
           <div id="legend-container02"></div>
 
           <!-- 바차트 -->
-          <h1>바차트</h1>
+          <h1 style="margin-top: 32px; margin-bottom: 16px; text-align: center; font-weight: bold; font-size: 24px;">Bar</h1>
           <div style="width: 100%;height:250px;"><canvas id="myChart03"></canvas></div>
       </div>
   </div>
