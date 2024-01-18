@@ -23,7 +23,7 @@ export default function page(props) {
   -webkit-appearance: none; /* for chrome */
   -moz-appearance: none; /*for firefox*/
   appearance: none;
-  background: url("/image/image/icon_down_arrow.svg") no-repeat 95% 50%/18px auto;
+  background: url("/image/icon_down_arrow.svg") no-repeat 95% 50%/18px auto;
   background-color: #fff;
   padding: 12px 54px 12px 18px;
   border-radius: 5px;
@@ -73,7 +73,7 @@ export default function page(props) {
   -webkit-appearance: none; /* for chrome */
   -moz-appearance: none; /*for firefox*/
   appearance: none;
-  background: url("/image/image/icon_down_arrow.svg") no-repeat 95% 50%/18px auto;
+  background: url("/image/icon_down_arrow.svg") no-repeat 95% 50%/18px auto;
   background-color: #fff;
   padding: 12px 54px 12px 18px;
   border-radius: 5px;
