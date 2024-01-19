@@ -109,12 +109,12 @@ export default function page(props) {
             overflow: hidden;
             transition: max-height 0.3s;
         }
-        .active-on .s__accordion01-contents{
+        .is-active .s__accordion01-contents{
             border-bottom: 1px solid var(--border);
             /* max-height는 가변적 */
             max-height: 200px;
         }
-        .active-on .s__accordion01-title > a > img{
+        .is-active .s__accordion01-title > a > img{
             transform: rotate(180deg);
         }
         .s__accordion01-contents > div {
@@ -128,15 +128,15 @@ export default function page(props) {
         accordionAList.forEach((e) => {
           const thisAccordionName = e.parentNode.parentNode.dataset.accordion;
           e.addEventListener("click", () => {
-            if (e.parentNode.parentNode.classList.contains("active-on")) {
-              e.parentNode.parentNode.classList.remove("active-on");
+            if (e.parentNode.parentNode.classList.contains("is-active")) {
+              e.parentNode.parentNode.classList.remove("is-active");
             } else {
               accordionList.forEach((t) => {
                 if (t.dataset.accordion === thisAccordionName) {
-                  t.classList.remove("active-on");
+                  t.classList.remove("is-active");
                 }
               });
-              e.parentNode.parentNode.classList.add("active-on");
+              e.parentNode.parentNode.classList.add("is-active");
             }
           });
         });`

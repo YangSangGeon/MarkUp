@@ -106,7 +106,7 @@ header.s__header .s__row {
   padding: 0 24px;
   font-weight: 500;
 }
-.pc-menu__step1.menu-on + ul,
+.pc-menu__step1.is-open + ul,
 .menu-link > li:hover > ul {
   display: block;
   border: 1px solid var(--border);
@@ -115,14 +115,14 @@ header.s__header .s__row {
   animation-duration: 2s;
   border-radius: 0 0 4px 4px;
 }
-.pc-menu__step1.menu-on + ul a,
+.pc-menu__step1.is-open + ul a,
 .menu-link > li:hover > ul a {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 8px;
 }
-.pc-menu__step1.menu-on + ul li:last-child a,.menu-link > li:hover > ul li:last-child a {
+.pc-menu__step1.is-open + ul li:last-child a,.menu-link > li:hover > ul li:last-child a {
   padding-bottom: 16px;
 }
 .pc-menu {
@@ -157,9 +157,9 @@ header.s__header .s__row {
              const p = pcMenuBtn[i];
              p.addEventListener("focusin", () => {
                pcMenuBtn.forEach((e) => {
-                 e.classList.remove("menu-on");
+                 e.classList.remove("is-open");
                });
-               p.classList.add("menu-on");
+               p.classList.add("is-open");
              });
            }
            let preMenu = document.querySelector(".s__logo"); //pc메뉴의 이전요소
@@ -167,13 +167,13 @@ header.s__header .s__row {
            preMenu &&
              preMenu.addEventListener("focusin", () => {
                pcMenuBtn.forEach((e) => {
-                 e.classList.remove("menu-on");
+                 e.classList.remove("is-open");
                });
              });
            nextMenu &&
              nextMenu.addEventListener("focusin", () => {
                pcMenuBtn.forEach((e) => {
-                 e.classList.remove("menu-on");
+                 e.classList.remove("is-open");
                });
              });`
       
@@ -283,7 +283,7 @@ header.s__header .s__row {
   height: 0;
   transition: all 0.2s;
 }
-.menu-link:hover .pc-menu__step1 + ul, .s__pc-header-wrap.menu-on .menu-link ul {
+.menu-link:hover .pc-menu__step1 + ul, .s__pc-header-wrap.is-open .menu-link ul {
   height: auto;
   max-height: 200px;
 }
@@ -297,7 +297,7 @@ header.s__header .s__row {
   transition: opacity 0.3s;
   transition-delay: 0.3s;
 }
-.menu-link:hover .pc-menu__step1 + ul a, .s__pc-header-wrap.menu-on .menu-link ul a {
+.menu-link:hover .pc-menu__step1 + ul a, .s__pc-header-wrap.is-open .menu-link ul a {
   opacity: 1;
 }
 .pc-menu {
@@ -320,7 +320,7 @@ header.s__header .s__row {
   transition: all 0.3s;
   border-bottom: 1px solid var(--border);
 }
-.s__pc-header-wrap.menu-on + .pc-menu-bg{
+.s__pc-header-wrap.is-open + .pc-menu-bg{
   top: 0;
 }
 
@@ -350,25 +350,25 @@ header.s__header .s__row {
         for (let i = 0; i < pcMenuBtn.length; i++) {
           const p = pcMenuBtn[i];
           p.addEventListener("focusin", () => {
-            pcMenu.classList.add("menu-on");
+            pcMenu.classList.add("is-open");
           });
           p.addEventListener("mouseover", () => {
-            pcMenu.classList.add("menu-on");
+            pcMenu.classList.add("is-open");
           });
         }
         header.addEventListener("mouseleave", () => {
-          pcMenu.classList.remove("menu-on");
+          pcMenu.classList.remove("is-open");
         });
         let preMenu = document.querySelector(".s__logo"); //pc메뉴의 이전요소
         let nextMenu = document.querySelector(".s__login"); //pc메뉴의 다음요소
         preMenu.addEventListener("focusin", () => {
-          pcMenu.classList.remove("menu-on");
+          pcMenu.classList.remove("is-open");
         });
         nextMenu.addEventListener("focusin", () => {
-          pcMenu.classList.remove("menu-on");
+          pcMenu.classList.remove("is-open");
         });
         lastMenuLink.addEventListener("focusin", () => {
-          pcMenu.classList.add("menu-on");
+          pcMenu.classList.add("is-open");
         });
       `,
     },

@@ -13,7 +13,7 @@ export default function page(props) {
   <div class="s__container mobile-menu">
       <div class="s__row">
           <a href="#" class="s__logo"><img src="/image/icon_logo.svg" alt="logo" title="홈으로 이동"></a>
-          <a href="#" class="menu"><img class="icon-menu-on" src="/image/icon_menu.svg" alt="메뉴열기"><img class="icon-menu-off" src="/image/icon_close.svg" alt="메뉴닫기"></a>
+          <a href="#" class="menu"><img class="icon-is-open" src="/image/icon_menu.svg" alt="메뉴열기"><img class="icon-menu-off" src="/image/icon_close.svg" alt="메뉴닫기"></a>
       </div>
       <ul class="mobile-menu__list">
           <li>
@@ -80,13 +80,13 @@ header .s__row {
 .mobile-menu ul ul {
   display: none;
 }
-.mobile-menu ul ul.menu-on {
+.mobile-menu ul ul.is-open {
   display: block;
 }
 .mobile-menu__list {
   display: none;
 }
-.mobile-menu__list.menu-on {
+.mobile-menu__list.is-open {
   display: block;
   height: 100vh;
   background-color: #fff;
@@ -98,7 +98,7 @@ header .s__row {
   padding: 16px;
   /* border-bottom: 1px solid var(--border); */
 }
-.mobile-menu__step1.menu-on + ul {
+.mobile-menu__step1.is-open + ul {
   display: block;
   text-align: center;
 }
@@ -109,7 +109,7 @@ header .s__row {
   width: 100%;
   padding: 12px;
 }
-.mobile-menu__step1.menu-on + ul {
+.mobile-menu__step1.is-open + ul {
   /* border-bottom: 1px solid var(--border); */
   background-color: #f7f7f7;
 }
@@ -117,10 +117,10 @@ header .s__row {
 .icon-menu-off{
   display: none;
 }
-.menu.menu-on .icon-menu-on{
+.menu.is-open .icon-is-open{
   display: none;
 }
-.menu.menu-on .icon-menu-off{
+.menu.is-open .icon-menu-off{
   display: block;
 }
 
@@ -151,21 +151,21 @@ header .s__row {
           m.addEventListener("click", () => {
             menuBtn.forEach((e) => {
               if (e == m) {
-                e.classList.toggle("menu-on");
+                e.classList.toggle("is-open");
               } else {
-                e.classList.remove("menu-on");
+                e.classList.remove("is-open");
               }
             });
           });
         }
         mobileMenuBtn.addEventListener("click", () => {
-          if (mobileMenuList.classList.contains("menu-on")) {
+          if (mobileMenuList.classList.contains("is-open")) {
             menuBtn.forEach((e) => {
-              e.classList.remove("menu-on");
+              e.classList.remove("is-open");
             });
           }
-          mobileMenuList.classList.toggle("menu-on");
-          mobileMenuBtn.classList.toggle("menu-on");
+          mobileMenuList.classList.toggle("is-open");
+          mobileMenuBtn.classList.toggle("is-open");
         });
       `,
     },
@@ -179,7 +179,7 @@ header .s__row {
   <div class="s__container mobile-menu">
       <div class="s__row">
           <a href="#" class="s__logo"><img src="/image/icon_logo.svg" alt="logo" title="홈으로 이동"></a>
-          <a href="#" class="menu"><img class="icon-menu-on" src="/image/icon_menu.svg" alt="메뉴열기"><img class="icon-menu-off" src="/image/icon_close.svg" alt="메뉴닫기"></a>
+          <a href="#" class="menu"><img class="icon-is-open" src="/image/icon_menu.svg" alt="메뉴열기"><img class="icon-menu-off" src="/image/icon_close.svg" alt="메뉴닫기"></a>
       </div>
       <ul class="mobile-menu__list">
           <li>
@@ -251,13 +251,13 @@ header .s__row {
 .mobile-menu ul ul {
   display: none;
 }
-.mobile-menu ul ul.menu-on {
+.mobile-menu ul ul.is-open {
   display: block;
 }
 .mobile-menu__list {
   display: none;
 }
-.mobile-menu__list.menu-on {
+.mobile-menu__list.is-open {
   display: block;
   height: 100vh;
   background-color: #fff;
@@ -273,10 +273,10 @@ header .s__row {
   width: 24px;
   transition: all 0.3s;
 }
-.mobile-menu__step1.menu-on > img {
+.mobile-menu__step1.is-open > img {
   transform: rotate(180deg);
 }
-.mobile-menu__step1.menu-on + ul {
+.mobile-menu__step1.is-open + ul {
   display: block;
   text-align: center;
 }
@@ -291,20 +291,20 @@ header .s__row {
   width: 24px;
   transition: all 0.3s;
 }
-.mobile-menu__step1.menu-on + ul {
+.mobile-menu__step1.is-open + ul {
   border-bottom: 1px solid var(--border);
   background-color: #f7f7f7;
 }
-.mobile-menu__step2.menu-on > img {
+.mobile-menu__step2.is-open > img {
   transform: rotate(180deg);
 }
 .icon-menu-off {
   display: none;
 }
-.menu.menu-on .icon-menu-on {
+.menu.is-open .icon-is-open {
   display: none;
 }
-.menu.menu-on .icon-menu-off {
+.menu.is-open .icon-menu-off {
   display: block;
 }
 .mobile-menu__step3{
@@ -317,7 +317,7 @@ header .s__row {
 .mobile-menu__step2 + ul {
   background-color: #fff;
 }
-.mobile-menu__step2.menu-on + ul {
+.mobile-menu__step2.is-open + ul {
   display: block;
 }
 @media (max-width: 1600px) {
@@ -345,9 +345,9 @@ header .s__row {
           m.addEventListener("click", () => {
             menuBtn.forEach((e) => {
               if (e == m) {
-                e.classList.toggle("menu-on");
+                e.classList.toggle("is-open");
               } else {
-                e.classList.remove("menu-on");
+                e.classList.remove("is-open");
               }
             });
           });
@@ -357,22 +357,22 @@ header .s__row {
           m.addEventListener("click", () => {
             menuBtnStep2.forEach((e) => {
               if (e == m) {
-                e.classList.toggle("menu-on");
+                e.classList.toggle("is-open");
               } else {
-                e.classList.remove("menu-on");
+                e.classList.remove("is-open");
               }
             });
           });
         }
 
         mobileMenuBtn.addEventListener("click", () => {
-          if (mobileMenuList.classList.contains("menu-on")) {
+          if (mobileMenuList.classList.contains("is-open")) {
             menuBtn.forEach((e) => {
-              e.classList.remove("menu-on");
+              e.classList.remove("is-open");
             });
           }
-          mobileMenuList.classList.toggle("menu-on");
-          mobileMenuBtn.classList.toggle("menu-on");
+          mobileMenuList.classList.toggle("is-open");
+          mobileMenuBtn.classList.toggle("is-open");
         });
       `,
     },

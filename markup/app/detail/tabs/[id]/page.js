@@ -13,7 +13,7 @@ export default function page(props) {
     <div class="s__container">
         <div class="s__row">
             <div class="s__tab01-wrap">
-                <div class="s__tab01-box active-on" data-tab="tab01">
+                <div class="s__tab01-box is-active" data-tab="tab01">
                     <a href="#" class="s__tab01-title">title1</a>
                     <ul class="s__tab01-contents">
                         <li>
@@ -78,7 +78,7 @@ export default function page(props) {
                 </div>
             </div>
             <div class="s__tab01-wrap">
-                <div class="s__tab01-box active-on" data-tab="tab02">
+                <div class="s__tab01-box is-active" data-tab="tab02">
                     <a href="#" class="s__tab01-title">title1</a>
                     <ul class="s__tab01-contents">
                         <li>
@@ -134,7 +134,7 @@ export default function page(props) {
       .s__tab01-box .s__tab01-contents, .s__tab01-box .s__tab01-more-btn{
           display: none;
       }
-      .s__tab01-box.active-on .s__tab01-contents, .s__tab01-box.active-on .s__tab01-more-btn{
+      .s__tab01-box.is-active .s__tab01-contents, .s__tab01-box.is-active .s__tab01-more-btn{
           display: block;
       }
       .s__tab01-title{
@@ -152,7 +152,7 @@ export default function page(props) {
           border-top: 1px solid var(--border);
       
       }
-      .active-on .s__tab01-title{
+      .is-active .s__tab01-title{
           font-weight: 600;
           border-bottom: 3px solid var(--main);
           color: var(--main);
@@ -203,10 +203,10 @@ export default function page(props) {
           e.addEventListener("click", () => {
             tabList.forEach((t) => {
               if (t.dataset.tab === thisTabName) {
-                t.classList.remove("active-on");
+                t.classList.remove("is-active");
               }
             });
-            e.classList.add("active-on");
+            e.classList.add("is-active");
           });
         });
       `,
@@ -222,13 +222,13 @@ export default function page(props) {
         <div class="s__row">
             <div class="s__tab02-wrap">
                 <div class="s__tab02-title-wrap">
-                    <a href="#" class="s__tab02-title active-on" data-tab="tab01">title1</a>
+                    <a href="#" class="s__tab02-title is-active" data-tab="tab01">title1</a>
                     <a href="#" class="s__tab02-title" data-tab="tab02">title2</a>
                     <a href="#" class="s__tab02-title" data-tab="tab03">title3</a>
                     <a href="#" class="s__tab02-title" data-tab="tab04">title4</a>
                 </div>
                 <div class="s__tab02-contents-wrap">
-                    <div id="tab01" class="s__teb-contents active-on">
+                    <div id="tab01" class="s__teb-contents is-active">
                         contents1
                     </div>
                     <div id="tab02" class="s__teb-contents">
@@ -261,7 +261,7 @@ font-weight: 400;
 padding: 12px 16px;
 display: block;
 }
-.s__tab02-title-wrap .s__tab02-title.active-on{
+.s__tab02-title-wrap .s__tab02-title.is-active{
 border-bottom: 2px solid var(--main);
 color: var(--main);
 font-weight: 700;
@@ -269,7 +269,7 @@ font-weight: 700;
 .s__teb-contents {
     display: none;
 }
-.s__teb-contents.active-on{
+.s__teb-contents.is-active{
 display: block;
 }
       `,
@@ -281,13 +281,13 @@ display: block;
           const thisTabName = e.dataset.tab;
           e.addEventListener("click", () => {
             tabList02.forEach((t) => {
-              t.classList.remove("active-on");
+              t.classList.remove("is-active");
             });
             tabContents02.forEach((t) => {
-              t.classList.remove("active-on");
+              t.classList.remove("is-active");
             });
-            e.classList.add("active-on");
-            document.getElementById(thisTabName).classList.add("active-on");
+            e.classList.add("is-active");
+            document.getElementById(thisTabName).classList.add("is-active");
           });
         });
       `,

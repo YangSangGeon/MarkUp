@@ -517,7 +517,7 @@ export default function page(props) {
       jsFile: ["js/swiper-bundle.min.js"],
       img: "category/img_modal03.svg",
       html: `
-<div class="popup-slider active-on">
+<div class="popup-slider is-active">
     <button class="popup-slider-close-btn"><img src="/image/icon_close_w.svg" alt="닫기" title="닫기"></button>
     <!-- Slider main container -->
     <div class="swiper" id="popupSlider">
@@ -532,7 +532,7 @@ export default function page(props) {
 </div>
       `,
       css: `
-.popup-slider.active-on {
+.popup-slider.is-active {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -639,7 +639,7 @@ export default function page(props) {
 
         // 광고팝업닫기
         popupSliderCloseBtn.addEventListener("click", () => {
-          popupSlider.classList.remove("active-on");
+          popupSlider.classList.remove("is-active");
         });
 
         function toggleMainPopup() {
@@ -773,7 +773,7 @@ export default function page(props) {
                 );
 
                 if (popupSlideBtns.length == popupSlideclickBtns.length) {
-                  popupSlider.classList.remove("active-on");
+                  popupSlider.classList.remove("is-active");
                 } else {
                   popupSwiper.slideNext();
                 }
