@@ -14,111 +14,111 @@ export default function page(props) {
         <div class="s__row">
             <div class="s__tab01-wrap">
                 <div class="s__tab01-box is-active" data-tab="tab01">
-                    <a href="#!" class="s__tab01-title">title1</a>
+                    <button class="s__tab01-title">title1</button>
                     <ul class="s__tab01-contents">
                         <li>
-                            <a href=""><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span><span>2024.01.01</span></a>
+                            <a href="#!"><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span><span>2024.01.01</span></a>
                         </li>
                         <li>
-                            <a href=""><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span><span>2024.01.01</span></a>
+                            <a href="#!"><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span><span>2024.01.01</span></a>
                         </li>
                         <li>
-                            <a href=""><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span><span>2024.01.01</span></a>
+                            <a href="#!"><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span><span>2024.01.01</span></a>
                         </li>
                         <li>
-                            <a href=""><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span><span>2024.01.01</span></a>
+                            <a href="#!"><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span><span>2024.01.01</span></a>
                         </li>
                         <li>
-                            <a href=""><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span><span>2024.01.01</span></a>
+                            <a href="#!"><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span><span>2024.01.01</span></a>
                         </li>
                     </ul>
-                    <a href="" class="s__tab01-more-btn"><img src="/image/icon_plus.svg" alt="더보기" title="더보기"></a>
+                    <a href="#!" class="s__tab01-more-btn"><img src="/image/icon_plus.svg" alt="더보기"></a>
                 </div>
                 <div class="s__tab01-box" data-tab="tab01">
-                    <a href="#!" class="s__tab01-title">title2</a>
+                    <button class="s__tab01-title">title2</button>
                     <ul class="s__tab01-contents">
                         <li>
-                            <a href=""><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span>2024.01.01</span></a>
+                            <a href="#!"><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span>2024.01.01</span></a>
                         </li>
                         <li>
-                            <a href=""><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span>2024.01.01</span></a>
+                            <a href="#!"><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span>2024.01.01</span></a>
                         </li>
                         <li>
-                            <a href=""><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span>2024.01.01</span></a>
+                            <a href="#!"><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span>2024.01.01</span></a>
                         </li>
                         <li>
-                            <a href=""><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span>2024.01.01</span></a>
+                            <a href="#!"><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span>2024.01.01</span></a>
                         </li>
                         <li>
-                            <a href=""><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span>2024.01.01</span></a>
+                            <a href="#!"><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span>2024.01.01</span></a>
                         </li>
                     </ul>
-                    <a href="" class="s__tab01-more-btn"><img src="/image/icon_plus.svg" alt="더보기" title="더보기"></a>
+                    <a href="#!" class="s__tab01-more-btn"><img src="/image/icon_plus.svg" alt="더보기"></a>
                 </div>
                 <div class="s__tab01-box" data-tab="tab01">
-                    <a href="#!" class="s__tab01-title">title3</a>
+                    <button class="s__tab01-title">title3</button>
                     <ul class="s__tab01-contents">
                         <li>
-                            <a href=""><span>There are many variations of passages of Lorem Ipsum available</span><span>2024.01.01</span></a>
+                            <a href="#!"><span>There are many variations of passages of Lorem Ipsum available</span><span>2024.01.01</span></a>
                         </li>
                         <li>
-                            <a href=""><span>There are many variations of passages of Lorem Ipsum available</span><span>2024.01.01</span></a>
+                            <a href="#!"><span>There are many variations of passages of Lorem Ipsum available</span><span>2024.01.01</span></a>
                         </li>
                         <li>
-                            <a href=""><span>There are many variations of passages of Lorem Ipsum available</span><span>2024.01.01</span></a>
+                            <a href="#!"><span>There are many variations of passages of Lorem Ipsum available</span><span>2024.01.01</span></a>
                         </li>
                         <li>
-                            <a href=""><span>There are many variations of passages of Lorem Ipsum available</span><span>2024.01.01</span></a>
+                            <a href="#!"><span>There are many variations of passages of Lorem Ipsum available</span><span>2024.01.01</span></a>
                         </li>
                         <li>
-                            <a href=""><span>There are many variations of passages of Lorem Ipsum available</span><span>2024.01.01</span></a>
+                            <a href="#!"><span>There are many variations of passages of Lorem Ipsum available</span><span>2024.01.01</span></a>
                         </li>
                     </ul>
-                    <a href="" class="s__tab01-more-btn"><img src="/image/icon_plus.svg" alt="더보기" title="더보기"></a>
+                    <a href="#!" class="s__tab01-more-btn"><img src="/image/icon_plus.svg" alt="더보기"></a>
                 </div>
             </div>
             <div class="s__tab01-wrap">
                 <div class="s__tab01-box is-active" data-tab="tab02">
-                    <a href="#!" class="s__tab01-title">title1</a>
+                    <button class="s__tab01-title">title1</button>
                     <ul class="s__tab01-contents">
                         <li>
-                        <a href=""><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span><span>2024.01.01</span></a>
+                        <a href="#!"><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span><span>2024.01.01</span></a>
                         </li>
                         <li>
-                            <a href=""><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span><span>2024.01.01</span></a>
+                            <a href="#!"><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span><span>2024.01.01</span></a>
                         </li>
                         <li>
-                            <a href=""><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span><span>2024.01.01</span></a>
+                            <a href="#!"><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span><span>2024.01.01</span></a>
                         </li>
                         <li>
-                            <a href=""><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span><span>2024.01.01</span></a>
+                            <a href="#!"><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span><span>2024.01.01</span></a>
                         </li>
                         <li>
-                            <a href=""><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span><span>2024.01.01</span></a>
+                            <a href="#!"><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span><span>2024.01.01</span></a>
                         </li>
                     </ul>
-                    <a href="" class="s__tab01-more-btn"><img src="/image/icon_plus.svg" alt="더보기" title="더보기"></a>
+                    <a href="#!" class="s__tab01-more-btn"><img src="/image/icon_plus.svg" alt="더보기"></a>
                 </div>
                 <div class="s__tab01-box" data-tab="tab02">
-                    <a href="#!" class="s__tab01-title">title2</a>
+                    <button class="s__tab01-title">title2</button>
                     <ul class="s__tab01-contents">
                         <li>
-                        <a href=""><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span>2024.01.01</span></a>
+                        <a href="#!"><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span>2024.01.01</span></a>
                         </li>
                         <li>
-                            <a href=""><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span>2024.01.01</span></a>
+                            <a href="#!"><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span>2024.01.01</span></a>
                         </li>
                         <li>
-                            <a href=""><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span>2024.01.01</span></a>
+                            <a href="#!"><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span>2024.01.01</span></a>
                         </li>
                         <li>
-                            <a href=""><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span>2024.01.01</span></a>
+                            <a href="#!"><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span>2024.01.01</span></a>
                         </li>
                         <li>
-                            <a href=""><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span>2024.01.01</span></a>
+                            <a href="#!"><span>Contrary to popular belief, Lorem Ipsum is not simply random text.</span><span>2024.01.01</span></a>
                         </li>
                     </ul>
-                    <a href="" class="s__tab01-more-btn"><img src="/image/icon_plus.svg" alt="더보기" title="더보기"></a>
+                    <a href="#!" class="s__tab01-more-btn"><img src="/image/icon_plus.svg" alt="더보기"></a>
                 </div>
             </div>
         </div>
@@ -126,74 +126,75 @@ export default function page(props) {
 </section>
       `,
       css: `
-      /* tab */
-      .s__tab01-wrap{
-          padding-top: 50px;
-          position: relative;
-      }
-      .s__tab01-box .s__tab01-contents, .s__tab01-box .s__tab01-more-btn{
-          display: none;
-      }
-      .s__tab01-box.is-active .s__tab01-contents, .s__tab01-box.is-active .s__tab01-more-btn{
-          display: block;
-      }
-      .s__tab01-title{
-          cursor: pointer;
-          text-wrap: nowrap;
-          position: absolute;
-          top: 0;
-          display: flex;
-          align-items: center;
-          padding: 16px 24px;
-          height: 50px;
-          width: 100px;
-      }
-      .s__tab01-box .s__tab01-contents{
-          border-top: 1px solid var(--border);
-      
-      }
-      .is-active .s__tab01-title{
-          font-weight: 600;
-          border-bottom: 3px solid var(--main);
-          color: var(--main);
-      }
-      .s__tab01-box:nth-child(2) .s__tab01-title{
-          left: 100px;
-      }
-      .s__tab01-box:nth-child(3) .s__tab01-title{
-          left: 200px;
-      }
-      .s__tab01-box:nth-child(4) .s__tab01-title{
-          left: 300px;
-      }
-      .s__tab01-contents{
-          padding-top: 16px;
-      }
-      .s__tab01-contents li a{
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-      }
-      .s__tab01-contents li a span:nth-child(1){
-          width: calc(100% - 80px);
-          white-space: normal;
-          display: -webkit-box;
-          -webkit-line-clamp:1 ;
-          -webkit-box-orient: vertical;
-          overflow: hidden;
-      }
-      .s__tab01-contents li + li a{
-           padding-top: 8px;
-      }
-      .s__tab01-more-btn{
-          position: absolute;
-          right: 0;
-          top: 14px;
-      }
-      .s__tab01-more-btn img {
-          width: 24px;
-      }
-      /* tab 끝*/
+/* tab */
+.s__tab01-wrap{
+    padding-top: 50px;
+    position: relative;
+}
+.s__tab01-box .s__tab01-contents, .s__tab01-box .s__tab01-more-btn{
+    display: none;
+}
+.s__tab01-box.is-active .s__tab01-contents, .s__tab01-box.is-active .s__tab01-more-btn{
+    display: block;
+}
+.s__tab01-title{
+    cursor: pointer;
+    text-wrap: nowrap;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 24px;
+    height: 50px;
+    width: 100px;
+}
+.s__tab01-box .s__tab01-contents{
+    border-top: 1px solid var(--border);
+
+}
+.is-active .s__tab01-title{
+    font-weight: 600;
+    border-bottom: 3px solid var(--main);
+    color: var(--main);
+}
+.s__tab01-box:nth-child(2) .s__tab01-title{
+    left: 100px;
+}
+.s__tab01-box:nth-child(3) .s__tab01-title{
+    left: 200px;
+}
+.s__tab01-box:nth-child(4) .s__tab01-title{
+    left: 300px;
+}
+.s__tab01-contents{
+    padding-top: 16px;
+}
+.s__tab01-contents li a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.s__tab01-contents li a span:nth-child(1){
+    width: calc(100% - 80px);
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp:1 ;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.s__tab01-contents li + li a{
+    padding-top: 8px;
+}
+.s__tab01-more-btn{
+    position: absolute;
+    right: 0;
+    top: 14px;
+}
+.s__tab01-more-btn img {
+    width: 24px;
+}
+/* tab 끝*/
       `,
       js: `
         // tab01
@@ -222,20 +223,20 @@ export default function page(props) {
         <div class="s__row">
             <div class="s__tab02-wrap">
                 <div class="s__tab02-title-wrap">
-                    <a href="#!" class="s__tab02-title is-active" data-tab="tab01">title1</a>
-                    <a href="#!" class="s__tab02-title" data-tab="tab02">title2</a>
-                    <a href="#!" class="s__tab02-title" data-tab="tab03">title3</a>
-                    <a href="#!" class="s__tab02-title" data-tab="tab04">title4</a>
+                    <button class="s__tab02-title is-active" data-tab="tab01">title1</button>
+                    <button class="s__tab02-title" data-tab="tab02">title2</button>
+                    <button class="s__tab02-title" data-tab="tab03">title3</button>
+                    <button class="s__tab02-title" data-tab="tab04">title4</button>
                 </div>
                 <div class="s__tab02-contents-wrap">
                     <div id="tab01" class="s__teb-contents is-active">
                         contents1
                     </div>
                     <div id="tab02" class="s__teb-contents">
-                    c   ontents2
+                        contents2
                     </div>
                     <div id="tab03" class="s__teb-contents">
-                    c   ontents3
+                        contents3
                     </div>
                     <div id="tab04" class="s__teb-contents">
                         contents4
@@ -248,29 +249,29 @@ export default function page(props) {
       `,
       css: `
 .s__tab02-title-wrap{
-border-bottom: 1px solid var(--border);
-display: flex;
-align-items: center;
-overflow-x: auto;
-margin-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    margin-bottom: 16px;
 }
 .s__tab02-title-wrap .s__tab02-title{
-cursor: pointer;
-font-size: 18px;
-font-weight: 400;
-padding: 12px 16px;
-display: block;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 12px 16px;
+    display: block;
 }
 .s__tab02-title-wrap .s__tab02-title.is-active{
-border-bottom: 2px solid var(--main);
-color: var(--main);
-font-weight: 700;
+    border-bottom: 2px solid var(--main);
+    color: var(--main);
+    font-weight: 700;
 }
 .s__teb-contents {
     display: none;
 }
 .s__teb-contents.is-active{
-display: block;
+    display: block;
 }
       `,
       js: `

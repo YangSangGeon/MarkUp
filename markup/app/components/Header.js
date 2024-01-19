@@ -40,7 +40,7 @@ export default function Header() {
       <Container>
         <Row>
           <Link href="/">
-            <Image priority={true} width={70} height={18} src="/image/icon_main_logo.svg" alt="홈" title="홈" />
+            <Image priority={true} width={70} height={18} src="/image/icon_main_logo.svg" alt="홈" />
           </Link>
           <DeviceBtns>
             <DeviceBtn onClick={() => setSize("size-mobile")}>

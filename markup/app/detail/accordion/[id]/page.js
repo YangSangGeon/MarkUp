@@ -16,10 +16,10 @@ export default function page(props) {
                 <li>
                     <ul class="s__accordion01" data-accordion="accordion01">
                         <li class="s__accordion01-title">
-                            <a href="#!">
+                            <button>
                                 <span>Accordion Title</span>
-                                <img src="/image/icon_down_arrow.svg" alt="열기" title="열기">
-                            </a>
+                                <img src="/image/icon_down_arrow.svg" alt="열기" >
+                            </button>
                         </li>
                         <li class="s__accordion01-contents">
                             <div>
@@ -31,10 +31,10 @@ export default function page(props) {
                 <li>
                     <ul class="s__accordion01" data-accordion="accordion01">
                         <li class="s__accordion01-title">
-                            <a href="#!">
+                            <button>
                                 <span>Accordion Title</span>
-                                <img src="/image/icon_down_arrow.svg" alt="열기" title="열기">
-                            </a>
+                                <img src="/image/icon_down_arrow.svg" alt="열기" >
+                            </button>
                         </li>
                         <li class="s__accordion01-contents">
                             <div>
@@ -49,10 +49,10 @@ export default function page(props) {
                 <li>
                     <ul class="s__accordion01" data-accordion="accordion01">
                         <li class="s__accordion01-title">
-                            <a href="#!">
+                            <button>
                                 <span>Accordion Title</span>
-                                <img src="/image/icon_down_arrow.svg" alt="열기" title="열기">
-                            </a>
+                                <img src="/image/icon_down_arrow.svg" alt="열기" >
+                            </button>
                         </li>
                         <li class="s__accordion01-contents">
                             <div>
@@ -67,10 +67,10 @@ export default function page(props) {
                 <li>
                     <ul class="s__accordion01" data-accordion="accordion01">
                         <li class="s__accordion01-title">
-                            <a href="#!">
+                            <button>
                                 <span>Accordion Title</span>
-                                <img src="/image/icon_down_arrow.svg" alt="열기" title="열기">
-                            </a>
+                                <img src="/image/icon_down_arrow.svg" alt="열기" >
+                            </button>
                         </li>
                         <li class="s__accordion01-contents">
                             <div>
@@ -91,15 +91,16 @@ export default function page(props) {
       .s__accordion01-wrap{
         border-top: 1px solid var(--border);
         }
-        .s__accordion01-title > a{
+        .s__accordion01-title > button{
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 16px;
             border-bottom: 1px solid var(--border);
+            width: 100%;
         }
-        .s__accordion01-title > a > img {
+        .s__accordion01-title > button > img {
             width: 24px;
             transition: all 0.3s;
         }
@@ -114,7 +115,7 @@ export default function page(props) {
             /* max-height는 가변적 */
             max-height: 200px;
         }
-        .is-active .s__accordion01-title > a > img{
+        .is-active .s__accordion01-title > button > img{
             transform: rotate(180deg);
         }
         .s__accordion01-contents > div {
@@ -123,7 +124,7 @@ export default function page(props) {
       `,
       js:
         `// 아코디언
-        const accordionAList = document.querySelectorAll(".s__accordion01 a");
+        const accordionAList = document.querySelectorAll(".s__accordion01 button");
         const accordionList = document.querySelectorAll(".s__accordion01");
         accordionAList.forEach((e) => {
           const thisAccordionName = e.parentNode.parentNode.dataset.accordion;

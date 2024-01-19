@@ -12,8 +12,8 @@ export default function page(props) {
   <!-- PC 헤더 위치 -->
   <div class="s__container mobile-menu">
       <div class="s__row">
-          <a href="#!" class="s__logo"><img src="/image/icon_logo.svg" alt="logo" title="홈으로 이동"></a>
-          <a href="#!" class="menu"><img class="icon-is-open" src="/image/icon_menu.svg" alt="메뉴열기"><img class="icon-menu-off" src="/image/icon_close.svg" alt="메뉴닫기"></a>
+          <a href="#!" class="s__logo"><img src="/image/icon_logo.svg" alt="홈으로 이동"></a>
+          <a href="#!" class="menu"><img class="icon-is-open" src="/image/icon_menu.svg" alt="메뉴열기"><img class="icon-is-close" src="/image/icon_close.svg" alt="메뉴닫기"></a>
       </div>
       <ul class="mobile-menu__list">
           <li>
@@ -114,13 +114,13 @@ header .s__row {
   background-color: #f7f7f7;
 }
 
-.icon-menu-off{
+.icon-is-close{
   display: none;
 }
 .menu.is-open .icon-is-open{
   display: none;
 }
-.menu.is-open .icon-menu-off{
+.menu.is-open .icon-is-close{
   display: block;
 }
 
@@ -178,8 +178,8 @@ header .s__row {
   <!-- PC 헤더 위치 -->
   <div class="s__container mobile-menu">
       <div class="s__row">
-          <a href="#!" class="s__logo"><img src="/image/icon_logo.svg" alt="logo" title="홈으로 이동"></a>
-          <a href="#!" class="menu"><img class="icon-is-open" src="/image/icon_menu.svg" alt="메뉴열기"><img class="icon-menu-off" src="/image/icon_close.svg" alt="메뉴닫기"></a>
+          <a href="#!" class="s__logo"><img src="/image/icon_logo.svg" alt="홈으로 이동"></a>
+          <a href="#!" class="menu"><img class="icon-is-open" src="/image/icon_menu.svg" alt="메뉴열기"><img class="icon-is-close" src="/image/icon_close.svg" alt="메뉴닫기"></a>
       </div>
       <ul class="mobile-menu__list">
           <li>
@@ -298,13 +298,13 @@ header .s__row {
 .mobile-menu__step2.is-open > img {
   transform: rotate(180deg);
 }
-.icon-menu-off {
+.icon-is-close {
   display: none;
 }
 .menu.is-open .icon-is-open {
   display: none;
 }
-.menu.is-open .icon-menu-off {
+.menu.is-open .icon-is-close {
   display: block;
 }
 .mobile-menu__step3{

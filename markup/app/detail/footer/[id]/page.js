@@ -22,16 +22,16 @@ export default function page(props) {
                       <option value="option2">222 바로가기</option>
                   </select>
                   <div class="footet__link-icon-list">
-                      <a href="#!" title="유튜브">
+                      <a href="#!">
                           <img src="/image/icon_youtube_w.svg" alt="유튜브">
                       </a>
-                      <a href="#!" title="인스타그램">
+                      <a href="#!">
                           <img src="/image/icon_instar_w.svg" alt="인스타그램">
                       </a>
-                      <a href="#!" title="카카오톡">
+                      <a href="#!">
                           <img src="/image/icon_kakao_w.svg" alt="카카오톡">
                       </a>
-                      <a href="#!" title="블로그">
+                      <a href="#!">
                           <img src="/image/icon_blog_w.svg" alt="블로그">
                       </a>
                   </div>
@@ -165,16 +165,16 @@ footer .s__row {
               <li>FAX: 02-1234-1234</li>
           </ul>
           <div class="footet__link-icon-list">
-              <a href="#!" title="유튜브">
+              <a href="#!">
                   <img src="/image/icon_youtube_w.svg" alt="유튜브">
               </a>
-              <a href="#!" title="인스타그램">
+              <a href="#!">
                   <img src="/image/icon_instar_w.svg" alt="인스타그램">
               </a>
-              <a href="#!" title="카카오톡">
+              <a href="#!">
                   <img src="/image/icon_kakao_w.svg" alt="카카오톡">
               </a>
-              <a href="#!" title="블로그">
+              <a href="#!">
                   <img src="/image/icon_blog_w.svg" alt="블로그">
               </a>
           </div>

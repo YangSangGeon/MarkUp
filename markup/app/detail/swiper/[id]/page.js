@@ -149,10 +149,10 @@ export default function page(props) {
         </svg>
         <span></span>
     </div>
-    <a href="#!" class="autoplay-play-stop">
+    <button class="autoplay-play-stop">
         <img src="/image/icon_play_w.svg" alt="재생" class="autoplay-play">
         <img src="/image/icon_play_stop_w.svg" alt="일시정지" class="autoplay-stop">
-    </a>
+    </button>
 </div>
       `,
       css: `
@@ -352,10 +352,10 @@ export default function page(props) {
         <div class="arrow-box">
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
-            <a href="#!" class="autoplay-play-stop">
+            <button class="autoplay-play-stop">
                 <img src="/image/icon_play_w.svg" alt="재생" class="autoplay-play">
                 <img src="/image/icon_play_stop_w.svg" alt="일시정지" class="autoplay-stop">
-            </a>
+            </button>
         </div>
     </div>
 </div>

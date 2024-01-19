@@ -286,7 +286,7 @@ export default function page(props) {
                   <form>
                       <div class="top-search">
                           <input type="text">
-                          <button><img src="/image/icon_search.svg" alt="검색" title="검색"></button>
+                          <button><img src="/image/icon_search.svg" alt="검색"></button>
                       </div>
                       
                   </form>
@@ -518,7 +518,7 @@ export default function page(props) {
       img: "category/img_modal03.svg",
       html: `
 <div class="popup-slider is-active">
-    <button class="popup-slider-close-btn"><img src="/image/icon_close_w.svg" alt="닫기" title="닫기"></button>
+    <button class="popup-slider-close-btn"><img src="/image/icon_close_w.svg" alt="닫기"></button>
     <!-- Slider main container -->
     <div class="swiper" id="popupSlider">
         <!-- Additional required wrapper -->
