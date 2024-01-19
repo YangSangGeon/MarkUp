@@ -16,7 +16,7 @@ export default function page(props) {
                 <li>
                     <ul class="s__accordion01" data-accordion="accordion01">
                         <li class="s__accordion01-title">
-                            <a href="#">
+                            <a href="#!">
                                 <span>Accordion Title</span>
                                 <img src="/image/icon_down_arrow.svg" alt="열기" title="열기">
                             </a>
@@ -31,7 +31,7 @@ export default function page(props) {
                 <li>
                     <ul class="s__accordion01" data-accordion="accordion01">
                         <li class="s__accordion01-title">
-                            <a href="#">
+                            <a href="#!">
                                 <span>Accordion Title</span>
                                 <img src="/image/icon_down_arrow.svg" alt="열기" title="열기">
                             </a>
@@ -49,7 +49,7 @@ export default function page(props) {
                 <li>
                     <ul class="s__accordion01" data-accordion="accordion01">
                         <li class="s__accordion01-title">
-                            <a href="#">
+                            <a href="#!">
                                 <span>Accordion Title</span>
                                 <img src="/image/icon_down_arrow.svg" alt="열기" title="열기">
                             </a>
@@ -67,7 +67,7 @@ export default function page(props) {
                 <li>
                     <ul class="s__accordion01" data-accordion="accordion01">
                         <li class="s__accordion01-title">
-                            <a href="#">
+                            <a href="#!">
                                 <span>Accordion Title</span>
                                 <img src="/image/icon_down_arrow.svg" alt="열기" title="열기">
                             </a>

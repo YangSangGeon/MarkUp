@@ -12,8 +12,8 @@ export default function page(props) {
           <div class="s__row">
               <img class="footer__logo" src="/image/icon_footer_logo.svg" alt="logo">
               <ul class="footer__link-list">
-                  <li><a href="#">이용약관</a></li>
-                  <li><a href="#">개인정보처리방침</a></li>
+                  <li><a href="#!">이용약관</a></li>
+                  <li><a href="#!">개인정보처리방침</a></li>
               </ul>
               <div class="footer__right-wrap">
                   <select name="" id="footerSelect" class="footer__select">
@@ -22,16 +22,16 @@ export default function page(props) {
                       <option value="option2">222 바로가기</option>
                   </select>
                   <div class="footet__link-icon-list">
-                      <a href="#" title="유튜브">
+                      <a href="#!" title="유튜브">
                           <img src="/image/icon_youtube_w.svg" alt="유튜브">
                       </a>
-                      <a href="#" title="인스타그램">
+                      <a href="#!" title="인스타그램">
                           <img src="/image/icon_instar_w.svg" alt="인스타그램">
                       </a>
-                      <a href="#" title="카카오톡">
+                      <a href="#!" title="카카오톡">
                           <img src="/image/icon_kakao_w.svg" alt="카카오톡">
                       </a>
-                      <a href="#" title="블로그">
+                      <a href="#!" title="블로그">
                           <img src="/image/icon_blog_w.svg" alt="블로그">
                       </a>
                   </div>
@@ -152,8 +152,8 @@ footer .s__row {
   <div class="s__container">
       <div class="s__row">
           <ul class="footer__link-list">
-              <li><a href="#">이용약관</a></li>
-              <li><a href="#">개인정보처리방침</a></li>
+              <li><a href="#!">이용약관</a></li>
+              <li><a href="#!">개인정보처리방침</a></li>
           </ul>
           <ul class="footer__info-list">
               <li>상호명: 가나다</li>
@@ -165,16 +165,16 @@ footer .s__row {
               <li>FAX: 02-1234-1234</li>
           </ul>
           <div class="footet__link-icon-list">
-              <a href="#" title="유튜브">
+              <a href="#!" title="유튜브">
                   <img src="/image/icon_youtube_w.svg" alt="유튜브">
               </a>
-              <a href="#" title="인스타그램">
+              <a href="#!" title="인스타그램">
                   <img src="/image/icon_instar_w.svg" alt="인스타그램">
               </a>
-              <a href="#" title="카카오톡">
+              <a href="#!" title="카카오톡">
                   <img src="/image/icon_kakao_w.svg" alt="카카오톡">
               </a>
-              <a href="#" title="블로그">
+              <a href="#!" title="블로그">
                   <img src="/image/icon_blog_w.svg" alt="블로그">
               </a>
           </div>

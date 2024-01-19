@@ -20,7 +20,7 @@ border-bottom: 1px solid var(--boarder);
 margin-top: 16px;
 margin-bottom: 16px;
 `;
-const Tab = styled.a`
+const Tab = styled.button`
 display: block;
 font-size: 14px;
 font-style: normal;
@@ -85,8 +85,8 @@ export default function Contents(props) {
     }
     return str;
   };
-
-  const componentsHtml = DOMPurify.sanitize(props.contentsHtml); //html
+  // const componentsHtml = DOMPurify.sanitize(props.contentsHtml); //html : 주석까지 삭제하는 이슈
+  const componentsHtml = props.contentsHtml; //html
   const componentsCss = DOMPurify.sanitize(props.contentsCss); //css
   const firstJs = props.contentsJs.toString();
   // const startIndex = firstJs.indexOf("{") + 1; // '{' 다음 위치부터
@@ -470,13 +470,13 @@ input[type="number"]::-webkit-inner-spin-button {
         iframeDocument.body.appendChild(scriptElement);
       }
     }
-  }, [index]);
+  }, [index, props.contentsIndex]);
+
   return (
     <>
       <TabWrap>
         {data.map((item, innerIndex) => (
           <Tab
-            href="#/"
             key={innerIndex}
             style={{
               color: index === item.id ? "var(--black)" : "var(--gray)",
@@ -495,7 +495,7 @@ input[type="number"]::-webkit-inner-spin-button {
         .filter((item) => index === item.id)
         .map((item, innerIndex) =>
           item.id === 0 ? (
-            <HtmlWrap key={innerIndex} className="components-html-wrap">
+            <HtmlWrap key={props.iframeKey} className={"components-html-wrap"}>
               <HtmlInner ref={iframeRef} title="example-iframe"></HtmlInner>
             </HtmlWrap>
           ) : (

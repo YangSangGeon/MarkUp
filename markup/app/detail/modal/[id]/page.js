@@ -671,19 +671,19 @@ export default function page(props) {
           const data = [
             {
               id: "data01",
-              img: "/img_test.png",
+              img: "/image/img_test.png",
               link: "https://www.naver.com/",
               title: "공지1",
             },
             {
               id: "data02",
-              img: "/img_test.png",
+              img: "/image/img_test.png",
               link: "https://www.naver.com/",
               title: "공지2",
             },
             {
               id: "data03",
-              img: "/img_test.png",
+              img: "/image/img_test.png",
               link: "https://www.naver.com/",
               title: "공지3",
             },

@@ -65,7 +65,7 @@ const TabWrap = styled.div`
   border-bottom: 1px solid var(--boarder);
   margin-bottom: 32px;
 `;
-const Tab = styled.a`
+const Tab = styled.button`
   display: block;
   font-size: 14px;
   font-style: normal;
@@ -102,7 +102,6 @@ export default function Home() {
       <TabWrap>
         {data.map((item, innerIndex) => (
           <Tab
-            href="#/"
             key={innerIndex}
             style={{
               color: index === item.id ? "var(--black)" : "var(--gray)",
