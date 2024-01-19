@@ -20,19 +20,19 @@ font-weight: 400;
 margin-bottom: 16px;
 `;
 const Body = styled.div`
-margin-top: 40px;
+margin-top: 32px;
 width: calc(100% - 216px);
 `;
 const TabImgWrap = styled.ul`
 display: flex;
 gap: 12px;
-margin-bottom: 24px;
-height: 62px;
+margin-bottom: 16px;
+height: 54px;
 `;
 const NoneImg = styled.span`
 display: block;
-width: 60px;
-height: 60px;
+width: 52px;
+height: 52px;
 background-color: #fff;
 `
 
@@ -67,7 +67,6 @@ export default function ContentsWrap(props) {
 
   const [iframeKey, setIframeKey] = useState(0);
   const handleTabClick = () => {
-    console.log('??')
     // 탭이 클릭될 때마다 key 값을 변경하여 아이프레임 리랜더링
     setIframeKey((prevKey) => prevKey + 1);
   };
@@ -89,7 +88,7 @@ export default function ContentsWrap(props) {
            {/* <Link href={String(index)}> 페이지 이동 트래픽 이슈로 변경*/}
             <button onClick={() => { setPageIndex(index); handleTabClick(); }}>
               {isImageLoaded[index] ? (
-                <Image priority={true} width={60} height={60} src={"/" + num.img} alt={num.title} />
+                <Image priority={true} width={52} height={52} src={"/" + num.img} alt={num.title} />
               ) : (
                 <NoneImg />
               )}

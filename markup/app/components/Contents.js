@@ -17,7 +17,7 @@ const TabWrap = styled.div`
 display: flex;
 align-items: center;
 border-bottom: 1px solid var(--boarder);
-margin-top: 16px;
+margin-top: 8px;
 margin-bottom: 16px;
 `;
 const Tab = styled.button`
@@ -34,7 +34,7 @@ const HtmlWrap = styled.div`
 border: 1px solid var(--boarder);
 border-radius: 16px;
 padding: 12px;
-height: 650px;
+height: 600px;
 display: flex;
 align-items: center;
 transition: all 0.7s;
@@ -470,7 +470,7 @@ input[type="number"]::-webkit-inner-spin-button {
         iframeDocument.body.appendChild(scriptElement);
       }
     }
-  }, [index, props.contentsIndex]);
+  }, [index, props.contentsIndex, props.iframeKey]);
 
   return (
     <>

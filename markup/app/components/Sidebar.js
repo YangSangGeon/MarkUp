@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 const SidebarList = styled.ul`
-margin-top: 40px;
+margin-top: 32px;
 display: flex;
 flex-direction: column;
 gap: 16px;
