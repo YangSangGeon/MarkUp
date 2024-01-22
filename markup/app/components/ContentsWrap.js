@@ -20,19 +20,29 @@ font-weight: 400;
 margin-bottom: 16px;
 `;
 const Body = styled.div`
-margin-top: 32px;
+margin-top: 40px;
 width: calc(100% - 216px);
+display: flex;
+justify-content: space-between;
+& > div{
+  width: calc(100% - 92px);
+}
 `;
 const TabImgWrap = styled.ul`
 display: flex;
+flex-direction: column;
 gap: 12px;
 margin-bottom: 16px;
-height: 54px;
+height: 60px;
+width: 62px;
+& li {
+  height: 62px;
+}
 `;
 const NoneImg = styled.span`
 display: block;
-width: 52px;
-height: 52px;
+width: 60px;
+height: 60px;
 background-color: #fff;
 `
 
@@ -40,7 +50,36 @@ background-color: #fff;
 export default function ContentsWrap(props) {
   // 이미지 로드 확인
   const [isImageLoaded, setIsImageLoaded] = useState(Array(props.data.length).fill(false));
-  
+  useEffect(() => { 
+    // 디바이스 지정
+    if (props.data[pageIndex].device) {
+      if (props.data[pageIndex].device === 'mobile') {
+        document.querySelector('header').classList.remove('size-pc')
+        document.querySelector('header').classList.remove('size-tablet')
+        document.querySelector('header').classList.add('size-mobile')
+        document.querySelector('button.size-pc img').src ='/image/icon_pc.svg'
+        document.querySelector('button.size-tablet img').src ='/image/icon_tablet.svg'
+        document.querySelector('button.size-mobile img').src ='/image/icon_mobile_on.svg'
+      } else if (props.data[pageIndex].device === 'tablet') {
+        document.querySelector('header').classList.remove('size-pc')
+        document.querySelector('header').classList.add('size-tablet')
+        document.querySelector('header').classList.remove('size-mobile')
+        document.querySelector('button.size-pc img').src ='/image/icon_pc.svg'
+        document.querySelector('button.size-tablet img').src ='/image/icon_tablet_on.svg'
+        document.querySelector('button.size-mobile img').src ='/image/icon_mobile.svg'
+      } else if (props.data[pageIndex].device === 'pc') {
+        document.querySelector('header').classList.add('size-pc')
+        document.querySelector('header').classList.remove('size-tablet')
+        document.querySelector('header').classList.remove('size-mobile')
+        document.querySelector('button.size-pc img').src ='/image/icon_pc_on.svg'
+        document.querySelector('button.size-tablet img').src ='/image/icon_tablet.svg'
+        document.querySelector('button.size-mobile img').src ='/image/icon_mobile.svg'
+      }
+    }
+
+  },[])
+
+
   // useEffect를 사용하여 이미지 로드 이벤트를 한 번만 등록
   useEffect(() => {
     const handleImageLoad = (index) => {
@@ -62,7 +101,7 @@ export default function ContentsWrap(props) {
 
   const [pageIndex, setPageIndex] = useState(0)
   // 처음켜지면 id의 값이 thisPage의 값으로 지정
-  const thisPage = props.props.params.id;
+  // const thisPage = props.props.params.id;
 
 
   const [iframeKey, setIframeKey] = useState(0);
@@ -71,9 +110,27 @@ export default function ContentsWrap(props) {
     setIframeKey((prevKey) => prevKey + 1);
   };
 
+
+
   return (
     <Body>
        {/* 페이지 이동 트래픽 이슈 thisPage => pageIndex */}
+      <div>
+        <Title>{props.data[pageIndex].title}</Title>
+        {props.data[pageIndex].subTitle && (
+          <SubTitle>{props.data[pageIndex].subTitle}</SubTitle>
+        )}
+        <Contents
+          iframeKey={iframeKey}
+          contentsIndex={pageIndex}
+          contentsCssFile={props.data[pageIndex].cssFile}
+          contentsJsFile={props.data[pageIndex].jsFile}
+          contentsHtml={props.data[pageIndex].html}
+          contentsCss={props.data[pageIndex].css}
+          contentsJs={props.data[pageIndex].js}
+          contentsDownload={props.data[pageIndex].download}
+        ></Contents>
+      </div>
       <TabImgWrap>
         {props.data.map((num, index) => (
           <li
@@ -88,7 +145,7 @@ export default function ContentsWrap(props) {
            {/* <Link href={String(index)}> 페이지 이동 트래픽 이슈로 변경*/}
             <button onClick={() => { setPageIndex(index); handleTabClick(); }}>
               {isImageLoaded[index] ? (
-                <Image priority={true} width={52} height={52} src={"/" + num.img} alt={num.title} />
+                <Image priority={true} width={60} height={60} src={"/" + num.img} alt={num.title} />
               ) : (
                 <NoneImg />
               )}
@@ -96,20 +153,6 @@ export default function ContentsWrap(props) {
           </li>
         ))}
       </TabImgWrap>
-      <Title>{props.data[pageIndex].title}</Title>
-      {props.data[pageIndex].subTitle && (
-        <SubTitle>{props.data[pageIndex].subTitle}</SubTitle>
-      )}
-      <Contents
-        iframeKey={iframeKey}
-        contentsIndex={pageIndex}
-        contentsCssFile={props.data[pageIndex].cssFile}
-        contentsJsFile={props.data[pageIndex].jsFile}
-        contentsHtml={props.data[pageIndex].html}
-        contentsCss={props.data[pageIndex].css}
-        contentsJs={props.data[pageIndex].js}
-        contentsDownload={props.data[pageIndex].download}
-      ></Contents>
     </Body>
   );
 }

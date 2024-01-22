@@ -87,7 +87,7 @@ ol {
 /* 홈 */
 .m_container {
   width: 100%;
-  max-width: 1532px;
+  max-width: 1600px;
   margin: 0 auto;
   min-height: calc(100vh - 200px);
 }

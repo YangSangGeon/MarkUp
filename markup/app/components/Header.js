@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const Container = styled.div`
 width: 100%;
-max-width: 1532px;
+max-width: 1600px;
 margin: 0 auto;
 `;
 const Row = styled.div`
@@ -34,7 +34,24 @@ height: 32px;
 
 export default function Header() {
   const [size, setSize] = useState("size-pc");
- 
+  useEffect(() => {
+    if (size === "size-mobile") {
+      document.querySelector('header').classList.remove('size-pc')
+      document.querySelector('header').classList.remove('size-tablet')
+      document.querySelector('button.size-pc img').src ='/image/icon_pc.svg'
+      document.querySelector('button.size-tablet img').src ='/image/icon_tablet.svg'
+    } else if (size === "size-tablet") {
+      document.querySelector('header').classList.remove('size-pc')
+      document.querySelector('header').classList.remove('size-mobile')
+      document.querySelector('button.size-pc img').src ='/image/icon_pc.svg'
+      document.querySelector('button.size-mobile img').src ='/image/icon_mobile.svg'
+    } else if (size === "size-pc") {
+      document.querySelector('header').classList.remove('size-tablet')
+      document.querySelector('header').classList.remove('size-mobile')
+      document.querySelector('button.size-tablet img').src ='/image/icon_tablet.svg'
+      document.querySelector('button.size-mobile img').src ='/image/icon_mobile.svg'
+    }
+  },[size])
   return (
     <MarkupHeader className={size}>
       <Container>
@@ -43,7 +60,7 @@ export default function Header() {
             <Image priority={true} width={70} height={18} src="/image/icon_main_logo.svg" alt="홈" />
           </Link>
           <DeviceBtns>
-            <DeviceBtn onClick={() => setSize("size-mobile")}>
+            <DeviceBtn onClick={() => setSize("size-mobile")} className="size-mobile">
               <Image priority={true} width={32} height={32} 
                 src={
                   size === "size-mobile"
@@ -53,7 +70,7 @@ export default function Header() {
                 alt="모바일사이즈"
               />
             </DeviceBtn>
-            <DeviceBtn onClick={() => setSize("size-tablet")}>
+            <DeviceBtn onClick={() => setSize("size-tablet")} className="size-tablet">
               <Image priority={true} width={32} height={32} 
                 src={
                   size === "size-tablet"
@@ -63,7 +80,7 @@ export default function Header() {
                 alt="태블릿사이즈"
               />
             </DeviceBtn>
-            <DeviceBtn onClick={() => setSize("size-pc")}>
+            <DeviceBtn onClick={() => setSize("size-pc")} className="size-pc">
               <Image priority={true} width={32} height={32} 
                 src={size === "size-pc" ? "/image/icon_pc_on.svg" : "/image/icon_pc.svg"}
                 alt="PC사이즈"

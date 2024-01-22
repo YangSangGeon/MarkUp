@@ -34,7 +34,7 @@ const HtmlWrap = styled.div`
 border: 1px solid var(--boarder);
 border-radius: 16px;
 padding: 12px;
-height: 600px;
+height: 650px;
 display: flex;
 align-items: center;
 transition: all 0.7s;
