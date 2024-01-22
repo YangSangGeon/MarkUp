@@ -95,7 +95,10 @@ export default function Home() {
       description: "2",
     },
   ];
-
+  useEffect(() => {
+    document.querySelector('.device-btn-wrap').style.display ='none'
+  },[])
+  
   return (
     <Body>
       <Title>README</Title>
@@ -157,7 +160,7 @@ export default function Home() {
                   경우 JS 주석에 적어뒀으니 확인해주세요.)
                 </ReadMeList2>
                 <ReadMeList2>
-                  tip/ 최상단의 디바이스 크기 조절 버튼을 이용해 preview를
+                  최상단의 디바이스 크기 조절 버튼을 이용해 preview를
                   확인해보세요 :)
                 </ReadMeList2>
               </ReadMeListWrap>

@@ -67,7 +67,7 @@ export default function Header() {
               alt="홈"
             />
           </Link>
-          <DeviceBtns>
+          <DeviceBtns className="device-btn-wrap">
             <DeviceBtn
               onClick={() => setSize("size-mobile")}
               className="size-mobile"

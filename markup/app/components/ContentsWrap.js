@@ -51,6 +51,7 @@ export default function ContentsWrap(props) {
   // 이미지 로드 확인
   const [isImageLoaded, setIsImageLoaded] = useState(Array(props.data.length).fill(false));
   useEffect(() => { 
+    document.querySelector('.device-btn-wrap').style.display ='flex'
     // 디바이스 지정
     if (props.data[pageIndex].device) {
       if (props.data[pageIndex].device === 'mobile') {
@@ -67,34 +68,7 @@ export default function ContentsWrap(props) {
         document.querySelector('header').classList.remove('device-mobile')
       }
     }
-
-    // if (props.data[pageIndex].device) {
-    //   if (props.data[pageIndex].device === 'mobile') {
-    //     document.querySelector('header').classList.remove('size-pc')
-    //     document.querySelector('header').classList.remove('size-tablet')
-    //     document.querySelector('header').classList.add('size-mobile')
-    //     document.querySelector('button.size-pc img').src ='/image/icon_pc.svg'
-    //     document.querySelector('button.size-tablet img').src ='/image/icon_tablet.svg'
-    //     document.querySelector('button.size-mobile img').src ='/image/icon_mobile_on.svg'
-    //   } else if (props.data[pageIndex].device === 'tablet') {
-    //     document.querySelector('header').classList.remove('size-pc')
-    //     document.querySelector('header').classList.add('size-tablet')
-    //     document.querySelector('header').classList.remove('size-mobile')
-    //     document.querySelector('button.size-pc img').src ='/image/icon_pc.svg'
-    //     document.querySelector('button.size-tablet img').src ='/image/icon_tablet_on.svg'
-    //     document.querySelector('button.size-mobile img').src ='/image/icon_mobile.svg'
-    //   } else if (props.data[pageIndex].device === 'pc') {
-    //     document.querySelector('header').classList.add('size-pc')
-    //     document.querySelector('header').classList.remove('size-tablet')
-    //     document.querySelector('header').classList.remove('size-mobile')
-    //     document.querySelector('button.size-pc img').src ='/image/icon_pc_on.svg'
-    //     document.querySelector('button.size-tablet img').src ='/image/icon_tablet.svg'
-    //     document.querySelector('button.size-mobile img').src ='/image/icon_mobile.svg'
-    //   }
-    // }
-
   },[])
-
 
   // useEffect를 사용하여 이미지 로드 이벤트를 한 번만 등록
   useEffect(() => {
