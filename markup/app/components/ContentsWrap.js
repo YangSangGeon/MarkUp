@@ -54,28 +54,44 @@ export default function ContentsWrap(props) {
     // 디바이스 지정
     if (props.data[pageIndex].device) {
       if (props.data[pageIndex].device === 'mobile') {
-        document.querySelector('header').classList.remove('size-pc')
-        document.querySelector('header').classList.remove('size-tablet')
-        document.querySelector('header').classList.add('size-mobile')
-        document.querySelector('button.size-pc img').src ='/image/icon_pc.svg'
-        document.querySelector('button.size-tablet img').src ='/image/icon_tablet.svg'
-        document.querySelector('button.size-mobile img').src ='/image/icon_mobile_on.svg'
+        document.querySelector('header').classList.remove('device-pc')
+        document.querySelector('header').classList.remove('device-tablet')
+        document.querySelector('header').classList.add('device-mobile')
       } else if (props.data[pageIndex].device === 'tablet') {
-        document.querySelector('header').classList.remove('size-pc')
-        document.querySelector('header').classList.add('size-tablet')
-        document.querySelector('header').classList.remove('size-mobile')
-        document.querySelector('button.size-pc img').src ='/image/icon_pc.svg'
-        document.querySelector('button.size-tablet img').src ='/image/icon_tablet_on.svg'
-        document.querySelector('button.size-mobile img').src ='/image/icon_mobile.svg'
+        document.querySelector('header').classList.remove('device-pc')
+        document.querySelector('header').classList.add('device-tablet')
+        document.querySelector('header').classList.remove('device-mobile')
       } else if (props.data[pageIndex].device === 'pc') {
-        document.querySelector('header').classList.add('size-pc')
-        document.querySelector('header').classList.remove('size-tablet')
-        document.querySelector('header').classList.remove('size-mobile')
-        document.querySelector('button.size-pc img').src ='/image/icon_pc_on.svg'
-        document.querySelector('button.size-tablet img').src ='/image/icon_tablet.svg'
-        document.querySelector('button.size-mobile img').src ='/image/icon_mobile.svg'
+        document.querySelector('header').classList.add('device-pc')
+        document.querySelector('header').classList.remove('device-tablet')
+        document.querySelector('header').classList.remove('device-mobile')
       }
     }
+
+    // if (props.data[pageIndex].device) {
+    //   if (props.data[pageIndex].device === 'mobile') {
+    //     document.querySelector('header').classList.remove('size-pc')
+    //     document.querySelector('header').classList.remove('size-tablet')
+    //     document.querySelector('header').classList.add('size-mobile')
+    //     document.querySelector('button.size-pc img').src ='/image/icon_pc.svg'
+    //     document.querySelector('button.size-tablet img').src ='/image/icon_tablet.svg'
+    //     document.querySelector('button.size-mobile img').src ='/image/icon_mobile_on.svg'
+    //   } else if (props.data[pageIndex].device === 'tablet') {
+    //     document.querySelector('header').classList.remove('size-pc')
+    //     document.querySelector('header').classList.add('size-tablet')
+    //     document.querySelector('header').classList.remove('size-mobile')
+    //     document.querySelector('button.size-pc img').src ='/image/icon_pc.svg'
+    //     document.querySelector('button.size-tablet img').src ='/image/icon_tablet_on.svg'
+    //     document.querySelector('button.size-mobile img').src ='/image/icon_mobile.svg'
+    //   } else if (props.data[pageIndex].device === 'pc') {
+    //     document.querySelector('header').classList.add('size-pc')
+    //     document.querySelector('header').classList.remove('size-tablet')
+    //     document.querySelector('header').classList.remove('size-mobile')
+    //     document.querySelector('button.size-pc img').src ='/image/icon_pc_on.svg'
+    //     document.querySelector('button.size-tablet img').src ='/image/icon_tablet.svg'
+    //     document.querySelector('button.size-mobile img').src ='/image/icon_mobile.svg'
+    //   }
+    // }
 
   },[])
 
