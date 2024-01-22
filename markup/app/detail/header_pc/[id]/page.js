@@ -4,6 +4,7 @@ import ContentsWrap from "@/app/components/ContentsWrap";
 export default function page(props) {
   const data = [
     {
+      device:"pc",
       title: "Header_PC01 (PC, Tablet Only)",
       subTitle:"모바일에서는 숨겨집니다",
       img: "category/img_header_pc01.svg",
@@ -179,6 +180,7 @@ header.s__header .s__row {
       
     },
     {
+      device:"pc",
       title: "Header_PC02 (PC, Tablet Only)",
       subTitle:"모바일에서는 숨겨집니다",
       img: "category/img_header_pc02.svg",
@@ -373,6 +375,7 @@ header.s__header .s__row {
       `,
     },
     {
+      device:"pc",
       title: "Header_PC03 (PC, Tablet Only)",
       subTitle:"모바일에서는 숨겨집니다",
       img: "category/img_header_pc03.svg",
