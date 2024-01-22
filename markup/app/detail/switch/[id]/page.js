@@ -10,7 +10,7 @@ export default function page(props) {
       img: "category/img_switch01.svg",
       html: `
 <div class="s__switch">
-    <input type="checkbox" id="toggle" hidden>
+    <input type="checkbox" id="toggle">
     <label for="toggle" class="toggleSwitch">
         <span class="toggleButton"></span>
     </label>
@@ -18,6 +18,19 @@ export default function page(props) {
       `,
       css: `
 /* 토글스위치 */
+.s__switch input[type="checkbox"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0 none;
+}
+.s__switch input[type="checkbox"]:focus ~ .toggleSwitch{
+  border: 2px solid var(--black);
+}
 .toggleSwitch {
     width: 46px;
     height: 24px;
@@ -53,7 +66,7 @@ export default function page(props) {
     transition: all 0.2s ease-in;
   }
       `,
-      js: '',
+      js: ``,
     },
   ];
 

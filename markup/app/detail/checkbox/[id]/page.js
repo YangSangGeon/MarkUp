@@ -11,52 +11,59 @@ export default function page(props) {
       html: `
 <div class="s__checkbox-wrap">
   <div class="s__checkbox">
-    <input type="checkbox" class="s__checkbox-ck" id="ch01_01" hidden checked>
-    <label for="ch01_01"></label>
+    <input type="checkbox" class="s__checkbox-ck" id="ch01_01" checked>
     <label for="ch01_01">checkbox</label>
   </div>
 </div>
       `,
       css: `
-.s__checkbox-wrap,
-.s__radio-wrap {
+.s__checkbox-wrap {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
-.s__checkbox,
-.s__radio {
+.s__checkbox {
   display: flex;
   align-items: center;
 }
-.s__checkbox + .s__checkbox,
-.s__radio + .s__radio {
+.s__checkbox + .s__checkbox {
   margin-left: 16px;
 }
+.s__checkbox input{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0 none;
+}
+.s__checkbox input:focus ~ label{
+  border: 2px solid var(--black);
+  height: 28px;
+}
 .s__checkbox input + label {
-  width: 24px;
   height: 24px;
   display: block;
-  background: url(/image/icon_checkbox_off.svg);
+  background: url(/image/icon_checkbox_off.svg) no-repeat;
   background-size: contain;
   cursor: pointer;
+  font-size: 16px;
+  padding-left: 32px;
+  border-radius: 4px;
 }
 .s__checkbox input:disabled + label {
-  background: url(/image/icon_checkbox_off_disabled.svg);
+  background: url(/image/icon_checkbox_off_disabled.svg) no-repeat;
   background-size: contain;
 }
 .s__checkbox input:checked + label {
-  background: url(/image/icon_checkbox_on.svg);
+  background: url(/image/icon_checkbox_on.svg) no-repeat;
   background-size: contain;
 }
 .s__checkbox input:checked:disabled + label {
-  background: url(/image/icon_checkbox_on_disabled.svg);
+  background: url(/image/icon_checkbox_on_disabled.svg) no-repeat;
   background-size: contain;
-}
-.s__checkbox input + label + label {
-  font-size: 16px;
-  cursor: pointer;
-  margin-left: 8px;
 }
       `,
       js: '',
@@ -69,62 +76,67 @@ export default function page(props) {
       html: `
 <div class="s__checkbox-wrap">
   <div class="s__checkbox">
-      <input type="checkbox" class="s__checkbox-total" id="ch01_all" hidden>
-      <label for="ch01_all"></label>
+      <input type="checkbox" class="s__checkbox-total" id="ch01_all">
       <label for="ch01_all">checkboxAll</label>
   </div>
   <div class="s__checkbox">
-      <input type="checkbox" class="s__checkbox-ck" id="ch01_01" hidden checked>
-      <label for="ch01_01"></label>
+      <input type="checkbox" class="s__checkbox-ck" id="ch01_01" checked>
       <label for="ch01_01">checkbox</label>
   </div>
   <div class="s__checkbox">
-      <input type="checkbox" class="s__checkbox-ck" id="ch01_02" hidden>
-      <label for="ch01_02"></label>
+      <input type="checkbox" class="s__checkbox-ck" id="ch01_02">
       <label for="ch01_02">checkbox</label>
   </div>
 </div>
       `,
       css: `
-.s__checkbox-wrap,
-.s__radio-wrap {
+.s__checkbox-wrap {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
-.s__checkbox,
-.s__radio {
+.s__checkbox {
   display: flex;
   align-items: center;
 }
-.s__checkbox + .s__checkbox,
-.s__radio + .s__radio {
+.s__checkbox + .s__checkbox{
   margin-left: 16px;
 }
+.s__checkbox input{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0 none;
+}
+.s__checkbox input:focus ~ label{
+  border: 2px solid var(--black);
+  height: 28px;
+}
 .s__checkbox input + label {
-  width: 24px;
   height: 24px;
   display: block;
-  background: url(/image/icon_checkbox_off.svg);
+  background: url(/image/icon_checkbox_off.svg) no-repeat;
   background-size: contain;
   cursor: pointer;
+  font-size: 16px;
+  padding-left: 32px;
+  border-radius: 4px;
 }
 .s__checkbox input:disabled + label {
-  background: url(/image/icon_checkbox_off_disabled.svg);
+  background: url(/image/icon_checkbox_off_disabled.svg) no-repeat;
   background-size: contain;
 }
 .s__checkbox input:checked + label {
-  background: url(/image/icon_checkbox_on.svg);
+  background: url(/image/icon_checkbox_on.svg) no-repeat;
   background-size: contain;
 }
 .s__checkbox input:checked:disabled + label {
-  background: url(/image/icon_checkbox_on_disabled.svg);
+  background: url(/image/icon_checkbox_on_disabled.svg) no-repeat;
   background-size: contain;
-}
-.s__checkbox input + label + label {
-  font-size: 16px;
-  cursor: pointer;
-  margin-left: 8px;
 }
       `,
       js: `

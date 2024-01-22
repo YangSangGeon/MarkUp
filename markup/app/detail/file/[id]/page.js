@@ -14,7 +14,7 @@ export default function page(props) {
     <div class="s__row">
     <div class="s__file-wrap s__singlefile-wrap">
       <div class="s__file-btn">
-          <input type="file" class="s__file" id="btnFile" hidden>
+          <input type="file" class="s__file" id="btnFile">
           <label for="btnFile" class="s__btn s__btn-line">업로드</label>
       </div>
       <div class="s__singlefile-list"></div>
@@ -45,32 +45,45 @@ export default function page(props) {
   border-radius: 4px;
   border: 1px solid var(--border);
 }
+.s__file-wrap input[type="file"]:focus ~ .s__btn{
+  border: 2px solid var(--black);
+}
+.s__file-wrap input[type="file"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0 none;
+}
       `,
       js: `
-        //싱글 파일첨부
-        const fileUploads = document.querySelectorAll(
-          'input[type="file"]:not([multiple])'
-        );
-        if (fileUploads) {
-          fileUploads.forEach((fileInput) => {
-            fileInput.addEventListener("change", () => {
-              let file = fileInput.files;
-              const fileName = file[0].name;
-              const fileSize = (file[0].size / (1024 * 1024)).toFixed(1);
+//싱글 파일첨부
+const fileUploads = document.querySelectorAll(
+  'input[type="file"]:not([multiple])'
+);
+if (fileUploads) {
+  fileUploads.forEach((fileInput) => {
+    fileInput.addEventListener("change", () => {
+      let file = fileInput.files;
+      const fileName = file[0].name;
+      const fileSize = (file[0].size / (1024 * 1024)).toFixed(1);
 
-              // p 태그 생성
-              const fileGetListName = document.createElement("p");
-              fileGetListName.className = "file__get__list__name";
-              fileGetListName.textContent = fileName + '(' + fileSize + 'MB)';
-              fileInput.parentNode.parentNode.querySelector(
-                ".s__singlefile-list"
-              ).innerHTML = ""; //초기화
-              fileInput.parentNode.parentNode
-                .querySelector(".s__singlefile-list")
-                .appendChild(fileGetListName);
-            });
-          });
-        }
+      // p 태그 생성
+      const fileGetListName = document.createElement("p");
+      fileGetListName.className = "file__get__list__name";
+      fileGetListName.textContent = fileName + '(' + fileSize + 'MB)';
+      fileInput.parentNode.parentNode.querySelector(
+        ".s__singlefile-list"
+      ).innerHTML = ""; //초기화
+      fileInput.parentNode.parentNode
+        .querySelector(".s__singlefile-list")
+        .appendChild(fileGetListName);
+    });
+  });
+}
       `,
     },
     {
@@ -84,7 +97,7 @@ export default function page(props) {
     <div class="s__row">
       <div class="s__file-wrap">
         <div class="s__file-btn">
-            <input type="file" class="s__multi-file" multiple id="what_file" hidden>
+            <input type="file" class="s__multi-file" multiple id="what_file">
             <label for="what_file" class="s__btn s__btn-line">업로드</label>
         </div>
         <div class="s__file-list-wrap">
@@ -153,126 +166,138 @@ export default function page(props) {
   height: 20px;
   position: relative;
 }
+.s__file-wrap input[type="file"]:focus ~ .s__btn{
+  border: 2px solid var(--black);
+}
+.s__file-wrap input[type="file"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0 none;
+}
       `,
       js: `
-        //멀티 파일첨부
-        const fileMultiUploads = document.querySelectorAll(
-          'input[type="file"][multiple]'
-        );
+//멀티 파일첨부
+const fileMultiUploads = document.querySelectorAll(
+  'input[type="file"][multiple]'
+);
 
-        if (fileMultiUploads) {
-          fileMultiUploads.forEach((fileInput) => {
-            const dataTransfer = new DataTransfer();
+if (fileMultiUploads) {
+  fileMultiUploads.forEach((fileInput) => {
+    const dataTransfer = new DataTransfer();
+    fileInput.addEventListener("change", () => {
+      let fileArr = fileInput.files;
 
-            fileInput.addEventListener("change", () => {
-              let fileArr = fileInput.files;
-
-              if (fileArr != null && fileArr.length > 0) {
-                // =====DataTransfer 파일 관리========
-                for (let i = 0; i < fileArr.length; i++) {
-                  dataTransfer.items.add(fileArr[i]);
-                }
-                fileInput.files = dataTransfer.files;
-                const underscoreIndex = fileInput.id.indexOf("_");
-                const prefix =
-                  underscoreIndex !== -1
-                    ? fileInput.id.slice(0, underscoreIndex)
-                    : fileInput.id;
-                const modifiedId = prefix + "List";
-
-                //for문으로 리스트 만들어 줌
-                let fileList = "";
-                let fileDiv = document.createElement("div");
-
-                for (let i = 0; i < fileInput.files.length; i++) {
-                  const currentFile = fileInput.files[i];
-                  const fileSize = (currentFile.size / (1024 * 1024)).toFixed(
-                    1
-                  );
-
-                  // 새로운 li 요소 생성
-                  const listItem = document.createElement("li");
-                  listItem.id = 'data'+currentFile.lastModified;
-
-                  // p 태그 생성
-                  const fileGetListName = document.createElement("p");
-                  fileGetListName.className = "file__get__list__name";
-                  fileGetListName.textContent = currentFile.name +'(' + fileSize + 'MB)';
-
-                  // button 태그 생성
-                  const removeButton = document.createElement("button");
-                  removeButton.className = "btns remove_button";
-                  removeButton.setAttribute(
-                    "data-index",
-                    'data'+currentFile.lastModified
-                  );
-                  removeButton.setAttribute("data-target-input", fileInput.id);
-
-                  // span 태그 생성
-                  const span = document.createElement("span");
-                  span.textContent = currentFile.name + ' 삭제';
-
-                  // button에 span 추가
-                  removeButton.appendChild(span);
-
-                  // li에 p와 button 추가
-                  listItem.appendChild(fileGetListName);
-                  listItem.appendChild(removeButton);
-
-                  // 대상 요소에 li 추가
-                  fileDiv.appendChild(listItem);
-
-                  fileList += fileDiv.innerHTML;
-                  fileDiv.innerHTML = "";
-                }
-
-                document.querySelector("#" + modifiedId).innerHTML = fileList;
-
-                // ==========================================
-
-                // 삭제
-                const fileBottomList =
-                  document.querySelectorAll(".s__file-list");
-                fileBottomList.forEach((e) => {
-                  e.addEventListener("click", function (event) {
-                    if (
-                      e.id == modifiedId &&
-                      event.target.className == "btns remove_button"
-                    ) {
-                      targetFile = event.target.dataset.index;
-                      // ============DataTransfer================
-                      for (let i = 0; i < dataTransfer.files.length; i++) {
-                        if (
-                          "data" + dataTransfer.files[i].lastModified ==
-                          targetFile
-                        ) {
-                          dataTransfer.items.remove(i);
-                          break;
-                        }
-                      }
-
-                      document.getElementById(
-                        event.target.dataset.targetInput
-                      ).files = dataTransfer.files;
-                      console.log(e.querySelector("#" + targetFile));
-                      console.log(targetFile);
-                      if (e.querySelector("#" + targetFile)) {
-                        e.querySelector("#" + targetFile).remove();
-                      }
-
-                      console.log(
-                        "input FIles 삭제후=>",
-                        document.getElementById(
-                          event.target.dataset.targetInput
-                        ).files
-                      );
-                    }
-                  });
-                });
-              }
-            });
-          });
+      if (fileArr != null && fileArr.length > 0) {
+        // =====DataTransfer 파일 관리========
+        for (let i = 0; i < fileArr.length; i++) {
+          dataTransfer.items.add(fileArr[i]);
         }
+        fileInput.files = dataTransfer.files;
+        const underscoreIndex = fileInput.id.indexOf("_");
+        const prefix =
+          underscoreIndex !== -1
+            ? fileInput.id.slice(0, underscoreIndex)
+            : fileInput.id;
+        const modifiedId = prefix + "List";
+
+        //for문으로 리스트 만들어 줌
+        let fileList = "";
+        let fileDiv = document.createElement("div");
+
+        for (let i = 0; i < fileInput.files.length; i++) {
+          const currentFile = fileInput.files[i];
+          const fileSize = (currentFile.size / (1024 * 1024)).toFixed(
+            1
+          );
+
+          // 새로운 li 요소 생성
+          const listItem = document.createElement("li");
+          listItem.id = 'data'+currentFile.lastModified;
+
+          // p 태그 생성
+          const fileGetListName = document.createElement("p");
+          fileGetListName.className = "file__get__list__name";
+          fileGetListName.textContent = currentFile.name +'(' + fileSize + 'MB)';
+
+          // button 태그 생성
+          const removeButton = document.createElement("button");
+          removeButton.className = "btns remove_button";
+          removeButton.setAttribute(
+            "data-index",
+            'data'+currentFile.lastModified
+          );
+          removeButton.setAttribute("data-target-input", fileInput.id);
+
+          // span 태그 생성
+          const span = document.createElement("span");
+          span.textContent = currentFile.name + ' 삭제';
+
+          // button에 span 추가
+          removeButton.appendChild(span);
+
+          // li에 p와 button 추가
+          listItem.appendChild(fileGetListName);
+          listItem.appendChild(removeButton);
+
+          // 대상 요소에 li 추가
+          fileDiv.appendChild(listItem);
+
+          fileList += fileDiv.innerHTML;
+          fileDiv.innerHTML = "";
+        }
+
+        document.querySelector("#" + modifiedId).innerHTML = fileList;
+
+        // ==========================================
+
+        // 삭제
+        const fileBottomList =
+          document.querySelectorAll(".s__file-list");
+        fileBottomList.forEach((e) => {
+          e.addEventListener("click", function (event) {
+            if (
+              e.id == modifiedId &&
+              event.target.className == "btns remove_button"
+            ) {
+              targetFile = event.target.dataset.index;
+              // ============DataTransfer================
+              for (let i = 0; i < dataTransfer.files.length; i++) {
+                if (
+                  "data" + dataTransfer.files[i].lastModified ==
+                  targetFile
+                ) {
+                  dataTransfer.items.remove(i);
+                  break;
+                }
+              }
+
+              document.getElementById(
+                event.target.dataset.targetInput
+              ).files = dataTransfer.files;
+              console.log(e.querySelector("#" + targetFile));
+              console.log(targetFile);
+              if (e.querySelector("#" + targetFile)) {
+                e.querySelector("#" + targetFile).remove();
+              }
+
+              console.log(
+                "input FIles 삭제후=>",
+                document.getElementById(
+                  event.target.dataset.targetInput
+                ).files
+              );
+            }
+          });
+        });
+      }
+    });
+  });
+}
       `,
     },
   ];
