@@ -6,69 +6,70 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 
 const Title = styled.h2`
-color: var(--black, #181818);
-font-family: GmarketSansBold;
-font-size: 24px;
-font-style: normal;
-font-weight: 700;
+  color: var(--black, #181818);
+  font-family: GmarketSansBold;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
 `;
 const SubTitle = styled.p`
-color: var(--gray);
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-margin-bottom: 16px;
+  color: var(--gray);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  margin-bottom: 16px;
 `;
 const Body = styled.div`
-margin-top: 40px;
-width: calc(100% - 216px);
-display: flex;
-justify-content: space-between;
-& > div{
-  width: calc(100% - 92px);
-}
+  margin-top: 40px;
+  width: calc(100% - 216px);
+  display: flex;
+  justify-content: space-between;
+  & > div {
+    width: calc(100% - 92px);
+  }
 `;
 const TabImgWrap = styled.ul`
-display: flex;
-flex-direction: column;
-gap: 12px;
-margin-bottom: 16px;
-height: 60px;
-width: 62px;
-& li {
-  height: 62px;
-}
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+  height: 60px;
+  width: 62px;
+  & li {
+    height: 62px;
+  }
 `;
 const NoneImg = styled.span`
-display: block;
-width: 60px;
-height: 60px;
-background-color: #fff;
-`
-
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+`;
 
 export default function ContentsWrap(props) {
   // 이미지 로드 확인
-  const [isImageLoaded, setIsImageLoaded] = useState(Array(props.data.length).fill(false));
-  useEffect(() => { 
-    document.querySelector('.device-btn-wrap').style.display ='flex'
-    // 디바이스 지정
+  const [isImageLoaded, setIsImageLoaded] = useState(
+    Array(props.data.length).fill(false)
+  );
+  useEffect(() => {
+    document.querySelector(".device-btn-wrap").style.display = "flex";
+    // 디바이스 지정.. 이런식으로 하기 싫은데... ㅜㅜ
     if (props.data[pageIndex].device) {
-      if (props.data[pageIndex].device === 'mobile') {
-        document.querySelector('header').classList.remove('device-pc')
-        document.querySelector('header').classList.remove('device-tablet')
-        document.querySelector('header').classList.add('device-mobile')
-      } else if (props.data[pageIndex].device === 'tablet') {
-        document.querySelector('header').classList.remove('device-pc')
-        document.querySelector('header').classList.add('device-tablet')
-        document.querySelector('header').classList.remove('device-mobile')
-      } else if (props.data[pageIndex].device === 'pc') {
-        document.querySelector('header').classList.add('device-pc')
-        document.querySelector('header').classList.remove('device-tablet')
-        document.querySelector('header').classList.remove('device-mobile')
+      if (props.data[pageIndex].device === "mobile") {
+        document.querySelector("header").classList.remove("device-pc");
+        document.querySelector("header").classList.remove("device-tablet");
+        document.querySelector("header").classList.add("device-mobile");
+      } else if (props.data[pageIndex].device === "tablet") {
+        document.querySelector("header").classList.remove("device-pc");
+        document.querySelector("header").classList.add("device-tablet");
+        document.querySelector("header").classList.remove("device-mobile");
+      } else if (props.data[pageIndex].device === "pc") {
+        document.querySelector("header").classList.add("device-pc");
+        document.querySelector("header").classList.remove("device-tablet");
+        document.querySelector("header").classList.remove("device-mobile");
       }
     }
-  },[])
+  }, []);
 
   // useEffect를 사용하여 이미지 로드 이벤트를 한 번만 등록
   useEffect(() => {
@@ -89,10 +90,9 @@ export default function ContentsWrap(props) {
     });
   }, [props.data]);
 
-  const [pageIndex, setPageIndex] = useState(0)
+  const [pageIndex, setPageIndex] = useState(0);
   // 처음켜지면 id의 값이 thisPage의 값으로 지정
   // const thisPage = props.props.params.id;
-
 
   const [iframeKey, setIframeKey] = useState(0);
   const handleTabClick = () => {
@@ -100,11 +100,9 @@ export default function ContentsWrap(props) {
     setIframeKey((prevKey) => prevKey + 1);
   };
 
-
-
   return (
     <Body>
-       {/* 페이지 이동 트래픽 이슈 thisPage => pageIndex */}
+      {/* 페이지 이동 트래픽 이슈 thisPage => pageIndex */}
       <div>
         <Title>{props.data[pageIndex].title}</Title>
         {props.data[pageIndex].subTitle && (
@@ -132,10 +130,21 @@ export default function ContentsWrap(props) {
                   : "1px solid var(--boarder)",
             }}
           >
-           {/* <Link href={String(index)}> 페이지 이동 트래픽 이슈로 변경*/}
-            <button onClick={() => { setPageIndex(index); handleTabClick(); }}>
+            {/* <Link href={String(index)}> 페이지 이동 트래픽 이슈로 변경*/}
+            <button
+              onClick={() => {
+                setPageIndex(index);
+                handleTabClick();
+              }}
+            >
               {isImageLoaded[index] ? (
-                <Image priority={true} width={60} height={60} src={"/" + num.img} alt={num.title} />
+                <Image
+                  priority={true}
+                  width={60}
+                  height={60}
+                  src={"/" + num.img}
+                  alt={num.title}
+                />
               ) : (
                 <NoneImg />
               )}

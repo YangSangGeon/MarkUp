@@ -86,19 +86,24 @@ export default function Home() {
     },
     {
       id: 1,
-      title: "Supporters",
+      title: "Update",
       description: "1",
     },
     {
       id: 2,
-      title: "Bug",
+      title: "Supporters",
       description: "2",
+    },
+    {
+      id: 3,
+      title: "Bug",
+      description: "3",
     },
   ];
   useEffect(() => {
-    document.querySelector('.device-btn-wrap').style.display ='none'
-  },[])
-  
+    document.querySelector(".device-btn-wrap").style.display = "none";
+  }, []);
+
   return (
     <Body>
       <Title>README</Title>
@@ -185,6 +190,39 @@ export default function Home() {
               </ReadMeListWrap>
             </div>
           ) : item.id === 1 ? (
+            <div key={innerIndex}>
+              <ReadMeListWrap>
+                <SubTitle>예정</SubTitle>
+                <ReadMeListWrap>
+                  <ReadMeList>
+                    <strong>SideBar</strong>
+                  </ReadMeList>
+                  <ReadMeList>
+                    <strong>Board : </strong> 갤러리형
+                  </ReadMeList>
+                  <ReadMeList>
+                    <strong>chart : </strong> 가로형
+                  </ReadMeList>
+                  <ReadMeList>
+                    <strong>file : </strong> 이미지 첨부 미리보기
+                  </ReadMeList>
+                  <ReadMeList>
+                    <strong>toolTip</strong>
+                  </ReadMeList>
+                  <ReadMeList>
+                    <strong>Date : </strong> DatePicker 라이브러리 활용
+                  </ReadMeList>
+                </ReadMeListWrap>
+                <SubTitle>완료</SubTitle>
+                <ReadMeListWrap>
+                  <ReadMeList>
+                    <strong>Haeder(Mobile) : </strong> 사이드형(24.01.22
+                    추가완료)
+                  </ReadMeList>
+                </ReadMeListWrap>
+              </ReadMeListWrap>
+            </div>
+          ) : item.id === 2 ? (
             <div key={innerIndex}>
               <ReadMeListWrap>
                 <ReadMeList>여러분의 메일을 기다리는중!</ReadMeList>
