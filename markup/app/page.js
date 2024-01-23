@@ -91,12 +91,12 @@ export default function Home() {
     },
     {
       id: 2,
-      title: "Supporters",
+      title: "Bug",
       description: "2",
     },
     {
       id: 3,
-      title: "Bug",
+      title: "Supporters",
       description: "3",
     },
   ];
@@ -224,19 +224,21 @@ export default function Home() {
             </div>
           ) : item.id === 2 ? (
             <div key={innerIndex}>
-              <ReadMeListWrap>
-                <ReadMeList>여러분의 메일을 기다리는중!</ReadMeList>
-              </ReadMeListWrap>
-            </div>
-          ) : (
-            <div key={innerIndex}>
               <SubTitle>수정 중</SubTitle>
               <ReadMeListWrap>
-                <ReadMeList>아직 없어요!</ReadMeList>
+                <ReadMeList>
+                  <strong>File : </strong> 멀티파일 중복된 파일명 노출{" "}
+                </ReadMeList>
               </ReadMeListWrap>
               <SubTitle>확인 중</SubTitle>
               <ReadMeListWrap>
                 <ReadMeList>아직 없어요!</ReadMeList>
+              </ReadMeListWrap>
+            </div>
+          ) : (
+            <div key={innerIndex}>
+              <ReadMeListWrap>
+                <ReadMeList>여러분의 메일을 기다리는중!</ReadMeList>
               </ReadMeListWrap>
             </div>
           )

@@ -40,17 +40,14 @@ export default function Header() {
     setTimeout(() => {
       if (document.querySelector("header").classList.contains("device-pc")) {
         setSize("size-pc");
-        console.log(size);
       } else if (
         document.querySelector("header").classList.contains("device-tablet")
       ) {
         setSize("size-tablet");
-        console.log(size);
       } else if (
         document.querySelector("header").classList.contains("device-mobile")
       ) {
         setSize("size-mobile");
-        console.log(size);
       }
     }, 100);
   }, [pathname]);
