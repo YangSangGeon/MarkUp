@@ -7,8 +7,8 @@ import { Analytics } from "@vercel/analytics/react";
 import Image from "next/image";
 
 export const metadata = {
-  title: "markUp",
-  description: "markUp components app",
+  title: "쉬운 마크업, MarkUp",
+  description: "마크업(퍼블리싱)을 더 쉽게 만들어봅시다!",
 };
 
 export default function RootLayout({ children }) {
