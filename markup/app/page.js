@@ -195,9 +195,6 @@ export default function Home() {
                 <SubTitle>예정</SubTitle>
                 <ReadMeListWrap>
                   <ReadMeList>
-                    <strong>SideBar</strong>
-                  </ReadMeList>
-                  <ReadMeList>
                     <strong>Board : </strong> 갤러리형
                   </ReadMeList>
                   <ReadMeList>
@@ -205,8 +202,8 @@ export default function Home() {
                   </ReadMeList>
                   <ReadMeList>
                     <strong>file : </strong> 이미지 첨부 미리보기
-                    </ReadMeList>
-                    <ReadMeList>
+                  </ReadMeList>
+                  <ReadMeList>
                     <strong>file : </strong> 드래그로 파일 첨부
                   </ReadMeList>
                   <ReadMeList>
@@ -220,6 +217,9 @@ export default function Home() {
                 <ReadMeListWrap>
                   <ReadMeList>
                     <strong>Haeder(Mobile) : </strong> 사이드형(24.01.22)
+                  </ReadMeList>
+                  <ReadMeList>
+                    <strong>Sidebar : </strong>(24.01.26)
                   </ReadMeList>
                 </ReadMeListWrap>
               </ReadMeListWrap>

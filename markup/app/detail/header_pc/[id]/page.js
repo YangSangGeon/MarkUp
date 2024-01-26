@@ -150,33 +150,33 @@ header.s__header .s__row {
 
   
       `,
-      js: 
-        `//pc메뉴
-           let pcMenuBtn = document.querySelectorAll(".pc-menu__step1");
-  
-           for (let i = 0; i < pcMenuBtn.length; i++) {
-             const p = pcMenuBtn[i];
-             p.addEventListener("focusin", () => {
-               pcMenuBtn.forEach((e) => {
-                 e.classList.remove("is-open");
-               });
-               p.classList.add("is-open");
-             });
-           }
-           let preMenu = document.querySelector(".s__logo"); //pc메뉴의 이전요소
-           let nextMenu = document.querySelector(".s__login"); //pc메뉴의 다음요소
-           preMenu &&
-             preMenu.addEventListener("focusin", () => {
-               pcMenuBtn.forEach((e) => {
-                 e.classList.remove("is-open");
-               });
-             });
-           nextMenu &&
-             nextMenu.addEventListener("focusin", () => {
-               pcMenuBtn.forEach((e) => {
-                 e.classList.remove("is-open");
-               });
-             });`
+      js: `
+//pc메뉴
+let pcMenuBtn = document.querySelectorAll(".pc-menu__step1");
+
+for (let i = 0; i < pcMenuBtn.length; i++) {
+  const p = pcMenuBtn[i];
+  p.addEventListener("focusin", () => {
+    pcMenuBtn.forEach((e) => {
+      e.classList.remove("is-open");
+    });
+    p.classList.add("is-open");
+  });
+}
+let preMenu = document.querySelector(".s__logo"); //pc메뉴의 이전요소
+let nextMenu = document.querySelector(".s__login"); //pc메뉴의 다음요소
+preMenu &&
+  preMenu.addEventListener("focusin", () => {
+    pcMenuBtn.forEach((e) => {
+      e.classList.remove("is-open");
+    });
+  });
+nextMenu &&
+  nextMenu.addEventListener("focusin", () => {
+    pcMenuBtn.forEach((e) => {
+      e.classList.remove("is-open");
+    });
+  });`
       
     },
     {
@@ -340,38 +340,43 @@ header.s__header .s__row {
       
       `,
       js: `
-        //pc메뉴
-        let header = document.querySelector("header");
-        let pcMenu = document.querySelector(".s__pc-header-wrap");
-        let pcMenuBtn = document.querySelectorAll(".pc-menu__step1");
-        let pcMenuBtnList = document.querySelectorAll(".pc-menu__step1 + ul");
-        let pcMenuBg = document.querySelector(".pc-menu-bg");
-        let lastMenuLink = document.querySelector(
-          ".menu-link > li:last-child li:last-child .pc-menu__step2"
-        );
-        for (let i = 0; i < pcMenuBtn.length; i++) {
-          const p = pcMenuBtn[i];
-          p.addEventListener("focusin", () => {
-            pcMenu.classList.add("is-open");
-          });
-          p.addEventListener("mouseover", () => {
-            pcMenu.classList.add("is-open");
-          });
-        }
-        header.addEventListener("mouseleave", () => {
-          pcMenu.classList.remove("is-open");
-        });
-        let preMenu = document.querySelector(".s__logo"); //pc메뉴의 이전요소
-        let nextMenu = document.querySelector(".s__login"); //pc메뉴의 다음요소
-        preMenu.addEventListener("focusin", () => {
-          pcMenu.classList.remove("is-open");
-        });
-        nextMenu.addEventListener("focusin", () => {
-          pcMenu.classList.remove("is-open");
-        });
-        lastMenuLink.addEventListener("focusin", () => {
-          pcMenu.classList.add("is-open");
-        });
+//pc메뉴
+let header = document.querySelector("header");
+let pcMenu = document.querySelector(".s__pc-header-wrap");
+let pcMenuBtn = document.querySelectorAll(".pc-menu__step1");
+let pcMenuBtnList = document.querySelectorAll(".pc-menu__step1 + ul");
+let pcMenuBg = document.querySelector(".pc-menu-bg");
+let lastMenuLink = document.querySelector(
+  ".menu-link > li:last-child li:last-child .pc-menu__step2"
+);
+for (let i = 0; i < pcMenuBtn.length; i++) {
+  const p = pcMenuBtn[i];
+  p.addEventListener("focusin", () => {
+    pcMenu.classList.add("is-open");
+  });
+  p.addEventListener("mouseover", () => {
+    pcMenu.classList.add("is-open");
+  });
+  p.addEventListener("mouseover", () => {
+    pcMenuBtn.forEach((e) => {
+      e.classList.remove("is-open");
+    });
+  });
+}
+header.addEventListener("mouseleave", () => {
+  pcMenu.classList.remove("is-open");
+});
+let preMenu = document.querySelector(".s__logo"); //pc메뉴의 이전요소
+let nextMenu = document.querySelector(".s__login"); //pc메뉴의 다음요소
+preMenu.addEventListener("focusin", () => {
+  pcMenu.classList.remove("is-open");
+});
+nextMenu.addEventListener("focusin", () => {
+  pcMenu.classList.remove("is-open");
+});
+lastMenuLink.addEventListener("focusin", () => {
+  pcMenu.classList.add("is-open");
+});
       `,
     },
     {
@@ -579,63 +584,63 @@ li.active > .pc-menu__step3 {
 } 
       `,
       js: `
-        //pc메뉴
-        let pcMenuBtn = document.querySelectorAll(".pc-menu__step1");
-        let pcMenuBtnStep2 = document.querySelectorAll(
-          ".pc-menu__step2 > ul > li"
-        );
-        let pcMenuBtnList = document.querySelectorAll(".pc-menu__step1 + ul");
-        let preMenu = document.querySelector(".s__logo"); //pc메뉴의 이전요소
-        let nextMenu = document.querySelector(".s__login"); //pc메뉴의 다음요소
+//pc메뉴
+let pcMenuBtn = document.querySelectorAll(".pc-menu__step1");
+let pcMenuBtnStep2 = document.querySelectorAll(
+  ".pc-menu__step2 > ul > li"
+);
+let pcMenuBtnList = document.querySelectorAll(".pc-menu__step1 + ul");
+let preMenu = document.querySelector(".s__logo"); //pc메뉴의 이전요소
+let nextMenu = document.querySelector(".s__login"); //pc메뉴의 다음요소
 
-        //스탭1
-        for (let i = 0; i < pcMenuBtn.length; i++) {
-          const p = pcMenuBtn[i];
-          p.addEventListener("mouseenter", () => {
-            pcMenuBtn.forEach((e) => {
-              e.classList.remove("active");
-            });
-            p.classList.add("active");
-          });
-          p.addEventListener("focusin", () => {
-            pcMenuBtn.forEach((e) => {
-              e.classList.remove("active");
-            });
-            p.classList.add("active");
-          });
-          p.addEventListener("mouseleave", () => {
-            pcMenuBtn.forEach((e) => {
-              e.classList.remove("active");
-            });
-          });
-        }
-        preMenu.addEventListener("focusin", () => {
-          pcMenuBtn.forEach((e) => {
-            e.classList.remove("active");
-          });
-        });
-        nextMenu.addEventListener("focusin", () => {
-          pcMenuBtn.forEach((e) => {
-            e.classList.remove("active");
-          });
-        });
+//스탭1
+for (let i = 0; i < pcMenuBtn.length; i++) {
+  const p = pcMenuBtn[i];
+  p.addEventListener("mouseenter", () => {
+    pcMenuBtn.forEach((e) => {
+      e.classList.remove("active");
+    });
+    p.classList.add("active");
+  });
+  p.addEventListener("focusin", () => {
+    pcMenuBtn.forEach((e) => {
+      e.classList.remove("active");
+    });
+    p.classList.add("active");
+  });
+  p.addEventListener("mouseleave", () => {
+    pcMenuBtn.forEach((e) => {
+      e.classList.remove("active");
+    });
+  });
+}
+preMenu.addEventListener("focusin", () => {
+  pcMenuBtn.forEach((e) => {
+    e.classList.remove("active");
+  });
+});
+nextMenu.addEventListener("focusin", () => {
+  pcMenuBtn.forEach((e) => {
+    e.classList.remove("active");
+  });
+});
 
-        // 스탭2
-        for (let i = 0; i < pcMenuBtnStep2.length; i++) {
-          const p = pcMenuBtnStep2[i];
-          p.addEventListener("mouseenter", () => {
-            pcMenuBtnStep2.forEach((e) => {
-              e.classList.remove("active");
-            });
-            p.classList.add("active");
-          });
-          p.addEventListener("focusin", () => {
-            pcMenuBtnStep2.forEach((e) => {
-              e.classList.remove("active");
-            });
-            p.classList.add("active");
-          });
-        }
+// 스탭2
+for (let i = 0; i < pcMenuBtnStep2.length; i++) {
+  const p = pcMenuBtnStep2[i];
+  p.addEventListener("mouseenter", () => {
+    pcMenuBtnStep2.forEach((e) => {
+      e.classList.remove("active");
+    });
+    p.classList.add("active");
+  });
+  p.addEventListener("focusin", () => {
+    pcMenuBtnStep2.forEach((e) => {
+      e.classList.remove("active");
+    });
+    p.classList.add("active");
+  });
+}
       `,
     },
   ];

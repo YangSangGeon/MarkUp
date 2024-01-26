@@ -60,6 +60,7 @@ export default function Sidebar() {
     { name: "tabs", path: "/detail/tabs/0" },
     { name: "chart", path: "/detail/chart/0" },
     { name: "accordion", path: "/detail/accordion/0" },
+    { name: "sidebar", path: "/detail/sidebar/0" },
     // { name: "texteditor", path: "/detail/texteditor/0" },
     // { name: "cordbox", path: "/detail/cordbox/0" },
   ];
