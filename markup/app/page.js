@@ -205,6 +205,9 @@ export default function Home() {
                   </ReadMeList>
                   <ReadMeList>
                     <strong>file : </strong> 이미지 첨부 미리보기
+                    </ReadMeList>
+                    <ReadMeList>
+                    <strong>file : </strong> 드래그로 파일 첨부
                   </ReadMeList>
                   <ReadMeList>
                     <strong>toolTip</strong>
@@ -216,8 +219,7 @@ export default function Home() {
                 <SubTitle>완료</SubTitle>
                 <ReadMeListWrap>
                   <ReadMeList>
-                    <strong>Haeder(Mobile) : </strong> 사이드형(24.01.22
-                    추가완료)
+                    <strong>Haeder(Mobile) : </strong> 사이드형(24.01.22)
                   </ReadMeList>
                 </ReadMeListWrap>
               </ReadMeListWrap>
@@ -226,13 +228,17 @@ export default function Home() {
             <div key={innerIndex}>
               <SubTitle>수정 중</SubTitle>
               <ReadMeListWrap>
-                <ReadMeList>
-                  <strong>File : </strong> 멀티파일 중복된 파일명 노출{" "}
-                </ReadMeList>
+                <ReadMeList>아직 없어요!</ReadMeList>
               </ReadMeListWrap>
               <SubTitle>확인 중</SubTitle>
               <ReadMeListWrap>
                 <ReadMeList>아직 없어요!</ReadMeList>
+              </ReadMeListWrap>
+              <SubTitle>수정 완료</SubTitle>
+              <ReadMeListWrap>
+                <ReadMeList>
+                  <strong>File : </strong> 멀티파일 중복된 파일명 노출(24.01.26)
+                </ReadMeList>
               </ReadMeListWrap>
             </div>
           ) : (

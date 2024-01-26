@@ -195,7 +195,23 @@ if (fileMultiUploads) {
       if (fileArr != null && fileArr.length > 0) {
         // =====DataTransfer 파일 관리========
         for (let i = 0; i < fileArr.length; i++) {
-          dataTransfer.items.add(fileArr[i]);
+          
+          const currentFile = fileArr[i];
+
+          let isDuplicate = false;
+          for (let j = 0; j < dataTransfer.items.length; j++) {
+            if (
+              dataTransfer.items[j].kind == "file" &&
+              dataTransfer.items[j].getAsFile().name === currentFile.name) {
+              isDuplicate = true;
+              console.log( dataTransfer.items[j].getAsFile().name)
+              break;
+            }
+          }
+
+          if (!isDuplicate) {
+            dataTransfer.items.add(currentFile);
+          }
         }
         fileInput.files = dataTransfer.files;
         const underscoreIndex = fileInput.id.indexOf("_");
@@ -279,18 +295,14 @@ if (fileMultiUploads) {
               document.getElementById(
                 event.target.dataset.targetInput
               ).files = dataTransfer.files;
-              console.log(e.querySelector("#" + targetFile));
-              console.log(targetFile);
               if (e.querySelector("#" + targetFile)) {
                 e.querySelector("#" + targetFile).remove();
+                console.log(
+                  "input FIles 삭제후=>",
+                  document.getElementById(event.target.dataset.targetInput).files
+                );
               }
 
-              console.log(
-                "input FIles 삭제후=>",
-                document.getElementById(
-                  event.target.dataset.targetInput
-                ).files
-              );
             }
           });
         });

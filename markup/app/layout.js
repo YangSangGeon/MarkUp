@@ -7,7 +7,7 @@ import { Analytics } from "@vercel/analytics/react";
 import Image from "next/image";
 
 export const metadata = {
-  title: "쉬운 마크업, MarkUp",
+  title: "쉽게 시작하는 마크업, MarkUp",
   description: "마크업(퍼블리싱)을 더 쉽게 만들어봅시다!",
 };
 
