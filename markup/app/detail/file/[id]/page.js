@@ -34,7 +34,7 @@ export default function page(props) {
   width: calc(100% - 88px);
 }
 .s__singlefile-wrap .file__get__list__name {
-  background-color: var(--backgroun);
+  background-color: var(--background);
 
   display: flex;
   align-items: center;

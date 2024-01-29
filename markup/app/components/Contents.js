@@ -225,7 +225,7 @@ ol {
   --secondary-color: #000000;
   --border: #E6E8EC;
   --gray: #BABABA;
-  --backgroun: #F5F5F6;
+  --background: #F5F5F6;
   --footer-bg: #191919;
   --footer-text: #fff;
 }

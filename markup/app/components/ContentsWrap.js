@@ -39,6 +39,14 @@ const TabImgWrap = styled.ul`
     height: 62px;
   }
 `;
+const CategoryList = styled.li`
+  & img {
+    opacity: 0.1;
+  }
+  &.is-open img {
+    opacity: 1;
+  }
+`;
 const NoneImg = styled.span`
   display: block;
   width: 60px;
@@ -121,8 +129,9 @@ export default function ContentsWrap(props) {
       </div>
       <TabImgWrap>
         {props.data.map((num, index) => (
-          <li
+          <CategoryList
             key={index}
+            className={pageIndex == index ? "is-open" : ""}
             style={{
               border:
                 pageIndex == index
@@ -149,7 +158,7 @@ export default function ContentsWrap(props) {
                 <NoneImg />
               )}
             </button>
-          </li>
+          </CategoryList>
         ))}
       </TabImgWrap>
     </Body>

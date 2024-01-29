@@ -1,13 +1,13 @@
 <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="60" height="60" fill="#E6E8EC"/>
+<rect width="60" height="60" fill="#181818"/>
 <rect width="60" height="14" fill="white"/>
 <rect y="26" width="60" height="14" fill="white"/>
 <rect y="14" width="60" height="46" fill="white"/>
-<line y1="13.5" x2="44" y2="13.5" stroke="#E6E8EC"/>
-<rect y="26" width="44" height="34" fill="#E6E8EC"/>
+<line y1="13.5" x2="44" y2="13.5" stroke="#181818"/>
+<rect y="26" width="44" height="34" fill="#181818"/>
 <rect y="38" width="60" height="22" fill="white"/>
-<path d="M34.1429 21.4286L37 18.5714L39.8572 21.4286" stroke="#E6E8EC" stroke-miterlimit="10"/>
+<path d="M34.1429 21.4286L37 18.5714L39.8572 21.4286" stroke="#181818" stroke-miterlimit="10"/>
 <path d="M34.1429 33.4286L37 30.5714L39.8572 33.4286" stroke="white" stroke-miterlimit="10"/>
-<rect x="43" width="17" height="60" fill="#E6E8EC"/>
+<rect x="43" width="17" height="60" fill="#181818"/>
 <line x1="42.5" y1="25" x2="42.5" y2="39" stroke="white"/>
 </svg>

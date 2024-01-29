@@ -216,10 +216,13 @@ export default function Home() {
                 <SubTitle>완료</SubTitle>
                 <ReadMeListWrap>
                   <ReadMeList>
-                    <strong>Haeder(Mobile) : </strong> 사이드형(24.01.22)
+                    <strong>Select : </strong> 위로 드랍다운(24.01.29)
                   </ReadMeList>
                   <ReadMeList>
                     <strong>Sidebar : </strong>(24.01.26)
+                  </ReadMeList>
+                  <ReadMeList>
+                    <strong>Haeder(Mobile) : </strong> 사이드형(24.01.22)
                   </ReadMeList>
                 </ReadMeListWrap>
               </ReadMeListWrap>
