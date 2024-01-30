@@ -195,9 +195,6 @@ export default function Home() {
                 <SubTitle>예정</SubTitle>
                 <ReadMeListWrap>
                   <ReadMeList>
-                    <strong>Board : </strong> 갤러리형
-                  </ReadMeList>
-                  <ReadMeList>
                     <strong>chart : </strong> 가로형
                   </ReadMeList>
                   <ReadMeList>
@@ -214,7 +211,10 @@ export default function Home() {
                   </ReadMeList>
                 </ReadMeListWrap>
                 <SubTitle>완료</SubTitle>
-                <ReadMeListWrap>
+                  <ReadMeListWrap>
+                  <ReadMeList>
+                    <strong>Board : </strong> 갤러리형(24.01.30)
+                  </ReadMeList>
                   <ReadMeList>
                     <strong>Select : </strong> 위로 드랍다운(24.01.29)
                   </ReadMeList>
@@ -235,7 +235,7 @@ export default function Home() {
               </ReadMeListWrap>
               <SubTitle>확인 중</SubTitle>
               <ReadMeListWrap>
-                <ReadMeList>아직 없어요!</ReadMeList>
+                <ReadMeList><strong>Swiper : </strong>웹접근성 미준수(좌우버튼 키보드로 조작불가 등)</ReadMeList>
               </ReadMeListWrap>
               <SubTitle>수정 완료</SubTitle>
               <ReadMeListWrap>
