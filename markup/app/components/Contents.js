@@ -86,10 +86,10 @@ export default function Contents(props) {
     return str;
   };
   // const componentsHtml = DOMPurify.sanitize(props.contentsHtml); //html : 주석까지 삭제하는 이슈
-  // const componentsHtml = props.contentsHtml; //html
-  let IframeDiv = document.createElement("div");
-  IframeDiv.classList.add('iframe-form')
-  IframeDiv.innerHTML = props.contentsHtml;
+  const componentsHtml = props.contentsHtml; //html
+  let iframeDiv = document.createElement("div");
+  iframeDiv.classList.add('iframe-form');
+  iframeDiv.innerHTML = props.contentsHtml;
   const componentsCss = DOMPurify.sanitize(props.contentsCss); //css
   const firstJs = props.contentsJs.toString();
   // const startIndex = firstJs.indexOf("{") + 1; // '{' 다음 위치부터
@@ -411,7 +411,7 @@ input[type="number"]::-webkit-inner-spin-button {
     if (iframeRef.current) {
       const iframeDocument = iframeRef.current.contentDocument;
       iframeDocument.open();
-      iframeDocument.write(IframeDiv.outerHTML); //html
+      iframeDocument.write(iframeDiv.outerHTML); //html
       iframeDocument.close();
 
       //reset css
