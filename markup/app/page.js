@@ -198,9 +198,6 @@ export default function Home() {
                     <strong>chart : </strong> 가로형
                   </ReadMeList>
                   <ReadMeList>
-                    <strong>file : </strong> 드래그로 파일 첨부
-                  </ReadMeList>
-                  <ReadMeList>
                     <strong>toolTip</strong>
                   </ReadMeList>
                   <ReadMeList>
@@ -210,7 +207,7 @@ export default function Home() {
                 <SubTitle>완료</SubTitle>
                   <ReadMeListWrap>
                   <ReadMeList>
-                    <strong>file : </strong> 싱글,멀티파일 이미지 미리보기(24.01.31)
+                    <strong>File : </strong> 싱글,멀티파일 이미지 미리보기(24.01.31), 드래그드랍 멀티파일 미리보기(24.02.01)
                   </ReadMeList>
                   <ReadMeList>
                     <strong>Board : </strong> 갤러리형(24.01.30)

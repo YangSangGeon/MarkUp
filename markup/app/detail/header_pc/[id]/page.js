@@ -564,11 +564,11 @@ li.active > .pc-menu__step3 {
   border-radius: 8px;
 }
 .pc-menu__step2 > ul > li:hover > a,
-.pc-menu__step2 > ul > li:focus > a {
+.pc-menu__step2 > ul > li:focus-visible > a {
   background-color: #eeeeee3e;
 }
 .pc-menu__step2 a:hover,
-.pc-menu__step2 a:focus {
+.pc-menu__step2 a:focus-visible {
   background-color: #eeeeee3e;
 }
 @media (max-width: 1600px) {

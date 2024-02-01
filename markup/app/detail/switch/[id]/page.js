@@ -28,7 +28,7 @@ export default function page(props) {
   clip: rect(0, 0, 0, 0);
   border: 0 none;
 }
-.s__switch input[type="checkbox"]:focus ~ .toggleSwitch{
+.s__switch input[type="checkbox"]:focus-visible ~ .toggleSwitch{
   border: 2px solid var(--black);
 }
 .toggleSwitch {

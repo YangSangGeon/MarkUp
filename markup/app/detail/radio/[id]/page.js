@@ -45,9 +45,8 @@ export default function page(props) {
   clip: rect(0, 0, 0, 0);
   border: 0 none;
 }
-.s__radio input:focus ~ label{
-  border: 2px solid var(--black);
-  height: 28px;
+.s__radio input:focus-visible ~ label{
+  outline: 2px solid var(--black);
 }
 .s__radio input + label {
   height: 24px;
