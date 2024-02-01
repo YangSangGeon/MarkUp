@@ -195,9 +195,6 @@ export default function Home() {
                 <SubTitle>예정</SubTitle>
                 <ReadMeListWrap>
                   <ReadMeList>
-                    <strong>chart : </strong> 가로형
-                  </ReadMeList>
-                  <ReadMeList>
                     <strong>toolTip</strong>
                   </ReadMeList>
                   <ReadMeList>
@@ -206,6 +203,9 @@ export default function Home() {
                 </ReadMeListWrap>
                 <SubTitle>완료</SubTitle>
                   <ReadMeListWrap>
+                  <ReadMeList>
+                    <strong>chart : </strong> 가로막대형(24.02.02)
+                  </ReadMeList>
                   <ReadMeList>
                     <strong>File : </strong> 싱글,멀티파일 이미지 미리보기(24.01.31), 드래그드랍 멀티파일 미리보기(24.02.01)
                   </ReadMeList>
