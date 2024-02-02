@@ -204,22 +204,28 @@ export default function Home() {
                 <SubTitle>완료</SubTitle>
                   <ReadMeListWrap>
                   <ReadMeList>
-                    <strong>chart : </strong> 가로막대형(24.02.02)
+                      <strong>chart : </strong> 가로막대형
+                      {/* (24.02.02) */}
                   </ReadMeList>
                   <ReadMeList>
-                    <strong>File : </strong> 싱글,멀티파일 이미지 미리보기(24.01.31), 드래그드랍 멀티파일 미리보기(24.02.01)
+                      <strong>File : </strong> 싱글,멀티파일 이미지 미리보기, 드래그드랍 멀티파일 미리보기
+                      {/* (24.01.31)(24.02.01) */}
                   </ReadMeList>
                   <ReadMeList>
-                    <strong>Board : </strong> 갤러리형(24.01.30)
+                      <strong>Board : </strong> 갤러리형
+                      {/* (24.01.30) */}
                   </ReadMeList>
                   <ReadMeList>
-                    <strong>Select : </strong> 위로 드랍다운(24.01.29)
+                      <strong>Select : </strong> 위로 드랍다운
+                      {/* (24.01.29) */}
                   </ReadMeList>
                   <ReadMeList>
-                    <strong>Sidebar : </strong>(24.01.26)
+                      <strong>Sidebar : </strong> 기본 사이드바
+                      {/* (24.01.26) */}
                   </ReadMeList>
                   <ReadMeList>
-                    <strong>Haeder(Mobile) : </strong> 사이드형(24.01.22)
+                      <strong>Haeder(Mobile) : </strong> 사이드형
+                      {/* (24.01.22) */}
                   </ReadMeList>
                 </ReadMeListWrap>
               </ReadMeListWrap>
