@@ -196,13 +196,17 @@ export default function Home() {
                 <ReadMeListWrap>
                   <ReadMeList>
                     <strong>toolTip</strong>
-                  </ReadMeList>
-                  <ReadMeList>
-                    <strong>Date : </strong> DatePicker 라이브러리 활용
+                    </ReadMeList>
+                    <ReadMeList>
+                      <strong>Board : </strong> Tui그리드 UI수정 
                   </ReadMeList>
                 </ReadMeListWrap>
                 <SubTitle>완료</SubTitle>
                   <ReadMeListWrap>
+                  <ReadMeList>
+                      <strong>Date : </strong> DatePicker 
+                      {/* (24.02.06) */}
+                  </ReadMeList>
                   <ReadMeList>
                       <strong>chart : </strong> 가로막대형
                       {/* (24.02.02) */}
