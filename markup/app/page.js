@@ -196,30 +196,40 @@ export default function Home() {
                 <ReadMeListWrap>
                   <ReadMeList>
                     <strong>toolTip</strong>
-                  </ReadMeList>
-                  <ReadMeList>
-                    <strong>Date : </strong> DatePicker 라이브러리 활용
+                    </ReadMeList>
+                    <ReadMeList>
+                      <strong>Board : </strong> Tui그리드 UI수정 
                   </ReadMeList>
                 </ReadMeListWrap>
                 <SubTitle>완료</SubTitle>
                   <ReadMeListWrap>
                   <ReadMeList>
-                    <strong>chart : </strong> 가로막대형(24.02.02)
+                      <strong>Date : </strong> DatePicker 
+                      {/* (24.02.06) */}
                   </ReadMeList>
                   <ReadMeList>
-                    <strong>File : </strong> 싱글,멀티파일 이미지 미리보기(24.01.31), 드래그드랍 멀티파일 미리보기(24.02.01)
+                      <strong>chart : </strong> 가로막대형
+                      {/* (24.02.02) */}
                   </ReadMeList>
                   <ReadMeList>
-                    <strong>Board : </strong> 갤러리형(24.01.30)
+                      <strong>File : </strong> 싱글,멀티파일 이미지 미리보기, 드래그드랍 멀티파일 미리보기
+                      {/* (24.01.31)(24.02.01) */}
                   </ReadMeList>
                   <ReadMeList>
-                    <strong>Select : </strong> 위로 드랍다운(24.01.29)
+                      <strong>Board : </strong> 갤러리형
+                      {/* (24.01.30) */}
                   </ReadMeList>
                   <ReadMeList>
-                    <strong>Sidebar : </strong>(24.01.26)
+                      <strong>Select : </strong> 위로 드랍다운
+                      {/* (24.01.29) */}
                   </ReadMeList>
                   <ReadMeList>
-                    <strong>Haeder(Mobile) : </strong> 사이드형(24.01.22)
+                      <strong>Sidebar : </strong> 기본 사이드바
+                      {/* (24.01.26) */}
+                  </ReadMeList>
+                  <ReadMeList>
+                      <strong>Haeder(Mobile) : </strong> 사이드형
+                      {/* (24.01.22) */}
                   </ReadMeList>
                 </ReadMeListWrap>
               </ReadMeListWrap>
