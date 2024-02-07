@@ -61,6 +61,7 @@ export default function Sidebar() {
     { name: "chart", path: "/detail/chart/0" },
     { name: "accordion", path: "/detail/accordion/0" },
     { name: "sidebar", path: "/detail/sidebar/0" },
+    { name: "tooltip", path: "/detail/tooltip/0" },
     // { name: "texteditor", path: "/detail/texteditor/0" },
     // { name: "cordbox", path: "/detail/cordbox/0" },
   ];
