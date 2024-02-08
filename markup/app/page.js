@@ -195,41 +195,43 @@ export default function Home() {
                 <SubTitle>예정</SubTitle>
                 <ReadMeListWrap>
                   <ReadMeList>
-                    <strong>toolTip</strong>
-                    </ReadMeList>
-                    <ReadMeList>
-                      <strong>Board : </strong> Tui그리드 UI수정 
+                    <strong>Board : </strong> Tui그리드 UI수정
                   </ReadMeList>
                 </ReadMeListWrap>
                 <SubTitle>완료</SubTitle>
                   <ReadMeListWrap>
                   <ReadMeList>
-                      <strong>Date : </strong> DatePicker 
-                      {/* (24.02.06) */}
+                      <strong>toolTip</strong>
+                       {/* (24.02.08) */}
                   </ReadMeList>
                   <ReadMeList>
-                      <strong>chart : </strong> 가로막대형
-                      {/* (24.02.02) */}
+                    <strong>Date : </strong> DatePicker
+                    {/* (24.02.06) */}
                   </ReadMeList>
                   <ReadMeList>
-                      <strong>File : </strong> 싱글,멀티파일 이미지 미리보기, 드래그드랍 멀티파일 미리보기
-                      {/* (24.01.31)(24.02.01) */}
+                    <strong>chart : </strong> 가로막대형
+                    {/* (24.02.02) */}
                   </ReadMeList>
                   <ReadMeList>
-                      <strong>Board : </strong> 갤러리형
-                      {/* (24.01.30) */}
+                    <strong>File : </strong> 싱글,멀티파일 이미지 미리보기,
+                    드래그드랍 멀티파일 미리보기
+                    {/* (24.01.31)(24.02.01) */}
                   </ReadMeList>
                   <ReadMeList>
-                      <strong>Select : </strong> 위로 드랍다운
-                      {/* (24.01.29) */}
+                    <strong>Board : </strong> 갤러리형
+                    {/* (24.01.30) */}
                   </ReadMeList>
                   <ReadMeList>
-                      <strong>Sidebar : </strong> 기본 사이드바
-                      {/* (24.01.26) */}
+                    <strong>Select : </strong> 위로 드랍다운
+                    {/* (24.01.29) */}
                   </ReadMeList>
                   <ReadMeList>
-                      <strong>Haeder(Mobile) : </strong> 사이드형
-                      {/* (24.01.22) */}
+                    <strong>Sidebar : </strong> 기본 사이드바
+                    {/* (24.01.26) */}
+                  </ReadMeList>
+                  <ReadMeList>
+                    <strong>Haeder(Mobile) : </strong> 사이드형
+                    {/* (24.01.22) */}
                   </ReadMeList>
                 </ReadMeListWrap>
               </ReadMeListWrap>
@@ -242,7 +244,10 @@ export default function Home() {
               </ReadMeListWrap>
               <SubTitle>확인 중</SubTitle>
               <ReadMeListWrap>
-                <ReadMeList><strong>Swiper : </strong>웹접근성 미준수(좌우버튼 키보드로 조작불가 등)</ReadMeList>
+                <ReadMeList>
+                  <strong>Swiper : </strong>웹접근성 미준수(좌우버튼 키보드로
+                  조작불가 등)
+                </ReadMeList>
               </ReadMeListWrap>
               <SubTitle>수정 완료</SubTitle>
               <ReadMeListWrap>

@@ -5,19 +5,16 @@ export default function page(props) {
   const data = [
     {
       title: "ToolTip",
-      subTitle: "Pc에서는 마우스오버, Mobile에서는 클릭으로 작동됩니다.",
+      subTitle: "Pc에서는 마우스오버, Mobile, Tablet에서는 클릭으로 작동됩니다.",
       cssFile: [],
       jsFile: [],
-      img: "category/img_header_pc01.svg",
+      img: "category/img_tooltip01.svg",
       html: `
-<section>
-  <div class="s__container">
-    <div class="s__row">
-      <button class="s__btn s__btn-line" data-tooltip="마우스오버시<br>툴팁이 노출됩니다.">ToolTip</button>
-      <button class="s__btn s__btn-line" data-tooltip="마우스오버시<br>툴팁이 노출됩니다.">ToolTip</button>
-    </div>
-  </div>
-</section>
+      <div style="display: flex; align-items: center; justify-content: center; width: 100%;">
+        <button class="s__btn s__btn-line" data-tooltip="PC에서는 마우스오버시<br>툴팁이 노출됩니다.">ToolTip</button>
+        <button class="s__btn s__btn-line" data-tooltip="Mobile,Tablet에서는 클릭시<br>툴팁이 노출됩니다.">ToolTip</button>
+        <button class="s__btn s__btn-line" data-tooltip="br태그없이 줄넘기게되면 틀어지는 경우도 있습니다. 이렇게 말이죠! <br>Lorem Ipsum is simply dummy text of the<br> printing and typesetting industry. Lorem<br> Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.">ToolTip</button>
+      </div>
       `,
       css: `
 .tooltip {
@@ -34,7 +31,7 @@ export default function page(props) {
       `,
       js: `
 let tooltipElem;
-
+// PC
 document.onmouseover = function(event) {
   let target = event.target;
 
@@ -62,6 +59,14 @@ document.onmouseover = function(event) {
   tooltipElem.style.left = left + 'px';
   tooltipElem.style.top = top + 'px';
 };
+document.onmouseout = function(e) {
+  if (tooltipElem && 767 < window.innerWidth) {
+    tooltipElem.remove();
+    tooltipElem = null;
+  }
+};
+
+// Mobile
 document.onmouseup = function (event) {
   let target = event.target;
 
@@ -91,17 +96,12 @@ document.onmouseup = function (event) {
 }
 
 document.onmousedown = function(e) {
-  if (tooltipElem) {
+  if (tooltipElem && window.innerWidth <= 767) {
     tooltipElem.remove();
     tooltipElem = null;
   }
 };
-document.onmouseout = function(e) {
-  if (tooltipElem) {
-    tooltipElem.remove();
-    tooltipElem = null;
-  }
-};
+
 // 참고한사이트 : https://ko.javascript.info/task/behavior-tooltip
       `,
     },

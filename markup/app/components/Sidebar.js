@@ -35,6 +35,19 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 text-transform: capitalize;
+display: flex;
+align-items: center;
+
+&.new::after{
+  display: block;
+  content: 'NEW';
+  padding: 2px 4px;
+  border-radius: 6px;
+  background-color: #3559E0;
+  color: #fff;
+  font-size:8px;
+  margin-left: 4px;
+}
 `;
 
 export default function Sidebar() {
@@ -60,8 +73,8 @@ export default function Sidebar() {
     { name: "tabs", path: "/detail/tabs/0" },
     { name: "chart", path: "/detail/chart/0" },
     { name: "accordion", path: "/detail/accordion/0" },
-    { name: "sidebar", path: "/detail/sidebar/0" },
-    { name: "tooltip", path: "/detail/tooltip/0" },
+    { name: "sidebar", path: "/detail/sidebar/0", new: true },
+    { name: "tooltip", path: "/detail/tooltip/0", new: true },
     // { name: "texteditor", path: "/detail/texteditor/0" },
     // { name: "cordbox", path: "/detail/cordbox/0" },
   ];
@@ -102,6 +115,7 @@ export default function Sidebar() {
                       ? 600
                       : 400,
                 }}
+                className={menu.new?'new':''}
               >
                 {menu.name}
               </List>
