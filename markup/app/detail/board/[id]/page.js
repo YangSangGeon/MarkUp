@@ -144,9 +144,63 @@ export default function page(props) {
   </div>
 </section>
       `,
-      css: ``,
-      js: 
-` // 도움말
+      css: `
+/* CSS적용순서는 tui-pagination > tui-grid > checkbox 입니다.*/   
+/* board02 */
+.tui-pagination .tui-first,
+.tui-pagination .tui-prev,
+.tui-pagination .tui-next,
+.tui-pagination .tui-last,
+.tui-pagination .tui-prev-is-ellip,
+.tui-pagination .tui-next-is-ellip {
+  display: inline-flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.tui-grid-cell {
+  background-color: #fff !important;
+  border: 0;
+  border-bottom: 1px solid var(--border) !important;
+}
+.tui-grid-header-area {
+  border-color: var(--border) !important;
+}
+.tui-grid-cell-header {
+  background-color: var(--background) !important;
+}
+.tui-grid-border-line-top {
+  border-top: 1px solid var(--main) !important;
+}
+.tui-grid-no-scroll-x .tui-grid-border-line-bottom {
+  display: none;
+}
+.tui-pagination .tui-last-child.tui-is-selected {
+  border-right: 1px solid var(--main) !important;
+}
+.tui-pagination .tui-first-child.tui-is-selected,
+.tui-pagination .tui-last-child.tui-is-selected,
+.tui-pagination .tui-is-selected,
+.tui-pagination strong {
+  background: var(--main);
+  border-color: var(--main);
+  border-left: 1px solid var(--main);
+}
+.tui-pagination .tui-page-btn {
+  border-color: var(--border);
+}
+.tui-pagination .tui-is-selected:hover {
+  background-color: var(--main) !important;
+}
+input[type="checkbox"]:checked ~ .custom-input:before {
+  background: var(--main) !important;
+  border: 1px solid var(--main) !important;
+}
+/* board02 끝 */
+      `,
+      js: `
+// 도움말
 //https://github.com/nhn/tui.grid/blob/master/packages/toast-ui.grid/docs/ko/README.md
 
 // 원래 대로라면 이렇게
@@ -267,16 +321,16 @@ const grid = new tui.Grid({
       },
     },
     {
-      type: "checkbox",
-      header: '<label for="all-checkbox" class="checkbox"><input type="checkbox" id="all-checkbox" class="hidden-input" name="_checked" /><span class="custom-input"></span></label>',
+      type: 'checkbox',
+      header: "<label for='all-checkbox' class='checkbox'><input type='checkbox' id='all-checkbox' class='hidden-input' name='_checked' /><span class='custom-input'></span></label>",
       renderer: {
-        type: CheckboxRenderer,
-      },
-    },
+        type: CheckboxRenderer
+      }
+    }
   ], //체크박스, 넘버
   pageOptions: {
     useClient: true,
-    perPage: 2,
+    perPage: 2,//한페이지에 보여줄 데이터 개수
   },
   columns: [
     {
@@ -306,7 +360,8 @@ grid.on("check", function (ev) {
 
 grid.on("uncheck", function (ev) {
   console.log("uncheck", ev);
-});`
+});
+`
       ,
       download: [{ name: "board02", link: "/download/board02.zip" }],
     },
