@@ -78,6 +78,9 @@ export default function page(props) {
     opacity: 0.4;
   }
 }
+.scroll-off{
+  overflow: hidden;
+}
 .screen-out {
   position: absolute !important;
   width: 0 !important;
@@ -321,6 +324,9 @@ export default function page(props) {
     opacity: 0.4;
   }
 }
+.scroll-off{
+  overflow: hidden;
+}
 .screen-out {
   position: absolute !important;
   width: 0 !important;
@@ -541,6 +547,9 @@ export default function page(props) {
   background-color: rgba(0, 0, 0, 0.4);
   position: fixed;
   top: 0;
+}
+.scroll-off{
+  overflow: hidden;
 }
 .popup-slider {
     display: none;

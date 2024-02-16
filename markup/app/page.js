@@ -195,11 +195,15 @@ export default function Home() {
                 <SubTitle>예정</SubTitle>
                 <ReadMeListWrap>
                   <ReadMeList>
-                    <strong>Board : </strong> Tui그리드 UI수정
+                    <strong>Animation : </strong> 여러가지 애니메이션
                   </ReadMeList>
                 </ReadMeListWrap>
                 <SubTitle>완료</SubTitle>
                   <ReadMeListWrap>
+                  <ReadMeList>
+                      <strong>Board : </strong> Tui그리드 UI수정
+                       {/* (24.02.13) */}
+                  </ReadMeList>
                   <ReadMeList>
                       <strong>toolTip</strong>
                        {/* (24.02.08) */}
@@ -252,7 +256,8 @@ export default function Home() {
               <SubTitle>수정 완료</SubTitle>
               <ReadMeListWrap>
                 <ReadMeList>
-                  <strong>File : </strong> 멀티파일 중복된 파일명 노출(24.01.26)
+                      <strong>File : </strong> 멀티파일 중복된 파일명 노출
+                      {/* (24.01.26) */}
                 </ReadMeList>
               </ReadMeListWrap>
             </div>

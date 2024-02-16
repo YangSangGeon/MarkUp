@@ -97,7 +97,8 @@ export default function Contents(props) {
   // const innerData = firstJs.substring(startIndex, endIndex).trim();
   // const componentsJs = DOMPurify.sanitize(innerData); //js
   // const encodeJs = encodeHTML(componentsJs); //js
-  const encodeJs = encodeHTML(firstJs); //js
+  // const encodeJs = encodeHTML(firstJs); //js 자꾸 막혀서 패스 나중에 문제 생길수도 있음
+  const encodeJs = firstJs; //js
 
   //style reset
   const resetCss = `
