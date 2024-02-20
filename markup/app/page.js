@@ -195,11 +195,15 @@ export default function Home() {
                 <SubTitle>예정</SubTitle>
                 <ReadMeListWrap>
                   <ReadMeList>
-                    <strong>Animation : </strong> 여러가지 애니메이션
+                    <strong>고민중 : </strong> 추천 받습니당..
                   </ReadMeList>
                 </ReadMeListWrap>
                 <SubTitle>완료</SubTitle>
                   <ReadMeListWrap>
+                  <ReadMeList>
+                    <strong>Scroll Animation : </strong> 여러가지 애니메이션
+                    {/* (24.02.20) */}
+                  </ReadMeList>
                   <ReadMeList>
                       <strong>Board : </strong> Tui그리드 UI수정
                        {/* (24.02.13) */}
@@ -244,7 +248,7 @@ export default function Home() {
             <div key={innerIndex}>
               <SubTitle>수정 중</SubTitle>
               <ReadMeListWrap>
-                <ReadMeList>아직 없어요!</ReadMeList>
+                <ReadMeList>-</ReadMeList>
               </ReadMeListWrap>
               <SubTitle>확인 중</SubTitle>
               <ReadMeListWrap>

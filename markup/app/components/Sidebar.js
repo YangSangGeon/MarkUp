@@ -75,6 +75,7 @@ export default function Sidebar() {
     { name: "accordion", path: "/detail/accordion/0" },
     { name: "sidebar", path: "/detail/sidebar/0", new: true },
     { name: "tooltip", path: "/detail/tooltip/0", new: true },
+    { name: "scroll animation", path: "/detail/scroll_animation/0", new: true },
     // { name: "texteditor", path: "/detail/texteditor/0" },
     // { name: "cordbox", path: "/detail/cordbox/0" },
   ];
