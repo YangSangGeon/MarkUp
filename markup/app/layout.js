@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export const metadata = {
   title: "Knock MarkUp - 쉽게 시작하는 마크업",
-  description: "노크마크업은 웹코딩을 쉽게 해주는 사이트입니다. HTML, CSS, JS를 빠르게 작성하세요.",
+  description: "노크마크업으로 웹코딩을 쉽게 해보세요! HTML, CSS, JS를 빠르게 작성하세요.",
   keywords: "노크마크업, 웹코딩, 퍼블리싱, 마크업, 퍼블리싱 학원, 퍼블리싱 인강, HTML, CSS, JS",
 };
 
@@ -20,6 +20,8 @@ export default function RootLayout({ children }) {
         <meta name="google-site-verification" content="KVRA1l3kW68HU9Gvq4f0tBRu3lYBwLgbKdjrZJ0mfm8" />
         {/* 네이버 검색엔진 */}
         <meta name="naver-site-verification" content="8d0fa028fca1ca9b14de1a3b11751250282a32fb" />
+
+        {/* 파비콘 */}
         <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png" />
         <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png" />
         <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png" />
@@ -33,6 +35,17 @@ export default function RootLayout({ children }) {
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+
+        {/* OG 태그 */}
+        <meta property="og:title" content="Knock MarkUp - 쉽게 시작하는 마크업" />
+        <meta property="og:url" content="https://mark-up-mu.vercel.app/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/favicon/kakao.png" />
+        <meta property="og:description" content="노크마크업으로 웹코딩을 쉽게 해보세요! HTML, CSS, JS를 빠르게 작성하세요." />
+        <meta property="og:site_name" content="KNOCK MARKUP" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+
         <link rel="manifest" href="/favicon/manifest.json" />
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png" />
