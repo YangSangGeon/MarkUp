@@ -1,12 +1,13 @@
 <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="60" height="60" fill="white"/>
-<rect x="11.5" y="9.5" width="11" height="11" rx="1.5" fill="#181818" stroke="#181818"/>
-<rect x="27" y="12" width="23" height="6" rx="3" fill="#181818"/>
-<path d="M14 15.5L16.5 17.5L21 13" stroke="white"/>
-<rect x="11.5" y="24.5" width="11" height="11" rx="1.5" fill="#181818" stroke="#181818"/>
-<rect x="11.5" y="39.5" width="11" height="11" rx="1.5" fill="#181818" stroke="#181818"/>
-<rect x="27" y="27" width="23" height="6" rx="3" fill="#181818"/>
-<rect x="27" y="42" width="23" height="6" rx="3" fill="#181818"/>
-<path d="M14 30.5L16.5 32.5L21 28" stroke="white"/>
-<path d="M14 45.5L16.5 47.5L21 43" stroke="white"/>
+<rect x="11.5" y="7.5" width="11" height="11" rx="1.5" fill="#181818" stroke="#181818"/>
+<rect x="27" y="10" width="23" height="6" rx="3" fill="#181818"/>
+<path d="M14 13.5L16.5 15.5L21 11" stroke="white"/>
+<rect x="11.5" y="27.5" width="11" height="11" rx="1.5" fill="#181818" stroke="#181818"/>
+<rect x="11.5" y="42.5" width="11" height="11" rx="1.5" fill="#181818" stroke="#181818"/>
+<rect x="27" y="30" width="23" height="6" rx="3" fill="#181818"/>
+<rect x="27" y="45" width="23" height="6" rx="3" fill="#181818"/>
+<path d="M14 33.5L16.5 35.5L21 31" stroke="white"/>
+<path d="M14 48.5L16.5 50.5L21 46" stroke="white"/>
+<line x1="11" y1="22.5" x2="50" y2="22.5" stroke="black"/>
 </svg>

@@ -184,7 +184,7 @@ export default function Home() {
               <SubTitle>기타</SubTitle>
               <ReadMeListWrap>
                 <ReadMeList>
-                  마크업 작업 특성상 본 'MARKUP' 페이지는 반응형으로 제작되지
+                  마크업 작업 특성상 본 'KNOCK MARKUP' 페이지는 반응형으로 제작되지
                   않았습니다.
                 </ReadMeList>
               </ReadMeListWrap>
