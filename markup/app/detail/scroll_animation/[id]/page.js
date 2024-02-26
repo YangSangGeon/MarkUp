@@ -330,9 +330,9 @@ if (ani) {
       <div class="s__animation fade-in">
         <p style="text-align: center; font-size: 24px">
           <!-- num-count 클래스를 넣고 data-count 안에 원하는 숫자를 넣습니다. -->
-          <span class="num-count" data-count="240">0</span>
+          <span class="num-count" data-count="240" style="width:48px; display:inline-block">0</span>
           <span>개의 마크업 컴포넌트, 개발속도 향상 </span>
-          <span class="num-count" data-count="54000">0</span>
+          <span class="num-count" data-count="54000" style="width:80px; display:inline-block">0</span>
           <span>%</span>
         </p>
       </div>
@@ -341,7 +341,7 @@ if (ani) {
         <p style="text-align: center; font-size: 24px">
           <!-- num-count 클래스를 넣고 data-count 안에 원하는 숫자를 넣습니다. -->
           <span>월 이용자</span>
-          <span class="num-count" data-count="9999999">0</span>
+          <span class="num-count" data-count="9999999" style="width:120px; display:inline-block">0</span>
           <span>명 달성(했으면 좋겠다💫)</span>
         </p>
       </div>

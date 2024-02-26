@@ -16,8 +16,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ko">
       <head>
-      {/* 구글 검색엔진 */}
+        {/* 구글 검색엔진 */}
         <meta name="google-site-verification" content="KVRA1l3kW68HU9Gvq4f0tBRu3lYBwLgbKdjrZJ0mfm8" />
+        {/* 네이버 검색엔진 */}
+        <meta name="naver-site-verification" content="8d0fa028fca1ca9b14de1a3b11751250282a32fb" />
         <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png" />
         <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png" />
         <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png" />
