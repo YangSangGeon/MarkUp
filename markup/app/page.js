@@ -195,14 +195,14 @@ export default function Home() {
                 <SubTitle>예정</SubTitle>
                 <ReadMeListWrap>
                   <ReadMeList>
-                    <strong>고민중 : </strong> 추천 받습니당..
+                    <strong>고민중 : </strong> 추천 받아요 :)
                   </ReadMeList>
                 </ReadMeListWrap>
                 <SubTitle>완료</SubTitle>
                   <ReadMeListWrap>
                   <ReadMeList>
-                    <strong>Scroll Animation : </strong> 여러가지 애니메이션
-                    {/* (24.02.20) */}
+                    <strong>Scroll Animation : </strong> fade-in, view-left, view-right, view-bottom, view-top, zoom-in, bounce-in, 숫자증가
+                    {/* (24.02.20)  (24.02.26) */}
                   </ReadMeList>
                   <ReadMeList>
                       <strong>Board : </strong> Tui그리드 UI수정
