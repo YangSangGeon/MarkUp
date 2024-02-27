@@ -23,7 +23,7 @@ const DeviceBtns = styled.div`
   align-items: center;
   justify-content: center;
   gap: 8px;
-  width: calc(100% - 70px);
+  width: calc(100% - 250px);
 `;
 const MarkupHeader = styled.header`
   border-bottom: 1px solid var(--boarder);

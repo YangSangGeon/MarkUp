@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 
 const Body = styled.div`
   margin-top: 40px;
-  width: calc(100% - 216px);
+  width: calc(100% - 308px);
 `;
 const Title = styled.h2`
   color: var(--black, #181818);
@@ -50,11 +50,9 @@ const DownBtn = styled.a`
   display: inline-block;
   padding: 8px 24px;
   border-radius: 100px;
-  font-size: 14px;
+  font-size: 16px;
   background-color: var(--black);
   color: #fff;
-  margin-right: 8px;
-  margin-bottom: 24px;
   &:hover {
     background-color: #3559e0;
   }
@@ -75,7 +73,49 @@ const Tab = styled.button`
   padding: 8px 16px 12px 16px;
   transform: translateY(1px);
 `;
+const ContentsWrap = styled.div`
+  border: 1px solid var(--boarder);
+  border-radius: 16px;
+  padding: 12px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  transition: all 0.7s;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #323232;
+  margin-bottom: 32px;
+  .size-pc + .m_container & {
+    max-width: 2000px;
+  }
+  .size-tablet + .m_container & {
+    max-width: 900px;
+  }
+  .size-mobile + .m_container & {
+    max-width: 390px;
+  }
+`;
+const Contents = styled.div`
+  width: 100%;
+  position: relative;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
+  & p {
+    font-size: 36px;
+    margin-bottom: 24px;
+    font-family: GmarketSansBold;
+    color: var(--black, #181818);
+    padding: 0 16px;
+    text-align: center;
+    line-height: 41px;
+  }
+`;
 export default function Home() {
   const [index, setIndex] = useState(0);
   const data = [
@@ -101,7 +141,7 @@ export default function Home() {
     },
   ];
   useEffect(() => {
-    document.querySelector(".device-btn-wrap").style.display = "none";
+    // document.querySelector(".device-btn-wrap").style.display = "none"; //디바이스 선택 숨기기
   }, []);
 
   return (
@@ -129,6 +169,14 @@ export default function Home() {
         .map((item, innerIndex) =>
           item.id === 0 ? (
             <div key={innerIndex}>
+              <ContentsWrap>
+                <Contents>
+                  <p>Let's Start Knock Markup!</p>
+                  <DownBtn href="/download/markup.zip" download>
+                  공통코드 다운로드
+                  </DownBtn>
+                </Contents>
+              </ContentsWrap>
               <SubTitle>특징</SubTitle>
               <ReadMeListWrap>
                 <ReadMeList>
@@ -146,10 +194,6 @@ export default function Home() {
                   사용했습니다.)
                 </ReadMeList>
               </ReadMeListWrap>
-              <SubTitle>공통 코드 다운로드</SubTitle>
-              <DownBtn href="/download/markup.zip" download>
-                다운로드
-              </DownBtn>
               <SubTitle>사용법</SubTitle>
               <ReadMeListWrap>
                 <ReadMeList2>
@@ -184,8 +228,8 @@ export default function Home() {
               <SubTitle>기타</SubTitle>
               <ReadMeListWrap>
                 <ReadMeList>
-                  마크업 작업 특성상 본 'KNOCK MARKUP' 페이지는 반응형으로 제작되지
-                  않았습니다.
+                  마크업 작업 특성상 본 'KNOCK MARKUP' 페이지는 반응형으로
+                  제작되지 않았습니다.
                 </ReadMeList>
               </ReadMeListWrap>
             </div>
@@ -199,18 +243,20 @@ export default function Home() {
                   </ReadMeList>
                 </ReadMeListWrap>
                 <SubTitle>완료</SubTitle>
-                  <ReadMeListWrap>
+                <ReadMeListWrap>
                   <ReadMeList>
-                    <strong>Scroll Animation : </strong> fade-in, view-left, view-right, view-bottom, view-top, zoom-in, bounce-in, 숫자증가
+                    <strong>Scroll Animation : </strong> fade-in, view-left,
+                    view-right, view-bottom, view-top, zoom-in, bounce-in,
+                    숫자증가
                     {/* (24.02.20)  (24.02.26) */}
                   </ReadMeList>
                   <ReadMeList>
-                      <strong>Board : </strong> Tui그리드 UI수정
-                       {/* (24.02.13) */}
+                    <strong>Board : </strong> Tui그리드 UI수정
+                    {/* (24.02.13) */}
                   </ReadMeList>
                   <ReadMeList>
-                      <strong>toolTip</strong>
-                       {/* (24.02.08) */}
+                    <strong>toolTip</strong>
+                    {/* (24.02.08) */}
                   </ReadMeList>
                   <ReadMeList>
                     <strong>Date : </strong> DatePicker
@@ -260,8 +306,8 @@ export default function Home() {
               <SubTitle>수정 완료</SubTitle>
               <ReadMeListWrap>
                 <ReadMeList>
-                      <strong>File : </strong> 멀티파일 중복된 파일명 노출
-                      {/* (24.01.26) */}
+                  <strong>File : </strong> 멀티파일 중복된 파일명 노출
+                  {/* (24.01.26) */}
                 </ReadMeList>
               </ReadMeListWrap>
             </div>
