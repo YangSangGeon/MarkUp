@@ -98,32 +98,34 @@ export default function Sidebar() {
   }
 
   return (
-    <SidebarList>
-      {menuData.map((menu, index) => {
-        return (
-          <li key={index}>
-            <Link href={menu.path}>
-              <List
-                style={{
-                  color:
-                    extractBetweenSlashes(menu.path) ===
-                    extractBetweenSlashes(pathname)
-                      ? "var(--black)"
-                      : "var(--gray)",
-                  fontWeight:
-                    extractBetweenSlashes(menu.path) ===
-                    extractBetweenSlashes(pathname)
-                      ? 600
-                      : 400,
-                }}
-                className={menu.new?'new':''}
-              >
-                {menu.name}
-              </List>
-            </Link>
-          </li>
-        );
-      })}
-    </SidebarList>
+    <div>
+      <SidebarList>
+        {menuData.map((menu, index) => {
+          return (
+            <li key={index}>
+              <Link href={menu.path}>
+                <List
+                  style={{
+                    color:
+                      extractBetweenSlashes(menu.path) ===
+                      extractBetweenSlashes(pathname)
+                        ? "var(--black)"
+                        : "var(--gray)",
+                    fontWeight:
+                      extractBetweenSlashes(menu.path) ===
+                      extractBetweenSlashes(pathname)
+                        ? 600
+                        : 400,
+                  }}
+                  className={menu.new?'new':''}
+                >
+                  {menu.name}
+                </List>
+              </Link>
+            </li>
+          );
+        })}
+      </SidebarList>
+    </div>
   );
 }

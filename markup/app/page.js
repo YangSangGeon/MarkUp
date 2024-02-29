@@ -80,7 +80,7 @@ const ContentsWrap = styled.div`
   height: 300px;
   display: flex;
   align-items: center;
-  transition: all 0.7s;
+  transition: max-width 0.7s, padding 0.7s;
   margin: 0 auto;
   overflow: hidden;
   background-color: #323232;
@@ -114,6 +114,12 @@ const Contents = styled.div`
     padding: 0 16px;
     text-align: center;
     line-height: 41px;
+    transition: all 0.7s;
+  }
+  .size-mobile + .m_container & p {
+    font-size: 28px;
+    margin-bottom: 24px;
+    line-height: 36px;
   }
 `;
 export default function Home() {
@@ -171,8 +177,8 @@ export default function Home() {
             <div key={innerIndex}>
               <ContentsWrap>
                 <Contents>
-                  <p>Let's Start Knock Markup!</p>
-                  <DownBtn href="/download/markup.zip" download>
+                  <p>Let's Knock The Markup!</p>
+                  <DownBtn href="/download/Knock_MarkUp.zip" download>
                   공통코드 다운로드
                   </DownBtn>
                 </Contents>

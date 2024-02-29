@@ -283,6 +283,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 /* button */
 .s__btn {
+  text-wrap: nowrap;
   margin: 2px;
   font-size: 16px;
   padding: 6px 20px 4px;

@@ -64,7 +64,7 @@ export default function RootLayout({ children }) {
         </footer>
         <div className="mobile_only">
           <div className="mobile_main_title">
-            <Image priority={true} src={"/image/icon_main_logo.svg"} width={150} height={40} alt="logo"></Image>
+            <Image priority={true} src={"/image/icon_main_logo.svg"} width={240} height={40} alt="logo"></Image>
             <p>찾아주셔서 감사해요!</p>
             <p>작업 특성상 PC로 접속 부탁드려요 😊</p>
           </div>

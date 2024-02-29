@@ -35,6 +35,8 @@ const TabImgWrap = styled.ul`
   margin-bottom: 16px;
   height: 60px;
   width: 62px;
+  position: sticky;
+  top: 32px;
   & li {
     height: 62px;
   }
