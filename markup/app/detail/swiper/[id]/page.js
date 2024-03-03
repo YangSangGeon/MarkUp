@@ -34,8 +34,8 @@ export default function page(props) {
         </div>
     </div>
     <div class="swiper-pagination"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
+    <a href="#!" class="swiper-button-prev"></a>
+    <a href="#!" class="swiper-button-next"></a>
 </div>
       `,
       css: `
@@ -141,8 +141,8 @@ export default function page(props) {
         </div>
     </div>
     <div class="swiper-pagination"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
+    <a href="#!" class="swiper-button-prev"></a>
+    <a href="#!" class="swiper-button-next"></a>
     <div class="autoplay-progress">
         <svg viewBox="0 0 48 48">
             <circle cx="24" cy="24" r="20"></circle>
@@ -350,8 +350,8 @@ export default function page(props) {
             </div>
         </div>
         <div class="arrow-box">
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <a href="#!" class="swiper-button-prev"></a>
+            <a href="#!" class="swiper-button-next"></a>
             <button class="autoplay-play-stop">
                 <img src="/image/icon_play_w.svg" alt="재생" class="autoplay-play">
                 <img src="/image/icon_play_stop_w.svg" alt="일시정지" class="autoplay-stop">
@@ -623,8 +623,8 @@ export default function page(props) {
       </div>
     </div>
   </div>
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
+  <a href="#!" class="swiper-button-prev"></a>
+  <a href="#!" class="swiper-button-next"></a>
 </section>
       `,
       css: `

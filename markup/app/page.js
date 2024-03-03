@@ -107,7 +107,7 @@ const Contents = styled.div`
   flex-direction: column;
 
   & p {
-    font-size: 36px;
+    font-size: 32px;
     margin-bottom: 24px;
     font-family: GmarketSansBold;
     color: var(--black, #181818);
@@ -116,8 +116,13 @@ const Contents = styled.div`
     line-height: 41px;
     transition: all 0.7s;
   }
-  .size-mobile + .m_container & p {
+  .size-tablet + .m_container & p {
     font-size: 28px;
+    margin-bottom: 24px;
+    line-height: 36px;
+  }
+  .size-mobile + .m_container & p {
+    font-size: 26px;
     margin-bottom: 24px;
     line-height: 36px;
   }
@@ -179,7 +184,7 @@ export default function Home() {
                 <Contents>
                   <p>Let's Knock The Markup!</p>
                   <DownBtn href="/download/Knock_MarkUp.zip" download>
-                  공통코드 다운로드
+                    공통코드 다운로드
                   </DownBtn>
                 </Contents>
               </ContentsWrap>
@@ -304,13 +309,15 @@ export default function Home() {
               </ReadMeListWrap>
               <SubTitle>확인 중</SubTitle>
               <ReadMeListWrap>
-                <ReadMeList>
-                  <strong>Swiper : </strong>웹접근성 미준수(좌우버튼 키보드로
-                  조작불가 등)
-                </ReadMeList>
+                <ReadMeList>-</ReadMeList>
               </ReadMeListWrap>
               <SubTitle>수정 완료</SubTitle>
               <ReadMeListWrap>
+                <ReadMeList>
+                  <strong>Swiper : </strong>웹접근성 미준수(좌우버튼 키보드로
+                  조작불가 등)
+                  {/* (24.03.03) */}
+                </ReadMeList>
                 <ReadMeList>
                   <strong>File : </strong> 멀티파일 중복된 파일명 노출
                   {/* (24.01.26) */}

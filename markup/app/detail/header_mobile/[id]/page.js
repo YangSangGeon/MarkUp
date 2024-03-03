@@ -6,7 +6,7 @@ export default function page(props) {
     {
       device: "mobile",
       title: "Header_Mobile01 (Mobile Only)",
-      subTitle:"PC, 태블릿에서는 숨겨집니다",
+      subTitle: "PC, 태블릿에서는 숨겨집니다",
       img: "category/img_header_mobile01.svg",
       html: `
 <header class="s__header">
@@ -173,7 +173,7 @@ header .s__row {
     {
       device: "mobile",
       title: "Header_Mobile02 (Mobile Only)",
-      subTitle:"PC, 태블릿에서는 숨겨집니다",
+      subTitle: "PC, 태블릿에서는 숨겨집니다",
       img: "category/img_header_mobile02.svg",
       html: `
 <header class="s__header">
@@ -381,8 +381,7 @@ header .s__row {
     {
       device: "mobile",
       title: "Header_Mobile03 (Mobile Only)",
-      cssFile: [],
-      jsFile: [],
+      subTitle: "PC, 태블릿에서는 숨겨집니다",
       img: "category/img_header_mobile03.svg",
       html: `
 <header class="s__header">
@@ -608,8 +607,7 @@ mobileMenuCloseBtn.addEventListener("click", () => {
     {
       device: "mobile",
       title: "Header_Mobile04 (Mobile Only)",
-      cssFile: [],
-      jsFile: [],
+      subTitle: "PC, 태블릿에서는 숨겨집니다",
       img: "category/img_header_mobile04.svg",
       html: `
 <header class="s__header">

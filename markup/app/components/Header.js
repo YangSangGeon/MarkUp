@@ -58,7 +58,7 @@ export default function Header() {
           <Link href="/">
             <Image
               priority={true}
-              width={182}
+              width={160}
               height={18}
               src="/image/icon_main_logo.svg"
               alt="홈"
