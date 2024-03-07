@@ -4,7 +4,7 @@ import ContentsWrap from "@/app/components/ContentsWrap";
 export default function page(props) {
   const data = [
     {
-      title: "Select01",
+      title: "Select Default",
       cssFile: [],
       jsFile: [],
       img: "category/img_select01.svg",
@@ -40,7 +40,7 @@ export default function page(props) {
       js: '',
     },
     {
-      title: "Select02",
+      title: "Up Select",
       subTitle: "위로 드랍다운되는 Select",
       cssFile: [],
       jsFile: [],
@@ -117,7 +117,7 @@ for (let i = 0; i < selectUp.length; i++) {
       `,
     },
     {
-      title: "Select03",
+      title: "Phone Number",
       cssFile: [],
       jsFile: [],
       img: "category/img_select03.svg",

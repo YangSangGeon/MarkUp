@@ -4,7 +4,7 @@ import ContentsWrap from "@/app/components/ContentsWrap";
 export default function page(props) {
   const data = [
     {
-      title: "Date01",
+      title: "Datepicker",
       cssFile: ["css/jquery-ui.min.css"],
       jsFile: [
         "js/jquery.min.js",
@@ -140,7 +140,7 @@ $( function() {
       download: [{ name: "Date01", link: "/download/datepicker.zip" }],
     },
     {
-      title: "Date02",
+      title: "Daterangepicker",
       cssFile: ["css/daterangepicker.css"],
       jsFile: [
         "js/jquery.min.js",

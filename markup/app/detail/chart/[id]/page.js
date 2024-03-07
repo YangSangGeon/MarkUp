@@ -4,7 +4,7 @@ import ContentsWrap from "@/app/components/ContentsWrap";
 export default function page(props) {
   const data = [
     {
-      title: "Chart01",
+      title: "Echart",
       cssFile: [],
       jsFile: ["js/echart.js"],
       img: "category/img_chart01.svg",
@@ -287,7 +287,7 @@ window.onresize = function() {//반응형
       download: [{ name: "Chart01", link: "/download/chart01.zip" }],
     },
     {
-      title: "Chart02",
+      title: "Chart.js",
       cssFile: [],
       jsFile: ["js/chart.js"],
       img: "category/img_chart02.svg",

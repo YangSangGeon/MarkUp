@@ -4,7 +4,7 @@ import ContentsWrap from "@/app/components/ContentsWrap";
 export default function page(props) {
   const data = [
     {
-      title: "Checkbox01",
+      title: "Checkbox Default",
       cssFile: [],
       jsFile: [],
       img: "category/img_checkbox01.svg",
@@ -68,7 +68,7 @@ export default function page(props) {
       js: '',
     },
     {
-      title: "Checkbox02",
+      title: "Checkbox All Check",
       cssFile: [],
       jsFile: [],
       img: "category/img_checkbox02.svg",

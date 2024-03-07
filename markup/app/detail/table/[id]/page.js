@@ -4,7 +4,7 @@ import ContentsWrap from "@/app/components/ContentsWrap";
 export default function page(props) {
   const data = [
     {
-      title: "Table01",
+      title: "Table Row(ul, li, div tag)",
       subTitle: "ul, li, div 태그로 만들어진 테이블입니다.",
       cssFile: [],
       jsFile: [],
@@ -120,7 +120,7 @@ export default function page(props) {
       js: "",
     },
     {
-      title: "Table02",
+      title: "Table Column(ul, li, div tag)",
       subTitle: "ul, li, div 태그로 만들어진 테이블입니다.",
       cssFile: [],
       jsFile: [],
@@ -234,7 +234,7 @@ export default function page(props) {
       js: "",
     },
     {
-      title: "Table03",
+      title: "Table Column(table tag)",
       subTitle: "table 태그로 만들어진 테이블입니다.",
       cssFile: [],
       jsFile: [],

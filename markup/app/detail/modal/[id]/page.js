@@ -4,7 +4,7 @@ import ContentsWrap from "@/app/components/ContentsWrap";
 export default function page(props) {
   const data = [
     {
-      title: "Modal01",
+      title: "Modal Default",
       cssFile: [],
       jsFile: [],
       img: "category/img_modal01.svg",
@@ -260,7 +260,7 @@ export default function page(props) {
       `,
     },
     {
-      title: "Modal02",
+      title: "Search Modal",
       cssFile: [],
       jsFile: [],
       img: "category/img_modal02.svg",
@@ -518,7 +518,7 @@ export default function page(props) {
       `,
     },
     {
-      title: "Modal03",
+      title: "Slide Modal",
       cssFile: ["css/swiper-bundle.min.css"],
       jsFile: ["js/swiper-bundle.min.js"],
       img: "category/img_modal03.svg",

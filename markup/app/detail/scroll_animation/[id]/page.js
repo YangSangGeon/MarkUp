@@ -4,7 +4,7 @@ import ContentsWrap from "@/app/components/ContentsWrap";
 export default function page(props) {
   const data = [
     {
-      title: "Scroll Animation01",
+      title: "Scroll Animation",
       img: "category/img_scroll_animation01.svg",
       html: `
 <section>
@@ -317,7 +317,7 @@ if (ani) {
   `,
     },
     {
-      title: "Scroll Animation01",
+      title: "Scroll Number Animation",
       img: "category/img_scroll_animation02.svg",
       html: `
 <section>

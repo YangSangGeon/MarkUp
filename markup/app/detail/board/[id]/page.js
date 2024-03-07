@@ -4,7 +4,7 @@ import ContentsWrap from "@/app/components/ContentsWrap";
 export default function page(props) {
   const data = [
     {
-      title: "Board01",
+      title: "Board Default",
       cssFile: [],
       jsFile: [],
       img: "category/img_board01.svg",
@@ -126,7 +126,7 @@ export default function page(props) {
       js: '',
     },
     {
-      title: "Board02",
+      title: "Toust Grid",
       subTitle: "더 자세한 정보는 TUI GRID 공식사이트를 참고해주세요.",
       cssFile: [
         "css/tui-pagination.css",
@@ -366,9 +366,7 @@ grid.on("uncheck", function (ev) {
       download: [{ name: "board02", link: "/download/board02.zip" }],
     },
     {
-      title: "Board03",
-      cssFile: [],
-      jsFile: [],
+      title: "Image Board",
       img: "category/img_board03.svg",
       html: `
 <section class="s__board03">

@@ -4,7 +4,7 @@ import ContentsWrap from "@/app/components/ContentsWrap";
 export default function page(props) {
   const data = [
     {
-      title: "File01",
+      title: "File Default",
       cssFile: [],
       jsFile: [],
       img: "category/img_file01.svg",
@@ -86,7 +86,7 @@ if (fileUploads) {
       `,
     },
     {
-      title: "File02",
+      title: "Multi File Default",
       cssFile: [],
       jsFile: [],
       img: "category/img_file02.svg",
@@ -312,7 +312,7 @@ if (fileMultiUploads) {
       `,
     },
     {
-      title: "File03",
+      title: "Multi File Drag",
       cssFile: [],
       jsFile: [],
       img: "category/img_file03.svg",
@@ -623,7 +623,7 @@ if (fileDragMultiUploads) {
       `,
     },
     {
-      title: "File04",
+      title: "Multi File Image",
       cssFile: [],
       jsFile: [],
       img: "category/img_file04.svg",
@@ -870,7 +870,7 @@ if (fileImgMultiUploads) {
       `,
     },
     {
-      title: "File05",
+      title: "Multi File Image Drag",
       cssFile: [],
       jsFile: [],
       img: "category/img_file05.svg",
@@ -1190,7 +1190,7 @@ if (fileImgMultiUploads) {
       `,
     },
     {
-      title: "File06",
+      title: "Profile",
       cssFile: [],
       jsFile: [],
       img: "category/img_file06.svg",

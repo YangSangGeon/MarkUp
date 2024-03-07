@@ -4,7 +4,7 @@ import ContentsWrap from "@/app/components/ContentsWrap";
 export default function page(props) {
   const data = [
     {
-      title: "Tabs01",
+      title: "Board Tabs",
       cssFile: [],
       jsFile: [],
       img: "category/img_tabs01.svg",
@@ -213,7 +213,7 @@ export default function page(props) {
       `,
     },
     {
-      title: "Tabs02",
+      title: "Contents Tabs",
       cssFile: [],
       jsFile: [],
       img: "category/img_tabs02.svg",
