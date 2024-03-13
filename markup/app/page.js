@@ -250,7 +250,13 @@ export default function Home() {
                 <SubTitle>예정</SubTitle>
                 <ReadMeListWrap>
                   <ReadMeList>
-                    <strong>고민중 : </strong> 추천 받아요 :)
+                    <strong>Breadcrumb</strong>
+                  </ReadMeList>
+                  <ReadMeList>
+                    <strong>DarkMode</strong>
+                  </ReadMeList>
+                  <ReadMeList>
+                    <strong>Examples</strong>
                   </ReadMeList>
                 </ReadMeListWrap>
                 <SubTitle>완료</SubTitle>
