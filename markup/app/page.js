@@ -263,46 +263,37 @@ export default function Home() {
                 <ReadMeListWrap>
                   <ReadMeList>
                     <strong>Scroll Animation : </strong> fade-in, view-left,
-                    view-right, view-bottom, view-top, zoom-in, bounce-in,
-                    숫자증가
-                    {/* (24.02.20)  (24.02.26) */}
+                    view-right, view-bottom, view-top, zoom-in, bounce-in
+                    (24.02.20), 숫자증가 (24.02.26)
                   </ReadMeList>
                   <ReadMeList>
-                    <strong>Board : </strong> Tui그리드 UI수정
-                    {/* (24.02.13) */}
+                    <strong>Board : </strong> Tui그리드 UI수정 (24.02.13)
                   </ReadMeList>
                   <ReadMeList>
                     <strong>toolTip</strong>
-                    {/* (24.02.08) */}
+                    (24.02.08)
                   </ReadMeList>
                   <ReadMeList>
-                    <strong>Date : </strong> DatePicker
-                    {/* (24.02.06) */}
+                    <strong>Date : </strong> DatePicker (24.02.06)
                   </ReadMeList>
                   <ReadMeList>
-                    <strong>chart : </strong> 가로막대형
-                    {/* (24.02.02) */}
+                    <strong>chart : </strong> 가로막대형 (24.02.02)
                   </ReadMeList>
                   <ReadMeList>
-                    <strong>File : </strong> 싱글,멀티파일 이미지 미리보기,
-                    드래그드랍 멀티파일 미리보기
-                    {/* (24.01.31)(24.02.01) */}
+                    <strong>File : </strong> 싱글,멀티파일 이미지
+                    미리보기(24.01.31), 드래그드랍 멀티파일 미리보기(24.02.01)
                   </ReadMeList>
                   <ReadMeList>
-                    <strong>Board : </strong> 갤러리형
-                    {/* (24.01.30) */}
+                    <strong>Board : </strong> 갤러리형 (24.01.30)
                   </ReadMeList>
                   <ReadMeList>
-                    <strong>Select : </strong> 위로 드랍다운
-                    {/* (24.01.29) */}
+                    <strong>Select : </strong> 위로 드랍다운 (24.01.29)
                   </ReadMeList>
                   <ReadMeList>
-                    <strong>Sidebar : </strong> 기본 사이드바
-                    {/* (24.01.26) */}
+                    <strong>Sidebar : </strong> 기본 사이드바 (24.01.26)
                   </ReadMeList>
                   <ReadMeList>
-                    <strong>Haeder(Mobile) : </strong> 사이드형
-                    {/* (24.01.22) */}
+                    <strong>Haeder(Mobile) : </strong> 사이드형 (24.01.22)
                   </ReadMeList>
                 </ReadMeListWrap>
               </ReadMeListWrap>
@@ -321,12 +312,11 @@ export default function Home() {
               <ReadMeListWrap>
                 <ReadMeList>
                   <strong>Swiper : </strong>웹접근성 미준수(좌우버튼 키보드로
-                  조작불가 등)
-                  {/* (24.03.03) */}
+                  조작불가 등) (24.03.03)
                 </ReadMeList>
                 <ReadMeList>
                   <strong>File : </strong> 멀티파일 중복된 파일명 노출
-                  {/* (24.01.26) */}
+                  (24.01.26)
                 </ReadMeList>
               </ReadMeListWrap>
             </div>
