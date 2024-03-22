@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Contents from "@/app/components/Contents";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Title = styled.h2`
   color: var(--black, #181818);
@@ -102,7 +103,7 @@ export default function ContentsWrap(props) {
 
   const [pageIndex, setPageIndex] = useState(0);
   // 처음켜지면 id의 값이 thisPage의 값으로 지정
-  // const thisPage = props.props.params.id;
+  const thisPage = props.props.params.id;
 
   const [iframeKey, setIframeKey] = useState(0);
   const handleTabClick = () => {
@@ -113,41 +114,43 @@ export default function ContentsWrap(props) {
   return (
     <Body>
       {/* 페이지 이동 트래픽 이슈 thisPage => pageIndex */}
+      {/* 트래픽 이슈 해결되어 다시 아래 thiPage로 모두 변경 */}
       <div>
-        <Title>{props.data[pageIndex].title}</Title>
-        {props.data[pageIndex].subTitle && (
-          <SubTitle>{props.data[pageIndex].subTitle}</SubTitle>
+        <Title>{props.data[thisPage].title}</Title>
+        {props.data[thisPage].subTitle && (
+          <SubTitle>{props.data[thisPage].subTitle}</SubTitle>
         )}
         <Contents
           iframeKey={iframeKey}
-          contentsIndex={pageIndex}
-          contentsCssFile={props.data[pageIndex].cssFile}
-          contentsJsFile={props.data[pageIndex].jsFile}
-          contentsHtml={props.data[pageIndex].html}
-          contentsCss={props.data[pageIndex].css}
-          contentsJs={props.data[pageIndex].js}
-          contentsDownload={props.data[pageIndex].download}
+          contentsIndex={thisPage}
+          contentsCssFile={props.data[thisPage].cssFile}
+          contentsJsFile={props.data[thisPage].jsFile}
+          contentsHtml={props.data[thisPage].html}
+          contentsCss={props.data[thisPage].css}
+          contentsJs={props.data[thisPage].js}
+          contentsDownload={props.data[thisPage].download}
         ></Contents>
       </div>
       <TabImgWrap>
         {props.data.map((num, index) => (
           <CategoryList
             key={index}
-            className={pageIndex == index ? "is-open" : ""}
+            className={thisPage == index ? "is-open" : ""}
             style={{
               border:
-                pageIndex == index
+                thisPage == index
                   ? "1px solid var(--black)"
                   : "1px solid var(--boarder)",
             }}
           >
-            {/* <Link href={String(index)}> 페이지 이동 트래픽 이슈로 변경*/}
-            <button
+            <Link href={String(index)}>
+              {/* 페이지 이동 트래픽 이슈로 변경 => 해결되어 다시 Link로 변경 */}
+              {/* <button
               onClick={() => {
                 setPageIndex(index);
                 handleTabClick();
               }}
-            >
+            > */}
               {isImageLoaded[index] ? (
                 <Image
                   priority={true}
@@ -159,7 +162,8 @@ export default function ContentsWrap(props) {
               ) : (
                 <NoneImg />
               )}
-            </button>
+            </Link>
+            {/* </button> */}
           </CategoryList>
         ))}
       </TabImgWrap>
