@@ -250,6 +250,9 @@ export default function Home() {
                 <SubTitle>예정</SubTitle>
                 <ReadMeListWrap>
                   <ReadMeList>
+                    <strong>MDI</strong>
+                  </ReadMeList>
+                  <ReadMeList>
                     <strong>Breadcrumb</strong>
                   </ReadMeList>
                   <ReadMeList>
